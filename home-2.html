@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Discovery &amp; Signature Specials | Burger &amp; Sandwich Joint</title>
+  <meta name="description" content="Embark on a culinary discovery journey at Burger &amp; Sandwich Joint. Explore exploded burger anatomy, flavour pairings, kitchen craftsmanship, and sandwich studio creations.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('joint_direction');
+        if (d === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+        var t = localStorage.getItem('joint_theme');
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint Home">
+          <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="38" height="38">
+          <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <div class="nav-dropdown">
+            <a href="home-2.html" class="nav-link nav-dropdown-toggle active" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html" class="nav-dropdown-link">Home 1</a>
+              <a href="home-2.html" class="nav-dropdown-link active">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="burgers.html" class="nav-link">Signature Burgers</a>
+          <a href="sandwiches.html" class="nav-link">Sandwiches</a>
+          <a href="combo-offers.html" class="nav-link">Combo Offers</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <!-- RTL Layout & Light/Dark Theme Toggles (Placed immediately after Contact) -->
+          <button type="button" class="nav-action-btn rtl-toggle" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
+            <svg class="rtl-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7h16M16 3l4 4-4 4"/>
+              <path d="M20 17H4M8 13l-4 4 4 4"/>
+            </svg>
+            <span class="rtl-text sr-only">RTL</span>
+          </button>
+          <button type="button" class="nav-action-btn theme-toggle" aria-label="Toggle light / dark theme" title="Toggle Light / Dark Theme">
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Details</a>
+          <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <div class="mobile-drawer-dropdown open">
+        <button type="button" class="mobile-nav-link mobile-dropdown-toggle active" aria-expanded="true">
+          <span>Home</span>
+          <svg class="drawer-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">Home 1</a>
+          <a href="home-2.html" class="mobile-sublink active">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="menu.html" class="mobile-nav-link"><span>Menu</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="burgers.html" class="mobile-nav-link"><span>Signature Burgers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="sandwiches.html" class="mobile-nav-link"><span>Sandwiches</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="combo-offers.html" class="mobile-nav-link"><span>Combo Offers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span class="drawer-arrow">&rarr;</span></a>
+    </div>
+        <div class="mobile-drawer-footer">
+      <div class="drawer-action-toggles">
+        <button type="button" class="mobile-toggle-btn rtl-toggle" aria-label="Toggle RTL layout">
+          <svg class="rtl-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 13l-4 4 4 4"/>
+          </svg>
+          <span class="rtl-text">RTL Layout</span>
+        </button>
+        <button type="button" class="mobile-toggle-btn theme-toggle" aria-label="Toggle light / dark theme">
+          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-mode-text">Dark Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Details</a>
+      <div class="mobile-drawer-info">
+        <strong>Open 7 Days A Week</strong>
+        <span>11:00 AM – 10:30 PM</span>
+      </div>
+      <div class="mobile-drawer-info">
+        <strong>Call for Enquiries</strong>
+        <span>+1 (555) 234-5678</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT (EXACTLY 8 SECTIONS) ==================== -->
+  <main id="mainContent">
+
+    <!-- SECTION 1: HERO - A WORLD OF FLAVOUR (FULL-WIDTH EDITORIAL HERO) -->
+    <section class="hero-2" id="discoveryHero">
+      <div class="hero-2-bg">
+        <img src="images/image-102.png" alt="Gourmet table spread with signature Charcoal Black Burger, panini and sides">
+      </div>
+      <div class="hero-2-overlay"></div>
+      <div class="container hero-2-container">
+        <span class="section-tag" style="background: rgba(244,119,33,0.25); color: #FFF; border-color: var(--primary);">Food Discovery &bull; Chef's Table</span>
+        <h1 class="hero-2-headline">CRAVINGS HAVE A NEW ADDRESS.</h1>
+        <p class="hero-2-sub">
+          Step into our culinary lab. From the smoky sear of our flame griddle to the crisp bite of fresh sourdough panini, experience how genuine food curiosity transforms every meal into an event.
+        </p>
+        <div class="hero-2-badges">
+          <span class="hero-2-badge">&bull; Charcoal Smoked Brioche</span>
+          <span class="hero-2-badge">&bull; 450&deg; Maillard Sear</span>
+          <span class="hero-2-badge">&bull; House-Crafted Aioli</span>
+          <span class="hero-2-badge">&bull; Triple-Deck Sandwiches</span>
+        </div>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="#burgerAnatomy" class="btn btn-primary btn-lg">Discover Our Specials</a>
+          <a href="menu.html" class="btn btn-secondary btn-lg">Explore Food Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE ART OF A GREAT BURGER (EXPLODED BURGER VISUAL - DECONSTRUCTED SPECTRUM) -->
+    <section class="section section-dark" id="burgerAnatomy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Anatomy Breakdown</span>
+          <h2 class="section-title">BUILT WITH FLAVOUR IN EVERY LAYER</h2>
+          <p class="section-desc">A memorable burger is an architectural marvel. Follow our deconstructed flavour spectrum below to discover how deliberate balance creates pure satisfaction.</p>
+        </div>
+
+        <div class="anatomy-spectrum">
+          <!-- Tier 1: Crown -->
+          <div class="spectrum-tier">
+            <div class="spectrum-content text-right">
+              <span class="spectrum-tag">LAYER 01 &bull; FOUNDATION CROWN</span>
+              <h3 class="spectrum-title">Golden Toasted Brioche Crown</h3>
+              <div class="spectrum-specs">
+                <span class="spectrum-spec-pill">Clarified Butter Glaze</span>
+                <span class="spectrum-spec-pill">190&deg; Warm Toast</span>
+                <span class="spectrum-spec-pill">Airy Cushion Shield</span>
+              </div>
+              <p class="spectrum-desc">Basted with clarified butter and griddled until golden. It creates an aromatic, airy shield that protects the fillings without overpowering the meat.</p>
+            </div>
+            <div class="spectrum-node">01</div>
+            <div class="spectrum-lens-wrap lens-right">
+              <div class="spectrum-lens">
+                <img src="images/image-71.png" alt="Toasted brioche crown with sesame seeds" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Greens & Avocado -->
+          <div class="spectrum-tier">
+            <div class="spectrum-lens-wrap lens-left">
+              <div class="spectrum-lens">
+                <img src="images/image-20.png" alt="Fresh green lettuce, sliced avocado and microgreens" loading="lazy">
+              </div>
+            </div>
+            <div class="spectrum-node">02</div>
+            <div class="spectrum-content text-left">
+              <span class="spectrum-tag">LAYER 02 &bull; TEMPERATURE &amp; ACIDITY</span>
+              <h3 class="spectrum-title">Hydroponic Greens &amp; Ripe Avocado</h3>
+              <div class="spectrum-specs">
+                <span class="spectrum-spec-pill">Hand-Torn Oak Greens</span>
+                <span class="spectrum-spec-pill">Hass Avocado Slices</span>
+                <span class="spectrum-spec-pill">Cool Crunch Barrier</span>
+              </div>
+              <p class="spectrum-desc">Hand-torn crisp oak lettuce and fresh avocado providing clean crunch, temperature contrast, and refreshing acidity to balance the rich hot beef.</p>
+            </div>
+          </div>
+
+          <!-- Tier 3: Cheese -->
+          <div class="spectrum-tier">
+            <div class="spectrum-content text-right">
+              <span class="spectrum-tag">LAYER 03 &bull; TEXTURAL EMULSION</span>
+              <h3 class="spectrum-title">Stretchy Molten Artisan Cheese</h3>
+              <div class="spectrum-specs">
+                <span class="spectrum-spec-pill">Wisconsin Aged Cheddar</span>
+                <span class="spectrum-spec-pill">Stainless Cloche Steam</span>
+                <span class="spectrum-spec-pill">Velvety Melt Flow</span>
+              </div>
+              <p class="spectrum-desc">Thick Wisconsin cheddar and American slices draped over the searing patty and steamed under a stainless cloche until velvety and dripping.</p>
+            </div>
+            <div class="spectrum-node">03</div>
+            <div class="spectrum-lens-wrap lens-right">
+              <div class="spectrum-lens">
+                <img src="images/image-36.png" alt="Molten melted cheddar cheese pull" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 4: Beef -->
+          <div class="spectrum-tier">
+            <div class="spectrum-lens-wrap lens-left">
+              <div class="spectrum-lens">
+                <img src="images/image-9.png" alt="Angus beef patty sizzling over open grill flames and glowing charcoal" loading="lazy">
+              </div>
+            </div>
+            <div class="spectrum-node">04</div>
+            <div class="spectrum-content text-left">
+              <span class="spectrum-tag">LAYER 04 &bull; MAILLARD REACTION CORE</span>
+              <h3 class="spectrum-title">Charcoal Flame-Seared Angus Beef</h3>
+              <div class="spectrum-specs">
+                <span class="spectrum-spec-pill">450&deg; Iron Sear</span>
+                <span class="spectrum-spec-pill">Coarse Chuck &amp; Brisket</span>
+                <span class="spectrum-spec-pill">Crispy Lacy Edges</span>
+              </div>
+              <p class="spectrum-desc">Prime coarsely-ground chuck and brisket seared on 450&deg; iron griddles with crushed sea salt, rendering deeply savory caramelized edges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CHOOSE YOUR FLAVOUR (4 CARDS) -->
+    <section class="section section-charcoal" id="chooseFlavour">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Taste Profile Finder</span>
+          <h2 class="section-title">FIND YOUR PERFECT BITE</h2>
+          <p class="section-desc">Whether you crave timeless nostalgic simplicity or an adrenaline-fueled spice bomb, choose the flavour profile that matches your appetite.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Flavour 1 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Nostalgic</span>
+              <img src="images/image-42.png" alt="Classic cheeseburger combo with french fries carton and tall iced cola" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Classic &amp; Timeless</h3>
+              </div>
+              <p class="food-card-desc">Pure beef purity, melted cheddar, crisp lettuce, sweet red onion, and classic house ketchup relish on soft potato brioche.</p>
+              <div class="food-card-footer">
+                <a href="menu.html#burgers" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Classics &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flavour 2 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge" style="background:#D32F2F;">Fiery Heat</span>
+              <img src="images/image-17.png" alt="Grilled chili spiced chicken burger with bell peppers and spicy dip" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Spicy &amp; Bold</h3>
+              </div>
+              <p class="food-card-desc">Charred bell peppers, habanero chili glaze, and spiced chicken breast for bold heat seekers who demand intensity.</p>
+              <div class="food-card-footer">
+                <a href="menu.html#burgers" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Spicy &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flavour 3 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Gooey</span>
+              <img src="images/image-43.png" alt="Sizzling cast-iron skillet filled with loaded cheese fries, bacon and scallions" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Cheesy &amp; Loaded</h3>
+              </div>
+              <p class="food-card-desc">Smothered in double cheddar sauce, applewood bacon crumbles, and mozzarella with an irresistible cheese pull.</p>
+              <div class="food-card-footer">
+                <a href="menu.html#sides" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Cheesy &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flavour 4 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-veg">Balanced</span>
+              <img src="images/image-27.png" alt="Artisan grilled chicken burger with sliced avocado and creamy tzatziki" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Fresh &amp; Light</h3>
+              </div>
+              <p class="food-card-desc">Lean grilled poultry, creamy tzatziki, baby arugula, and sliced avocado for clean satisfaction that energizes.</p>
+              <div class="food-card-footer">
+                <a href="menu.html#sandwiches" class="btn btn-secondary btn-sm" style="width: 100%;">Explore Fresh &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BEHIND OUR KITCHEN (KITCHEN ATELIER MASTER SPREAD) -->
+    <section class="section section-dark" id="behindKitchen">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Culinary Craftsmanship</span>
+          <h2 class="section-title">FRESHNESS IS OUR SECRET INGREDIENT</h2>
+          <p class="section-desc">Peek behind the stainless-steel line where timing, high heat, and culinary passion meet on every ticket.</p>
+        </div>
+
+        <div class="kitchen-atelier-spread">
+          <!-- Left: Master Live Sizzle Spotlight (image-64.png) -->
+          <div class="atelier-spotlight-frame">
+            <div class="atelier-spotlight-bg">
+              <img src="images/image-64.png" alt="Open kitchen with chefs working flat top grills and fryers" loading="lazy">
+            </div>
+            <div class="atelier-spotlight-overlay"></div>
+            <div class="atelier-spotlight-top">
+              <div class="spotlight-live-badge">
+                <span class="live-pulse-dot"></span>
+                <span>LIVE KITCHEN LINE &bull; 450&deg; FLAT-TOP</span>
+              </div>
+            </div>
+            <div class="atelier-spotlight-content">
+              <span class="spotlight-stage-tag">STAGE 02 &bull; CORE SEAR CRAFT</span>
+              <h3 class="spotlight-title">The High-Heat Sizzle</h3>
+              <p class="spotlight-desc">Hardwood flat-top griddle searing beef to order with custom cast-iron smash presses, rendering an irreplaceable crispy lacy edge and sealing in rich meat juices within 120 seconds.</p>
+              <div class="spotlight-metrics-bar">
+                <div class="spotlight-metric-item">
+                  <strong>450&deg;F</strong>
+                  <span>Iron Griddle Heat</span>
+                </div>
+                <div class="spotlight-metric-item">
+                  <strong>100%</strong>
+                  <span>Sizzled to Order</span>
+                </div>
+                <div class="spotlight-metric-item">
+                  <strong>0 sec</strong>
+                  <span>Pre-Warming Time</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Chronological Culinary Service Journal -->
+          <div class="atelier-chronology-flow">
+            <!-- Stage 01 (image-70.png) -->
+            <div class="chronology-step">
+              <div class="chronology-thumb">
+                <img src="images/image-70.png" alt="Kitchen line during peak service with toasted brioche buns and cheese slices" loading="lazy">
+              </div>
+              <div class="chronology-info">
+                <span class="chronology-stage-pill">STAGE 01 &bull; 7:00 AM PREP</span>
+                <h4 class="chronology-title">Line Prep &amp; Brioche Toasting</h4>
+                <p class="chronology-desc">Fresh bakery brioche buns basted with clarified butter and griddled to create a crisp moisture barrier.</p>
+              </div>
+            </div>
+
+            <!-- Stage 03 (image-69.png) -->
+            <div class="chronology-step">
+              <div class="chronology-thumb">
+                <img src="images/image-69.png" alt="Plating pass under copper heat lamps with stacked burgers on wooden boards" loading="lazy">
+              </div>
+              <div class="chronology-info">
+                <span class="chronology-stage-pill">STAGE 03 &bull; TICKET EXPEDITION</span>
+                <h4 class="chronology-title">Precision Gourmet Assembly</h4>
+                <p class="chronology-desc">Scratch-cooked sauces, farm produce, and molten cheeses stacked under precision pass lamps.</p>
+              </div>
+            </div>
+
+            <!-- Stage 04 (image-62.png) -->
+            <div class="chronology-step">
+              <div class="chronology-thumb">
+                <img src="images/image-62.png" alt="Modern fast-casual burger restaurant interior with glowing red neon burger sign" loading="lazy">
+              </div>
+              <div class="chronology-info">
+                <span class="chronology-stage-pill">STAGE 04 &bull; SERVICE PASS</span>
+                <h4 class="chronology-title">Expedition to Your Table</h4>
+                <p class="chronology-desc">Served steaming hot in our atmospheric dining room with sincere, energetic neighborhood hospitality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atelier Standards Banner -->
+        <div class="atelier-standards-banner">
+          <div class="standards-list">
+            <div class="standard-item"><strong>BAKERY FRESH:</strong> Butter-Griddled Daily</div>
+            <div class="standard-item"><strong>SEAR METHOD:</strong> 450&deg; Iron Weight Press</div>
+            <div class="standard-item"><strong>CHEESE MELT:</strong> Cloche-Steamed Cheddar</div>
+            <div class="standard-item"><strong>SPEED STANDARD:</strong> Sub-8-Minute Delivery</div>
+          </div>
+          <a href="about.html" class="btn btn-secondary btn-sm">Read Our Kitchen Story &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: THE SANDWICH STUDIO (4 CARDS) -->
+    <section class="section section-cream" id="sandwichStudio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Deli &amp; Panini Artistry</span>
+          <h2 class="section-title">STACKED WITH FRESHNESS</h2>
+          <p class="section-desc">Our dedicated sandwich program features hand-carved poultry, imported cold cuts, and artisan breads pressed to golden perfection.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Sandwich 1 -->
+          <div class="food-card" data-title="Buttermilk Fried Chicken Sub" data-price="$10.99" data-desc="Tender buttermilk fried chicken with crisp purple slaw and garlic herb aioli on a toasted sub roll." data-img="images/image-26.png" data-ingredients="Fried Chicken, Purple Slaw, Dill Pickles, Garlic Aioli">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Crispy</span>
+              <img src="images/image-26.png" alt="Buttermilk fried chicken sandwich with dill pickles and purple cabbage slaw" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Buttermilk Fried Chicken Sub</h3>
+                <span class="food-card-price">$10.99</span>
+              </div>
+              <p class="food-card-desc">Tender buttermilk fried chicken with crisp purple slaw and garlic herb aioli on a toasted sub roll.</p>
+              <div class="food-card-ingredients">
+                <span>Fried Chicken</span>
+                <span>Purple Slaw</span>
+                <span>Garlic Aioli</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-dark btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sandwich 2 -->
+          <div class="food-card" data-title="Chicken & Mozzarella Panini" data-price="$11.49" data-desc="Panini-pressed sourdough with grilled chicken, fresh baby spinach, molten mozzarella, and tomato relish." data-img="images/image-29.png" data-ingredients="Grilled Chicken, Baby Spinach, Mozzarella, Sourdough">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-special">Hot Panini</span>
+              <img src="images/image-29.png" alt="Toasted chicken and melted mozzarella panini with distinct grill marks and spinach" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Chicken &amp; Mozzarella Panini</h3>
+                <span class="food-card-price">$11.49</span>
+              </div>
+              <p class="food-card-desc">Panini-pressed sourdough with grilled chicken, fresh baby spinach, molten mozzarella, and tomato relish.</p>
+              <div class="food-card-ingredients">
+                <span>Grilled Chicken</span>
+                <span>Baby Spinach</span>
+                <span>Mozzarella</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-dark btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sandwich 3 -->
+          <div class="food-card" data-title="Italian Cold-Cut Submarine" data-price="$11.99" data-desc="Layered genoa salami, smoked ham, provolone cheese, sliced tomatoes, onions, and oregano dressing." data-img="images/image-35.png" data-ingredients="Genoa Salami, Cured Ham, Provolone, Oregano Vinaigrette">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Deli Classic</span>
+              <img src="images/image-35.png" alt="Italian cold-cut submarine hoagie loaded with salami, ham and provolone" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Italian Cold-Cut Submarine</h3>
+                <span class="food-card-price">$11.99</span>
+              </div>
+              <p class="food-card-desc">Layered genoa salami, smoked ham, provolone cheese, sliced tomatoes, onions, and oregano dressing.</p>
+              <div class="food-card-ingredients">
+                <span>Genoa Salami</span>
+                <span>Smoked Ham</span>
+                <span>Provolone</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-dark btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sandwich 4 -->
+          <div class="food-card" data-title="Golden Sourdough Tuna Melt" data-price="$10.49" data-desc="Seasoned albacore tuna salad, sharp melted cheddar, and sweet relish on butter-toasted rustic sourdough." data-img="images/image-32.png" data-ingredients="Albacore Tuna, Sharp Cheddar, Pickle Relish, Sourdough">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Melt</span>
+              <img src="images/image-32.png" alt="Classic tuna melt sandwich toasted golden with sharp cheddar cheese" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Golden Sourdough Tuna Melt</h3>
+                <span class="food-card-price">$10.49</span>
+              </div>
+              <p class="food-card-desc">Seasoned albacore tuna salad, sharp melted cheddar, and sweet relish on butter-toasted rustic sourdough.</p>
+              <div class="food-card-ingredients">
+                <span>Albacore Tuna</span>
+                <span>Sharp Cheddar</span>
+                <span>Sourdough</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-dark btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FLAVOUR PAIRING EXPERIENCE (DEGUSTATION HARMONY CONSOLE) -->
+    <section class="section section-dark" id="flavourPairing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Culinary Harmony</span>
+          <h2 class="section-title">THE PERFECT PAIRING</h2>
+          <p class="section-desc">Great meals are elevated through thoughtful combinations. Explore our sommelier tasting console below, engineered for maximum taste synergy.</p>
+        </div>
+
+        <div class="pairing-harmony-console">
+          <div class="harmony-columns-grid">
+            <!-- Pairing 1: Nostalgic -->
+            <div class="harmony-col">
+              <span class="harmony-col-tag" style="color:var(--primary);">HARMONY 01 &bull; NOSTALGIC</span>
+              <div class="harmony-formula">
+                <span class="harmony-item-name">Classic Burger</span>
+                <span class="harmony-plus-symbol">+</span>
+                <span class="harmony-item-name">Crinkle Fries</span>
+              </div>
+              <h4 class="harmony-subheading">The Timeless Diner Symphony</h4>
+              <p class="harmony-desc">Hot, savory Angus beef crust balanced against the piping, salty crunch of golden crinkle-cut potato fries and chilled fountain cola.</p>
+              <div class="harmony-chips-row">
+                <span class="harmony-chip">Crisp Salt</span>
+                <span class="harmony-chip">Savory Crust</span>
+                <span class="harmony-chip">Fountain Fizz</span>
+              </div>
+              <a href="combo-offers.html" class="harmony-link">View In Combos &rarr;</a>
+            </div>
+
+            <!-- Pairing 2: Thermal Contrast -->
+            <div class="harmony-col">
+              <span class="harmony-col-tag" style="color:#FF5252;">HARMONY 02 &bull; THERMAL CONTRAST</span>
+              <div class="harmony-formula">
+                <span class="harmony-item-name">Spicy Fire Burger</span>
+                <span class="harmony-plus-symbol" style="color:#FF5252; background:rgba(255,82,82,0.18); border-color:rgba(255,82,82,0.35);">+</span>
+                <span class="harmony-item-name">Chilled Mocktail</span>
+              </div>
+              <h4 class="harmony-subheading">Fiery Heat Meets Frost</h4>
+              <p class="harmony-desc">Fiery chili-glazed Southern chicken or pepper jack smash balanced by an ice-cold sparkling pink berry mocktail that resets your palate between bites.</p>
+              <div class="harmony-chips-row">
+                <span class="harmony-chip">Cayenne Glaze</span>
+                <span class="harmony-chip">Tart Berry</span>
+                <span class="harmony-chip">Palate Reset</span>
+              </div>
+              <a href="combo-offers.html" class="harmony-link" style="color:#FF5252;">View In Combos &rarr;</a>
+            </div>
+
+            <!-- Pairing 3: Artisan Crunch -->
+            <div class="harmony-col">
+              <span class="harmony-col-tag" style="color:#F5E9DC;">HARMONY 03 &bull; TEXTURE CRUNCH</span>
+              <div class="harmony-formula">
+                <span class="harmony-item-name">Grilled Panini</span>
+                <span class="harmony-plus-symbol">+</span>
+                <span class="harmony-item-name">Potato Wedges</span>
+              </div>
+              <h4 class="harmony-subheading">Rustic Textural Balance</h4>
+              <p class="harmony-desc">Toasted herb-infused sourdough panini stuffed with molten mozzarella, accompanied by thick-cut garlic skin-on potato wedges and truffled aioli.</p>
+              <div class="harmony-chips-row">
+                <span class="harmony-chip">Herb Sourdough</span>
+                <span class="harmony-chip">Garlic Skin-On</span>
+                <span class="harmony-chip">Truffled Aioli</span>
+              </div>
+              <a href="combo-offers.html" class="harmony-link">View In Combos &rarr;</a>
+            </div>
+
+            <!-- Pairing 4: Indulgence -->
+            <div class="harmony-col">
+              <span class="harmony-col-tag" style="color:var(--primary-light);">HARMONY 04 &bull; DECADENCE</span>
+              <div class="harmony-formula">
+                <span class="harmony-item-name">Double Cheese</span>
+                <span class="harmony-plus-symbol">+</span>
+                <span class="harmony-item-name">House Fry Sauce</span>
+              </div>
+              <h4 class="harmony-subheading">Double Umami Flow</h4>
+              <p class="harmony-desc">Double aged cheddar melted across twin Angus beef patties, paired with colossal beer-battered onion rings and signature shallot burger dip.</p>
+              <div class="harmony-chips-row">
+                <span class="harmony-chip">Aged Cheddar</span>
+                <span class="harmony-chip">Beer Batter</span>
+                <span class="harmony-chip">Shallot Dip</span>
+              </div>
+              <a href="combo-offers.html" class="harmony-link">View In Combos &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Console Footer Bar -->
+          <div class="harmony-console-footer">
+            <div class="harmony-sommelier-tip">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary); flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span><strong>Chef Sommelier Recommendation:</strong> Every pairing combination can be ordered as an All-Day Combo Upgrade with bottomless iced beverage and artisan side dip.</span>
+            </div>
+            <a href="combo-offers.html" class="btn btn-secondary btn-sm">Browse Combo Offers &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: OUR FOOD PROMISE (PROVENANCE MANIFESTO & FRAMELESS DISH STAGE) -->
+    <section class="section section-charcoal" id="foodPromise">
+      <div class="container">
+        <div class="promise-showcase-stage">
+          <!-- Left: Frameless Heroic Dish Presentation (image-11.png) -->
+          <div class="promise-dish-portal">
+            <img src="images/image-11.png" alt="Southern fried chicken breast burger with pickles and slaw on sesame bun" loading="lazy">
+            <div class="portal-seal-badge">
+              <span>&#9733;</span>
+              <span>ZERO HEAT LAMPS &bull; EVER</span>
+            </div>
+            <div class="portal-dish-caption">
+              <strong>Crafted From Fresh Ingredients</strong>
+              <span>100% whole buttermilk-brined poultry &amp; prime chuck ground fresh daily.</span>
+            </div>
+          </div>
+
+          <!-- Right: Culinary Charter Ledger -->
+          <div class="promise-charter-column">
+            <span class="section-tag">Quality Commitment</span>
+            <h2 class="promise-headline">EVERY BITE HAS A REASON.</h2>
+            <p class="promise-lead-story">
+              We believe casual food deserves fine dining respect. That means never cutting corners, never batch-warming, and maintaining uncompromising culinary standards every single morning.
+            </p>
+
+            <div class="promise-ledger-flow">
+              <!-- Pillar 1 -->
+              <div class="promise-ledger-row">
+                <span class="ledger-numeral">01</span>
+                <div class="ledger-detail">
+                  <h4>100% Sizzled to Order</h4>
+                  <p>Every single patty hits the 450&deg; iron flat-top only after your order is received. No pre-cooked patties, no heat lamps.</p>
+                </div>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div class="promise-ledger-row">
+                <span class="ledger-numeral">02</span>
+                <div class="ledger-detail">
+                  <h4>Morning Farm-Fresh Produce</h4>
+                  <p>Hand-torn crisp oak lettuce, ripe avocado, and sweet red onions delivered and prepped daily at 7:00 AM.</p>
+                </div>
+              </div>
+
+              <!-- Pillar 3 -->
+              <div class="promise-ledger-row">
+                <span class="ledger-numeral">03</span>
+                <div class="ledger-detail">
+                  <h4>Bakery-Direct Brioche</h4>
+                  <p>Delivered fresh every morning from local artisan bakers, basted with clarified butter and toasted golden.</p>
+                </div>
+              </div>
+
+              <!-- Pillar 4 -->
+              <div class="promise-ledger-row">
+                <span class="ledger-numeral">04</span>
+                <div class="ledger-detail">
+                  <h4>Proprietary House Recipes</h4>
+                  <p>Specialty spice rubs, slow-caramelized onions, and secret sauces created exclusively in our scratch kitchen.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust Metrics Grid -->
+            <div class="promise-metrics-grid">
+              <div class="promise-metric-stat">
+                <strong>450&deg;F</strong>
+                <span>Griddle Heat</span>
+              </div>
+              <div class="promise-metric-stat">
+                <strong>100%</strong>
+                <span>Made Fresh</span>
+              </div>
+              <div class="promise-metric-stat">
+                <strong>7 AM</strong>
+                <span>Daily Prep</span>
+              </div>
+              <div class="promise-metric-stat">
+                <strong>0</strong>
+                <span>Microwaves</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FINAL FOOD DISCOVERY CTA -->
+    <section class="section section-dark" id="discoveryCta">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-bg">
+            <img src="images/image-103.png" alt="Rustic flat lay featuring gourmet bacon cheeseburger and focaccia sandwich" loading="lazy">
+          </div>
+          <div class="cta-banner-content">
+            <span class="section-tag" style="background:rgba(255,255,255,0.2); color:#fff; border-color:rgba(255,255,255,0.4);">Taste Adventure</span>
+            <h2>READY TO FOLLOW YOUR CRAVINGS?</h2>
+            <p>
+              From our explosive burger anatomy to handcrafted sandwiches and irresistible combos, your next memorable culinary experience is just around the corner.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="menu.html" class="btn btn-white btn-lg">Explore Full Menu</a>
+            <a href="combo-offers.html" class="btn btn-dark btn-lg">Discover Combo Offers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint">
+            <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="44" height="44">
+            <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+          </a>
+          <p>Casual burger and sandwich restaurant crafting big-flavour meals with fresh ingredients, artisan breads, and warm neighborhood hospitality.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Joint</h4>
+          <div class="footer-links">
+            <a href="index.html">Home 1 (Main)</a>
+            <a href="home-2.html">Home 2 (Discovery)</a>
+            <a href="about.html">About Our Passion</a>
+            <a href="services.html">Catering &amp; Services</a>
+            <a href="contact.html">Contact &amp; Location</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Food Collections</h4>
+          <div class="footer-links">
+            <a href="burgers.html">Signature Burgers</a>
+            <a href="sandwiches.html">Sandwich Studio</a>
+            <a href="combo-offers.html">Value Combo Offers</a>
+            <a href="menu.html">Complete Food Menu</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hours &amp; Location</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span>Monday – Thursday</span>
+              <span>11:00 AM – 10:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Friday – Saturday</span>
+              <span>11:00 AM – 11:30 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Sunday</span>
+              <span>11:30 AM – 10:00 PM</span>
+            </div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.88rem; color: #bbb;">
+            &bull; 142 Market Street, Downtown<br>
+            &bull; Phone: +1 (555) 234-5678
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Burger &amp; Sandwich Joint. All rights reserved.</span>
+        <span>Crafted for Great Taste &bull; Fresh &bull; Made to Order</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Product Detail Modal -->
+  <div id="productModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <div class="modal-header">
+            <span class="section-tag">Chef's Signature Selection</span>
+            <h3 class="modal-title">Product Details</h3>
+          </div>
+          <div class="modal-price">$0.00</div>
+          <p class="modal-desc"></p>
+          <h4 class="modal-ingredients-heading">Featured Ingredients:</h4>
+          <div class="food-card-ingredients modal-ingredients"></div>
+          <div class="modal-action-wrap">
+            <a href="contact.html" class="btn btn-primary" style="width:100%;">Order / Enquire Today</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Drop to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll to top" title="Scroll to top">
+    <svg class="to-top-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>

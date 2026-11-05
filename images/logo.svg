@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Circle Radial Gradient -->
+    <radialGradient id="badgeDark" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#2D211A"/>
+      <stop offset="70%" stop-color="#1A130F"/>
+      <stop offset="100%" stop-color="#0E0A08"/>
+    </radialGradient>
+
+    <!-- Golden Ring & Accents Gradient -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD166"/>
+      <stop offset="35%" stop-color="#FFA000"/>
+      <stop offset="70%" stop-color="#F47721"/>
+      <stop offset="100%" stop-color="#D9530F"/>
+    </linearGradient>
+
+    <!-- Golden Swoosh Gradient -->
+    <linearGradient id="swooshGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFDD80"/>
+      <stop offset="25%" stop-color="#FFB300"/>
+      <stop offset="65%" stop-color="#F47721"/>
+      <stop offset="100%" stop-color="#BF4604"/>
+    </linearGradient>
+
+    <!-- Chef Hat Gradients -->
+    <linearGradient id="hatWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="75%" stop-color="#F7F1EB"/>
+      <stop offset="100%" stop-color="#E2D4C3"/>
+    </linearGradient>
+    <linearGradient id="hatShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8DDD0"/>
+      <stop offset="100%" stop-color="#C5B19A"/>
+    </linearGradient>
+
+    <!-- Brioche Bun Gradients -->
+    <radialGradient id="bunTop" cx="45%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFC278"/>
+      <stop offset="40%" stop-color="#F39233"/>
+      <stop offset="85%" stop-color="#CE6516"/>
+      <stop offset="100%" stop-color="#A54909"/>
+    </radialGradient>
+    <linearGradient id="bunBottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EE8C2C"/>
+      <stop offset="100%" stop-color="#9E460B"/>
+    </linearGradient>
+
+    <!-- Beef Patty Gradient -->
+    <linearGradient id="beefPatty" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#67311B"/>
+      <stop offset="40%" stop-color="#4B2011"/>
+      <stop offset="80%" stop-color="#351408"/>
+      <stop offset="100%" stop-color="#240B03"/>
+    </linearGradient>
+
+    <!-- Cheddar Melt Gradient -->
+    <linearGradient id="cheeseMelt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="40%" stop-color="#FFB703"/>
+      <stop offset="100%" stop-color="#FB8500"/>
+    </linearGradient>
+
+    <!-- Lettuce Gradient -->
+    <linearGradient id="lettuceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#80E040"/>
+      <stop offset="40%" stop-color="#55B322"/>
+      <stop offset="100%" stop-color="#2D7A10"/>
+    </linearGradient>
+
+    <!-- Tomato Gradient -->
+    <linearGradient id="tomatoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="45%" stop-color="#E52B2B"/>
+      <stop offset="100%" stop-color="#A81414"/>
+    </linearGradient>
+
+    <!-- Toasted Bread Gradient -->
+    <linearGradient id="toastBread" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FBE2B5"/>
+      <stop offset="35%" stop-color="#F2BA72"/>
+      <stop offset="80%" stop-color="#D78A33"/>
+      <stop offset="100%" stop-color="#A95D16"/>
+    </linearGradient>
+
+    <!-- Deli Ham Gradient -->
+    <linearGradient id="deliHam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFCDD2"/>
+      <stop offset="50%" stop-color="#EF9A9A"/>
+      <stop offset="100%" stop-color="#E57373"/>
+    </linearGradient>
+
+    <!-- Cutting Board Wood Gradient -->
+    <linearGradient id="woodBoard" x1="0%" y1="0%" x2="100%" y2="20%">
+      <stop offset="0%" stop-color="#8D5B34"/>
+      <stop offset="50%" stop-color="#6F3F1E"/>
+      <stop offset="100%" stop-color="#4E2911"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadowDepth" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- ========================================== -->
+  <!-- 1. CIRCULAR EMBLEM BADGE & GOLDEN RING     -->
+  <!-- ========================================== -->
+  <g id="badgeEmblem">
+    <!-- Golden Outer Ring Glow/Stroke -->
+    <circle cx="256" cy="235" r="198" fill="none" stroke="url(#goldRing)" stroke-width="14" filter="url(#shadowDepth)"/>
+    <!-- Thin inner decorative rim -->
+    <circle cx="256" cy="235" r="188" fill="none" stroke="#FFA000" stroke-width="2" stroke-opacity="0.5"/>
+    <!-- Deep Dark Badge Center -->
+    <circle cx="256" cy="235" r="186" fill="url(#badgeDark)"/>
+  </g>
+
+  <!-- Splash Droplets (Top Left & Top Right) -->
+  <g id="splashDroplets">
+    <!-- Left Droplets -->
+    <path d="M 125 152 C 110 135, 120 115, 138 128 C 145 133, 140 148, 125 152 Z" fill="url(#goldRing)"/>
+    <path d="M 152 118 C 142 104, 150 90, 162 100 C 168 105, 162 115, 152 118 Z" fill="url(#goldRing)"/>
+    <!-- Right Droplets -->
+    <path d="M 387 152 C 402 135, 392 115, 374 128 C 367 133, 372 148, 387 152 Z" fill="url(#goldRing)"/>
+    <path d="M 360 118 C 370 104, 362 90, 350 100 C 344 105, 350 115, 360 118 Z" fill="url(#goldRing)"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 2. WOODEN BOARD PLATTER BASE               -->
+  <!-- ========================================== -->
+  <g id="cuttingBoard">
+    <ellipse cx="256" cy="370" rx="192" ry="46" fill="#1C120C" opacity="0.8"/>
+    <!-- Wood Platter Edge -->
+    <path d="M 75 365 C 80 405, 432 405, 437 365 L 437 352 C 432 392, 80 392, 75 352 Z" fill="#4E2911"/>
+    <!-- Wood Platter Top Surface -->
+    <ellipse cx="256" cy="355" rx="181" ry="38" fill="url(#woodBoard)" stroke="#381D0B" stroke-width="2"/>
+    <!-- Wood Plank Grain Line -->
+    <path d="M 115 358 C 180 370, 330 370, 395 358" stroke="#3D1F0B" stroke-width="2.5" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3. GOURMET BURGER (LEFT SIDE)              -->
+  <!-- ========================================== -->
+  <g id="burger" filter="url(#shadowDepth)">
+    <!-- Burger Bottom Bun -->
+    <path d="M 108 344 C 112 374, 252 374, 258 344 L 258 334 C 252 352, 112 352, 108 334 Z" fill="url(#bunBottom)" stroke="#743004" stroke-width="2.5"/>
+
+    <!-- Sizzling Grilled Beef Patty -->
+    <path d="M 98 322 C 94 345, 266 345, 268 322 C 267 312, 97 312, 98 322 Z" fill="url(#beefPatty)" stroke="#220B03" stroke-width="2.5"/>
+    <!-- Patty Grill Sear Marks -->
+    <path d="M 118 326 Q 130 334 145 326 M 158 328 Q 170 335 185 327 M 200 327 Q 215 334 230 326 M 240 326 Q 248 331 256 325" stroke="#1A0702" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Molten Cheddar Cheese Layer with Dripping Corners -->
+    <path d="M 94 308 
+             C 105 310, 115 324, 122 338 
+             C 126 345, 134 345, 136 332
+             C 140 314, 155 315, 168 328
+             C 174 336, 182 334, 186 322
+             C 192 308, 208 316, 215 342
+             C 219 352, 228 350, 230 335
+             C 234 315, 255 310, 270 312
+             C 272 304, 94 302, 94 308 Z" 
+          fill="url(#cheeseMelt)" stroke="#D66D00" stroke-width="2"/>
+
+    <!-- Purple Onion Rings -->
+    <path d="M 115 300 C 130 292, 240 292, 255 300 C 248 307, 125 307, 115 300 Z" fill="#8E24AA" stroke="#4A148C" stroke-width="1.8"/>
+    <path d="M 130 299 C 145 294, 225 294, 240 299" stroke="#E1BEE7" stroke-width="2" fill="none"/>
+
+    <!-- Ripe Red Tomatoes -->
+    <path d="M 106 295 C 105 284, 185 278, 188 295 C 185 304, 105 304, 106 295 Z" fill="url(#tomatoGrad)" stroke="#800C0C" stroke-width="2"/>
+    <path d="M 184 293 C 185 282, 265 280, 264 293 C 263 302, 184 302, 184 293 Z" fill="url(#tomatoGrad)" stroke="#800C0C" stroke-width="2"/>
+    <!-- Tomato Seeds/Highlights -->
+    <circle cx="140" cy="292" r="2.5" fill="#FFE082"/>
+    <circle cx="155" cy="290" r="2.5" fill="#FFE082"/>
+    <circle cx="215" cy="289" r="2.5" fill="#FFE082"/>
+    <circle cx="232" cy="289" r="2.5" fill="#FFE082"/>
+
+    <!-- Crisp Ruffled Green Lettuce Leaf -->
+    <path d="M 88 284 
+             C 80 274, 95 264, 106 274
+             C 114 262, 130 264, 138 276
+             C 146 265, 162 265, 172 278
+             C 182 266, 198 266, 208 279
+             C 218 266, 235 266, 244 278
+             C 255 266, 275 270, 276 284
+             C 260 290, 95 290, 88 284 Z" 
+          fill="url(#lettuceGrad)" stroke="#1B5E20" stroke-width="2.5"/>
+
+    <!-- Golden Brioche Top Bun Crown -->
+    <path d="M 94 266 
+             C 90 190, 275 190, 272 266 
+             C 260 274, 106 274, 94 266 Z" 
+          fill="url(#bunTop)" stroke="#6A2E05" stroke-width="3"/>
+    <!-- Bun Highlight Sheen -->
+    <path d="M 125 218 C 145 204, 215 204, 238 216" stroke="#FFE0B2" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.45"/>
+
+    <!-- Sprinkled White/Golden Sesame Seeds -->
+    <g fill="#FFF9E6" stroke="#C78A3C" stroke-width="0.8">
+      <!-- Row 1 -->
+      <ellipse cx="145" cy="214" rx="3.5" ry="2" transform="rotate(-15 145 214)"/>
+      <ellipse cx="175" cy="206" rx="3.5" ry="2" transform="rotate(10 175 206)"/>
+      <ellipse cx="205" cy="208" rx="3.5" ry="2" transform="rotate(-20 205 208)"/>
+      <ellipse cx="235" cy="218" rx="3.5" ry="2" transform="rotate(25 235 218)"/>
+      <!-- Row 2 -->
+      <ellipse cx="125" cy="232" rx="3.5" ry="2" transform="rotate(30 125 232)"/>
+      <ellipse cx="155" cy="226" rx="3.5" ry="2" transform="rotate(-5 155 226)"/>
+      <ellipse cx="188" cy="222" rx="3.5" ry="2" transform="rotate(15 188 222)"/>
+      <ellipse cx="218" cy="228" rx="3.5" ry="2" transform="rotate(-15 218 228)"/>
+      <ellipse cx="248" cy="238" rx="3.5" ry="2" transform="rotate(20 248 238)"/>
+      <!-- Row 3 -->
+      <ellipse cx="138" cy="248" rx="3.5" ry="2" transform="rotate(-10 138 248)"/>
+      <ellipse cx="170" cy="244" rx="3.5" ry="2" transform="rotate(20 170 244)"/>
+      <ellipse cx="202" cy="242" rx="3.5" ry="2" transform="rotate(-15 202 242)"/>
+      <ellipse cx="234" cy="248" rx="3.5" ry="2" transform="rotate(10 234 248)"/>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 4. GRILLED ARTISAN SANDWICH (RIGHT SIDE)   -->
+  <!-- ========================================== -->
+  <g id="sandwich" filter="url(#shadowDepth)">
+    <!-- Bottom Bread Crust -->
+    <path d="M 264 348 L 444 300 L 440 286 L 260 334 Z" fill="#934D12" stroke="#482205" stroke-width="2"/>
+    <path d="M 260 334 L 440 286 L 434 278 L 254 326 Z" fill="url(#toastBread)"/>
+
+    <!-- Melted Cheese & Deli Cold Cut Folds -->
+    <path d="M 252 328 
+             C 275 324, 305 338, 325 322 
+             C 345 310, 380 326, 400 306 
+             C 415 296, 435 304, 442 290 
+             L 435 280 L 255 320 Z" 
+          fill="url(#cheeseMelt)" stroke="#D66D00" stroke-width="1.8"/>
+
+    <!-- Savory Folded Deli Turkey/Ham Slices -->
+    <path d="M 254 322 
+             C 278 316, 292 330, 318 316 
+             C 340 304, 362 318, 388 304 
+             C 408 294, 428 304, 438 288 
+             L 434 282 L 256 318 Z" 
+          fill="url(#deliHam)" stroke="#B71C1C" stroke-width="1.5"/>
+
+    <!-- Red Tomato Slices -->
+    <polygon points="274,314 310,306 308,298 272,306" fill="url(#tomatoGrad)" stroke="#800C0C" stroke-width="1.5"/>
+    <polygon points="340,298 382,288 380,280 338,290" fill="url(#tomatoGrad)" stroke="#800C0C" stroke-width="1.5"/>
+    <polygon points="400,284 434,276 432,270 398,278" fill="url(#tomatoGrad)" stroke="#800C0C" stroke-width="1.5"/>
+
+    <!-- Crisp Ruffled Green Lettuce Leaf -->
+    <path d="M 250 315 
+             C 260 306, 275 316, 285 306
+             C 298 318, 315 308, 325 316
+             C 340 304, 355 314, 370 302
+             C 385 312, 402 300, 415 308
+             C 426 296, 442 304, 446 288
+             L 436 280 L 252 310 Z" 
+          fill="url(#lettuceGrad)" stroke="#1B5E20" stroke-width="2"/>
+
+    <!-- Top Triangular Toasted Crust Surface -->
+    <polygon points="308,188 446,288 252,312" fill="url(#toastBread)" stroke="#5A2906" stroke-width="3"/>
+    <!-- Diagonal Crust Edge -->
+    <polygon points="308,188 446,288 448,298 310,198" fill="#B36118" stroke="#482205" stroke-width="1.5"/>
+
+    <!-- Distinct Diagonal Panini Flattop Grill Press Marks -->
+    <g stroke="url(#bunTop)" stroke-width="6" stroke-linecap="round" opacity="0.85">
+      <line x1="324" y1="218" x2="284" y2="295" stroke="#7A3607" stroke-width="5.5"/>
+      <line x1="352" y1="228" x2="318" y2="290" stroke="#7A3607" stroke-width="5.5"/>
+      <line x1="380" y1="238" x2="352" y2="285" stroke="#7A3607" stroke-width="5.5"/>
+      <line x1="408" y1="248" x2="386" y2="280" stroke="#7A3607" stroke-width="5.5"/>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 5. CHEF HAT (TOP CENTER)                   -->
+  <!-- ========================================== -->
+  <g id="chefHat" filter="url(#shadowDepth)">
+    <!-- Base Shading Backing to guarantee contrast on light backgrounds -->
+    <path d="M 205 168 
+             C 165 164, 160 102, 200 85
+             C 200 40, 312 40, 312 85
+             C 352 102, 347 164, 307 168 Z" 
+          fill="#31190A" opacity="0.75"/>
+
+    <!-- Outer Puffy Crown Structure -->
+    <!-- Left Puff -->
+    <path d="M 210 162 
+             C 168 158, 166 98, 208 85
+             C 214 55, 298 55, 304 85
+             C 346 98, 344 158, 302 162 Z" 
+          fill="url(#hatShadow)"/>
+
+    <!-- Billowing Front Lobes -->
+    <!-- Left Lobe -->
+    <path d="M 214 158 C 176 150, 178 100, 214 94 C 220 120, 226 142, 234 158 Z" fill="url(#hatWhite)" stroke="#52321E" stroke-width="2.5"/>
+    <!-- Right Lobe -->
+    <path d="M 298 158 C 336 150, 334 100, 298 94 C 292 120, 286 142, 278 158 Z" fill="url(#hatWhite)" stroke="#52321E" stroke-width="2.5"/>
+    <!-- Center Top Dome / Tallest Puff -->
+    <path d="M 212 94 C 215 54, 297 54, 300 94 C 282 90, 230 90, 212 94 Z" fill="url(#hatWhite)" stroke="#52321E" stroke-width="2.5"/>
+    <!-- Center Front Body -->
+    <path d="M 212 94 C 235 90, 277 90, 300 94 C 290 125, 284 155, 274 160 L 238 160 C 228 155, 222 125, 212 94 Z" fill="url(#hatWhite)" stroke="#52321E" stroke-width="2"/>
+
+    <!-- Internal Shading Creases / Pleat Shadows -->
+    <path d="M 242 98 Q 248 135 246 156" stroke="#C5B29B" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 270 98 Q 264 135 266 156" stroke="#C5B29B" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 256 94 Q 256 128 256 155" stroke="#EFE4D6" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Hat Headband / Cuff -->
+    <path d="M 214 158 C 214 154, 298 154, 298 158 L 294 178 C 294 182, 218 182, 218 178 Z" 
+          fill="url(#hatWhite)" stroke="#4A2711" stroke-width="3"/>
+    <!-- Headband Pleats -->
+    <line x1="234" y1="160" x2="234" y2="176" stroke="#BCAAA4" stroke-width="2"/>
+    <line x1="256" y1="160" x2="256" y2="176" stroke="#BCAAA4" stroke-width="2"/>
+    <line x1="278" y1="160" x2="278" y2="176" stroke="#BCAAA4" stroke-width="2"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 6. GOLDEN CRESCENT SWOOSH (BOTTOM WRAP)    -->
+  <!-- ========================================== -->
+  <g id="goldenSwoosh" filter="url(#shadowDepth)">
+    <!-- Dynamic Curved Swoosh Arc -->
+    <path d="M 45 358 
+             C 75 448, 256 468, 467 368
+             C 455 388, 385 460, 248 460
+             C 125 460, 52 408, 45 358 Z" 
+          fill="url(#swooshGrad)" stroke="#B04000" stroke-width="2"/>
+    <!-- Glowing Inner Ridge Line -->
+    <path d="M 68 382 C 120 442, 245 448, 435 385" 
+          stroke="#FFE28A" stroke-width="3.5" fill="none" opacity="0.75" stroke-linecap="round"/>
+  </g>
+</svg>

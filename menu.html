@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Food Menu | Burger &amp; Sandwich Joint</title>
+  <meta name="description" content="Explore the full food menu at Burger &amp; Sandwich Joint. Filter by signature smash burgers, gourmet sandwiches, crispy sides, and hand-spun milkshakes.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('joint_direction');
+        if (d === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+        var t = localStorage.getItem('joint_theme');
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint Home">
+          <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="38" height="38">
+          <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <div class="nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html" class="nav-dropdown-link">Home 1</a>
+              <a href="home-2.html" class="nav-dropdown-link">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="menu.html" class="nav-link active">Menu</a>
+          <a href="burgers.html" class="nav-link">Signature Burgers</a>
+          <a href="sandwiches.html" class="nav-link">Sandwiches</a>
+          <a href="combo-offers.html" class="nav-link">Combo Offers</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <!-- RTL Layout & Light/Dark Theme Toggles (Placed immediately after Contact) -->
+          <button type="button" class="nav-action-btn rtl-toggle" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
+            <svg class="rtl-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7h16M16 3l4 4-4 4"/>
+              <path d="M20 17H4M8 13l-4 4 4 4"/>
+            </svg>
+            <span class="rtl-text sr-only">RTL</span>
+          </button>
+          <button type="button" class="nav-action-btn theme-toggle" aria-label="Toggle light / dark theme" title="Toggle Light / Dark Theme">
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Details</a>
+          <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <div class="mobile-drawer-dropdown">
+        <button type="button" class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home</span>
+          <svg class="drawer-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">Home 1</a>
+          <a href="home-2.html" class="mobile-sublink">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="menu.html" class="mobile-nav-link active"><span>Menu</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="burgers.html" class="mobile-nav-link"><span>Signature Burgers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="sandwiches.html" class="mobile-nav-link"><span>Sandwiches</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="combo-offers.html" class="mobile-nav-link"><span>Combo Offers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span class="drawer-arrow">&rarr;</span></a>
+    </div>
+        <div class="mobile-drawer-footer">
+      <div class="drawer-action-toggles">
+        <button type="button" class="mobile-toggle-btn rtl-toggle" aria-label="Toggle RTL layout">
+          <svg class="rtl-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 13l-4 4 4 4"/>
+          </svg>
+          <span class="rtl-text">RTL Layout</span>
+        </button>
+        <button type="button" class="mobile-toggle-btn theme-toggle" aria-label="Toggle light / dark theme">
+          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-mode-text">Dark Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Details</a>
+      <div class="mobile-drawer-info">
+        <strong>Open 7 Days A Week</strong>
+        <span>11:00 AM – 10:30 PM</span>
+      </div>
+      <div class="mobile-drawer-info">
+        <strong>Call for Enquiries</strong>
+        <span>+1 (555) 234-5678</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT (EXACTLY 6 SECTIONS) ==================== -->
+  <main id="mainContent">
+
+    <!-- SECTION 1: MENU HERO -->
+    <section class="page-hero" id="menuHero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <span class="section-tag">Chef's Recipe Index</span>
+            <h1 class="hero-title" style="margin-bottom: 1.25rem;">FIND YOUR NEXT FAVOURITE.</h1>
+            <p class="hero-text">
+              Every dish is freshly prepared to order using prime ingredients, handcrafted bakery breads, and our proprietary house sauces. Filter by category or explore our signature house favorites below.
+            </p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#completeMenu" class="btn btn-primary btn-lg">Browse Full Menu</a>
+              <a href="combo-offers.html" class="btn btn-secondary btn-lg">Explore Meal Deals</a>
+            </div>
+          </div>
+          <div class="page-hero-visual">
+            <img src="images/image-78.png" alt="Bacon cheeseburger combo with wire basket fries and iced drink">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MENU CATEGORY RUNWAY (CATEGORY EXPRESS RUNWAY) -->
+    <section class="section section-charcoal" id="categoryNav">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Direct Category Express</span>
+          <h2 class="section-title">CHOOSE YOUR SECTION</h2>
+          <p class="section-desc">Click any category corridor below to jump directly and filter our live kitchen menu instantaneously.</p>
+        </div>
+
+        <div class="category-express-runway">
+          <div class="runway-corridors">
+            <!-- Corridor 1: Burgers -->
+            <div class="runway-corridor" onclick="document.querySelector('.filter-btn[data-filter=\'burgers\']').click(); window.location.href='#completeMenu';">
+              <span class="corridor-pill-badge">Griddle &bull; 6 Items</span>
+              <div class="corridor-dish-portal">
+                <img src="images/image-98.png" alt="Western bacon cheeseburger and star burger menu feature" loading="lazy">
+              </div>
+              <h3 class="corridor-title">Signature Burgers</h3>
+              <p class="corridor-desc">Smash Angus, spicy Southern chicken, and molten cheddar classics.</p>
+              <span class="corridor-action-pill">Filter Burgers &rarr;</span>
+            </div>
+
+            <!-- Corridor 2: Sandwiches -->
+            <div class="runway-corridor" onclick="document.querySelector('.filter-btn[data-filter=\'sandwiches\']').click(); window.location.href='#completeMenu';">
+              <span class="corridor-pill-badge">Breads &bull; 4 Items</span>
+              <div class="corridor-dish-portal">
+                <img src="images/image-97.png" alt="Gourmet sandwich quarters with potato chips and dip in catering box" loading="lazy">
+              </div>
+              <h3 class="corridor-title">Artisan Sandwiches</h3>
+              <p class="corridor-desc">Triple-decker clubs, pressed paninis, and slow-simmered deli melts.</p>
+              <span class="corridor-action-pill">Filter Sandwiches &rarr;</span>
+            </div>
+
+            <!-- Corridor 3: Sides -->
+            <div class="runway-corridor" onclick="document.querySelector('.filter-btn[data-filter=\'sides\']').click(); window.location.href='#completeMenu';">
+              <span class="corridor-pill-badge">Crunch &bull; 4 Items</span>
+              <div class="corridor-dish-portal">
+                <img src="images/image-44.png" alt="Tower of crispy golden panko onion rings on metal spindle with dips" loading="lazy">
+              </div>
+              <h3 class="corridor-title">Crispy Sides</h3>
+              <p class="corridor-desc">Beer-battered onion rings, mozzarella pulls, and seasoned fries.</p>
+              <span class="corridor-action-pill">Filter Sides &rarr;</span>
+            </div>
+
+            <!-- Corridor 4: Drinks -->
+            <div class="runway-corridor" onclick="document.querySelector('.filter-btn[data-filter=\'beverages\']').click(); window.location.href='#completeMenu';">
+              <span class="corridor-pill-badge">Chilled &bull; 4 Items</span>
+              <div class="corridor-dish-portal">
+                <img src="images/image-56.png" alt="Creamy thick strawberry milkshake overflowing with whipped cream and berry sprinkles" loading="lazy">
+              </div>
+              <h3 class="corridor-title">Handcrafted Drinks</h3>
+              <p class="corridor-desc">Malt milkshakes, fresh lemonades, and iced fountain coolers.</p>
+              <span class="corridor-action-pill">Filter Drinks &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COMPLETE FOOD MENU (24 CRAFT ITEMS WITH DYNAMIC FILTERING) -->
+    <section class="section section-dark" id="completeMenu">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Kitchen Menu</span>
+          <h2 class="section-title">THE COMPLETE CRAFT SELECTION</h2>
+          <p class="section-desc">Select a category below to filter products dynamically without reloading the page.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn" id="burgers" data-filter="burgers">Burgers</button>
+          <button class="filter-btn" id="sandwiches" data-filter="sandwiches">Sandwiches</button>
+          <button class="filter-btn" id="sides" data-filter="sides">Sides</button>
+          <button class="filter-btn" id="beverages" data-filter="beverages">Beverages</button>
+        </div>
+
+        <!-- 6 Cards Grid -->
+        <div class="grid-6" id="menuGrid">
+          <!-- Item 1 (BURGERS) -->
+          <div class="food-card menu-filter-item" data-category="burgers" data-title="Slow-Cooked Pulled Beef Burger" data-price="$12.99" data-desc="Slow-cooked beef brisket braised for 8 hours in aromatic broth, shredded and tossed in barbecue glaze with molten cheddar." data-img="images/image-99.png" data-ingredients="Braised Brisket, Molten Cheddar, Dill Pickles, Brioche Bun">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-special">Slow Braised</span>
+              <img src="images/image-99.png" alt="Slow-cooked pulled beef brisket burgers with melted cheese and pickles on brioche" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Slow-Cooked Pulled Beef Burger</h3>
+                <span class="food-card-price">$12.99</span>
+              </div>
+              <p class="food-card-desc">Slow-cooked beef brisket braised for 8 hours in aromatic broth, shredded and tossed in barbecue glaze with molten cheddar.</p>
+              <div class="food-card-ingredients">
+                <span>Braised Brisket</span>
+                <span>Molten Cheddar</span>
+                <span>Dill Pickles</span>
+                <span>Brioche Bun</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 (BURGERS) -->
+          <div class="food-card menu-filter-item" data-category="burgers" data-title="Crispy Southern Chicken Deluxe" data-price="$11.99" data-desc="Buttermilk-brined fried chicken breast with crunchy purple cabbage slaw, crinkle-cut pickles, and roasted garlic aioli." data-img="images/image-101.png" data-ingredients="Fried Chicken, Purple Slaw, Garlic Aioli, Brioche Bun">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Popular</span>
+              <img src="images/image-101.png" alt="Crispy fried chicken burger on wooden board with wire basket of fries and coleslaw" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Crispy Southern Chicken Deluxe</h3>
+                <span class="food-card-price">$11.99</span>
+              </div>
+              <p class="food-card-desc">Buttermilk-brined fried chicken breast with crunchy purple cabbage slaw, crinkle-cut pickles, and roasted garlic aioli.</p>
+              <div class="food-card-ingredients">
+                <span>Fried Chicken</span>
+                <span>Purple Slaw</span>
+                <span>Garlic Aioli</span>
+                <span>Brioche Bun</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 (BURGERS) -->
+          <div class="food-card menu-filter-item" data-category="burgers" data-title="The Oklahoma Double Smash" data-price="$11.99" data-desc="Lacy crispy-edged twin Angus beef patties griddled with paper-thin sweet onions, double melted American cheddar, and relish." data-img="images/image-1.png" data-ingredients="Angus Beef, Griddled Onions, Molten Cheddar, Brioche">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Bestseller</span>
+              <img src="images/image-1.png" alt="Gourmet double smash cheeseburger with caramelized onions and melted cheddar on slate" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">The Oklahoma Double Smash</h3>
+                <span class="food-card-price">$11.99</span>
+              </div>
+              <p class="food-card-desc">Lacy crispy-edged twin Angus beef patties griddled with paper-thin sweet onions, double melted American cheddar, and relish.</p>
+              <div class="food-card-ingredients">
+                <span>Angus Beef</span>
+                <span>Griddled Onions</span>
+                <span>Molten Cheddar</span>
+                <span>Brioche</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 (BURGERS) -->
+          <div class="food-card menu-filter-item" data-category="burgers" data-title="Alpine Mushroom Swiss" data-price="$12.49" data-desc="Juicy flame-grilled Angus beef topped with garlic-sautéed button mushrooms, caramelized onions, and velvety melted Swiss cheese." data-img="images/image-6.png" data-ingredients="Flame Beef, Button Mushrooms, Swiss Cheese, Herb Mayo">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Chef's Choice</span>
+              <img src="images/image-6.png" alt="Alpine Mushroom Swiss burger with sautéed button mushrooms" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Alpine Mushroom Swiss</h3>
+                <span class="food-card-price">$12.49</span>
+              </div>
+              <p class="food-card-desc">Juicy flame-grilled Angus beef topped with garlic-sautéed button mushrooms, caramelized onions, and velvety melted Swiss cheese.</p>
+              <div class="food-card-ingredients">
+                <span>Flame Beef</span>
+                <span>Button Mushrooms</span>
+                <span>Swiss Cheese</span>
+                <span>Herb Mayo</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 (BURGERS) -->
+          <div class="food-card menu-filter-item" data-category="burgers" data-title="Nashville Hot Fire Chicken" data-price="$11.49" data-desc="Crispy Southern fried chicken breast dipped in fiery cayenne oil glaze, layered with crunchy crinkle pickles and comeback sauce." data-img="images/image-16.png" data-ingredients="Fried Chicken, Cayenne Oil, Crinkle Pickles, Comeback Sauce">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-special">Spicy Hot</span>
+              <img src="images/image-16.png" alt="Nashville Hot Fire Chicken burger with spicy red comeback sauce" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Nashville Hot Fire Chicken</h3>
+                <span class="food-card-price">$11.49</span>
+              </div>
+              <p class="food-card-desc">Crispy Southern fried chicken breast dipped in fiery cayenne oil glaze, layered with crunchy crinkle pickles and comeback sauce.</p>
+              <div class="food-card-ingredients">
+                <span>Fried Chicken</span>
+                <span>Cayenne Oil</span>
+                <span>Crinkle Pickles</span>
+                <span>Comeback Sauce</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 (BURGERS) -->
+          <div class="food-card menu-filter-item" data-category="burgers" data-title="Western BBQ Bacon Stack" data-price="$13.29" data-desc="Double beef patties stacked with thick applewood-smoked bacon, beer-battered onion rings, and rich smoky barbecue sauce." data-img="images/image-13.png" data-ingredients="Double Patty, Smoked Bacon, Crispy Onion Rings, BBQ Glaze">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">House Special</span>
+              <img src="images/image-13.png" alt="Western BBQ bacon burger stacked with crispy onion rings" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Western BBQ Bacon Stack</h3>
+                <span class="food-card-price">$13.29</span>
+              </div>
+              <p class="food-card-desc">Double beef patties stacked with thick applewood-smoked bacon, beer-battered onion rings, and rich smoky barbecue sauce.</p>
+              <div class="food-card-ingredients">
+                <span>Double Patty</span>
+                <span>Smoked Bacon</span>
+                <span>Crispy Onion Rings</span>
+                <span>BBQ Glaze</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 (SANDWICHES) -->
+          <div class="food-card menu-filter-item" data-category="sandwiches" data-title="Triple-Decker Club Supreme" data-price="$11.49" data-desc="Three layers of golden butter-toasted bread stacked with shaved roasted turkey, smoked bacon, crisp romaine, and ripe tomato." data-img="images/image-82.png" data-ingredients="Roast Turkey, Applewood Bacon, Crisp Romaine, House Mayo">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Deli Classic</span>
+              <img src="images/image-82.png" alt="Toasted club sandwich cut into four triangles with golden fries in center" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Triple-Decker Club Supreme</h3>
+                <span class="food-card-price">$11.49</span>
+              </div>
+              <p class="food-card-desc">Three layers of golden butter-toasted bread stacked with shaved roasted turkey, smoked bacon, crisp romaine, and ripe tomato.</p>
+              <div class="food-card-ingredients">
+                <span>Roast Turkey</span>
+                <span>Applewood Bacon</span>
+                <span>Crisp Romaine</span>
+                <span>House Mayo</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 (SANDWICHES) -->
+          <div class="food-card menu-filter-item" data-category="sandwiches" data-title="Three-Cheese Sourdough Melt" data-price="$9.99" data-desc="Thick artisan sourdough buttered and grilled golden, overflowing with molten sharp cheddar, whole milk mozzarella, and provolone." data-img="images/image-83.png" data-ingredients="Sharp Cheddar, Mozzarella, Provolone, Rustic Sourdough">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-veg">Vegetarian</span>
+              <img src="images/image-83.png" alt="Multi-layer grilled cheese sandwich with melted cheese dripping on metal cafeteria tray" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Three-Cheese Sourdough Melt</h3>
+                <span class="food-card-price">$9.99</span>
+              </div>
+              <p class="food-card-desc">Thick artisan sourdough buttered and grilled golden, overflowing with molten sharp cheddar, whole milk mozzarella, and provolone.</p>
+              <div class="food-card-ingredients">
+                <span>Sharp Cheddar</span>
+                <span>Mozzarella</span>
+                <span>Provolone</span>
+                <span>Rustic Sourdough</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9 (SANDWICHES) -->
+          <div class="food-card menu-filter-item" data-category="sandwiches" data-title="Chicken Mozzarella Pesto Panini" data-price="$11.29" data-desc="Flame-grilled chicken breast pressed on artisan focaccia with fragrant basil pesto, ripe vine tomato, and melted mozzarella." data-img="images/image-29.png" data-ingredients="Grilled Chicken, Fresh Mozzarella, Basil Pesto, Baby Spinach">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Chef's Choice</span>
+              <img src="images/image-29.png" alt="Toasted chicken and melted mozzarella panini with distinct grill marks and spinach" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Chicken Mozzarella Pesto Panini</h3>
+                <span class="food-card-price">$11.29</span>
+              </div>
+              <p class="food-card-desc">Flame-grilled chicken breast pressed on artisan focaccia with fragrant basil pesto, ripe vine tomato, and melted mozzarella.</p>
+              <div class="food-card-ingredients">
+                <span>Grilled Chicken</span>
+                <span>Fresh Mozzarella</span>
+                <span>Basil Pesto</span>
+                <span>Baby Spinach</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 (SANDWICHES) -->
+          <div class="food-card menu-filter-item" data-category="sandwiches" data-title="Classic Italian Cold-Cut Sub" data-price="$11.99" data-desc="Fresh-baked submarine roll packed with Genoa salami, mortadella, smoked ham, aged provolone, shredded lettuce, and vinaigrette." data-img="images/image-35.png" data-ingredients="Genoa Salami, Smoked Ham, Aged Provolone, Vinaigrette">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">House Special</span>
+              <img src="images/image-35.png" alt="Italian cold-cut submarine hoagie loaded with salami, ham and provolone" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Classic Italian Cold-Cut Sub</h3>
+                <span class="food-card-price">$11.99</span>
+              </div>
+              <p class="food-card-desc">Fresh-baked submarine roll packed with Genoa salami, mortadella, smoked ham, aged provolone, shredded lettuce, and vinaigrette.</p>
+              <div class="food-card-ingredients">
+                <span>Genoa Salami</span>
+                <span>Smoked Ham</span>
+                <span>Aged Provolone</span>
+                <span>Vinaigrette</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11 (SANDWICHES) -->
+          <div class="food-card menu-filter-item" data-category="sandwiches" data-title="Philly Cheesesteak Hoagie" data-price="$12.49" data-desc="Thinly sliced ribeye steak seared on the flat-top with sweet caramelized onions, bell peppers, and molten provolone on a hoagie." data-img="images/image-40.png" data-ingredients="Shaved Ribeye, Caramelized Onions, Sweet Peppers, Provolone">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Bestseller</span>
+              <img src="images/image-40.png" alt="Classic Philly cheesesteak sub in soft hoagie roll with chopped steak and melted cheese" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Philly Cheesesteak Hoagie</h3>
+                <span class="food-card-price">$12.49</span>
+              </div>
+              <p class="food-card-desc">Thinly sliced ribeye steak seared on the flat-top with sweet caramelized onions, bell peppers, and molten provolone on a hoagie.</p>
+              <div class="food-card-ingredients">
+                <span>Shaved Ribeye</span>
+                <span>Caramelized Onions</span>
+                <span>Sweet Peppers</span>
+                <span>Provolone</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12 (SANDWICHES) -->
+          <div class="food-card menu-filter-item" data-category="sandwiches" data-title="Mediterranean Grilled Veggie Melt" data-price="$10.49" data-desc="Fire-roasted zucchini, grilled eggplant, sweet bell peppers, and sun-dried tomato spread with melted mozzarella on sourdough." data-img="images/image-31.png" data-ingredients="Roasted Zucchini, Grilled Eggplant, Sun-Dried Tomato, Mozzarella">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-veg">Vegetarian</span>
+              <img src="images/image-31.png" alt="Mediterranean grilled vegetable sandwich on sourdough with zucchini, eggplant and basil" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Mediterranean Grilled Veggie Melt</h3>
+                <span class="food-card-price">$10.49</span>
+              </div>
+              <p class="food-card-desc">Fire-roasted zucchini, grilled eggplant, sweet bell peppers, and sun-dried tomato spread with melted mozzarella on sourdough.</p>
+              <div class="food-card-ingredients">
+                <span>Roasted Zucchini</span>
+                <span>Grilled Eggplant</span>
+                <span>Sun-Dried Tomato</span>
+                <span>Mozzarella</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 13 (SIDES) -->
+          <div class="food-card menu-filter-item" data-category="sides" data-title="Loaded Fiesta Party Nachos" data-price="$8.99" data-desc="Warm stone-ground tortilla chips smothered in molten cheddar sauce, pickled jalapeño rings, black olives, and fresh cilantro." data-img="images/image-46.png" data-ingredients="Tortilla Chips, Molten Cheddar, Pickled Jalapeños, Cilantro">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-veg">Shareable</span>
+              <img src="images/image-46.png" alt="Loaded party nachos platter with melted cheese sauce, sliced pickled jalapeños and salsa" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Loaded Fiesta Party Nachos</h3>
+                <span class="food-card-price">$8.99</span>
+              </div>
+              <p class="food-card-desc">Warm stone-ground tortilla chips smothered in molten cheddar sauce, pickled jalapeño rings, black olives, and fresh cilantro.</p>
+              <div class="food-card-ingredients">
+                <span>Tortilla Chips</span>
+                <span>Molten Cheddar</span>
+                <span>Pickled Jalapeños</span>
+                <span>Cilantro</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 14 (SIDES) -->
+          <div class="food-card menu-filter-item" data-category="sides" data-title="Golden Skin-On Basket Fries" data-price="$4.49" data-desc="Russet potatoes hand-cut with skin-on, double-fried to golden perfection, seasoned with sea salt and served with garlic aioli." data-img="images/image-47.png" data-ingredients="Russet Potatoes, Sea Salt, Cracked Pepper, Garlic Aioli">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Classic</span>
+              <img src="images/image-47.png" alt="Crispy golden french fries served in wire basket with ketchup and mayo" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Golden Skin-On Basket Fries</h3>
+                <span class="food-card-price">$4.49</span>
+              </div>
+              <p class="food-card-desc">Russet potatoes hand-cut with skin-on, double-fried to golden perfection, seasoned with sea salt and served with garlic aioli.</p>
+              <div class="food-card-ingredients">
+                <span>Russet Potatoes</span>
+                <span>Sea Salt</span>
+                <span>Cracked Pepper</span>
+                <span>Garlic Aioli</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 15 (SIDES) -->
+          <div class="food-card menu-filter-item" data-category="sides" data-title="Crispy Panko Onion Rings" data-price="$5.99" data-desc="Thick-cut sweet Spanish onions dredged in crispy panko breadcrumbs and flash-fried crisp, served with smoky paprika dip." data-img="images/image-44.png" data-ingredients="Spanish Onions, Panko Crust, Smoked Paprika, Herb Dip">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-veg">Popular</span>
+              <img src="images/image-44.png" alt="Tower of crispy golden panko onion rings on metal spindle with dips" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Crispy Panko Onion Rings</h3>
+                <span class="food-card-price">$5.99</span>
+              </div>
+              <p class="food-card-desc">Thick-cut sweet Spanish onions dredged in crispy panko breadcrumbs and flash-fried crisp, served with smoky paprika dip.</p>
+              <div class="food-card-ingredients">
+                <span>Spanish Onions</span>
+                <span>Panko Crust</span>
+                <span>Smoked Paprika</span>
+                <span>Herb Dip</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 16 (SIDES) -->
+          <div class="food-card menu-filter-item" data-category="sides" data-title="Sizzling Loaded Skillet Fries" data-price="$7.99" data-desc="Hot cast-iron skillet loaded with crispy fries, melted sharp cheddar, crispy chopped bacon crumbles, ranch drizzle, and scallions." data-img="images/image-43.png" data-ingredients="Crispy Fries, Cheddar Sauce, Bacon Crumbles, Green Scallions">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">House Special</span>
+              <img src="images/image-43.png" alt="Sizzling cast-iron skillet filled with loaded cheese fries, bacon and scallions" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Sizzling Loaded Skillet Fries</h3>
+                <span class="food-card-price">$7.99</span>
+              </div>
+              <p class="food-card-desc">Hot cast-iron skillet loaded with crispy fries, melted sharp cheddar, crispy chopped bacon crumbles, ranch drizzle, and scallions.</p>
+              <div class="food-card-ingredients">
+                <span>Crispy Fries</span>
+                <span>Cheddar Sauce</span>
+                <span>Bacon Crumbles</span>
+                <span>Green Scallions</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 17 (SIDES) -->
+          <div class="food-card menu-filter-item" data-category="sides" data-title="Golden Mozzarella Cheese Sticks" data-price="$6.49" data-desc="Stringy whole-milk mozzarella cheese sticks coated in Italian herb seasoning, fried crispy golden and served with warm marinara." data-img="images/image-45.png" data-ingredients="Whole Mozzarella, Italian Herbs, Crispy Crust, Marinara Dip">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-veg">Vegetarian</span>
+              <img src="images/image-45.png" alt="Crispy deep-fried mozzarella sticks stacked with gooey cheese pull and marinara" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Golden Mozzarella Cheese Sticks</h3>
+                <span class="food-card-price">$6.49</span>
+              </div>
+              <p class="food-card-desc">Stringy whole-milk mozzarella cheese sticks coated in Italian herb seasoning, fried crispy golden and served with warm marinara.</p>
+              <div class="food-card-ingredients">
+                <span>Whole Mozzarella</span>
+                <span>Italian Herbs</span>
+                <span>Crispy Crust</span>
+                <span>Marinara Dip</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 18 (SIDES) -->
+          <div class="food-card menu-filter-item" data-category="sides" data-title="Sweet Potato Waffle Fries" data-price="$5.49" data-desc="Naturally sweet sweet-potato fries cut waffle-style, fried extra crispy, dusted with cinnamon sea salt, and served with honey mustard." data-img="images/image-48.png" data-ingredients="Sweet Potatoes, Cinnamon Salt, Honey Mustard, Garlic Dip">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-veg">Vegetarian</span>
+              <img src="images/image-48.png" alt="Sharing tray of seasoned crispy sweet potato fries with creamy dipping sauce" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Sweet Potato Waffle Fries</h3>
+                <span class="food-card-price">$5.49</span>
+              </div>
+              <p class="food-card-desc">Naturally sweet sweet-potato fries cut waffle-style, fried extra crispy, dusted with cinnamon sea salt, and served with honey mustard.</p>
+              <div class="food-card-ingredients">
+                <span>Sweet Potatoes</span>
+                <span>Cinnamon Salt</span>
+                <span>Honey Mustard</span>
+                <span>Garlic Dip</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 19 (BEVERAGES) -->
+          <div class="food-card menu-filter-item" data-category="beverages" data-title="Vanilla Bean Handcrafted Shake" data-price="$5.49" data-desc="Hand-spun Madagascar vanilla bean ice cream with pure whole milk, finished with a generous crown of whipped cream." data-img="images/image-57.png" data-ingredients="Madagascar Vanilla, Whole Milk, Vanilla Swirl, Whipped Cream">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Hand-Spun</span>
+              <img src="images/image-57.png" alt="Classic handcrafted vanilla bean milkshake in tall tumbler with whipped cream" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Vanilla Bean Handcrafted Shake</h3>
+                <span class="food-card-price">$5.49</span>
+              </div>
+              <p class="food-card-desc">Hand-spun Madagascar vanilla bean ice cream with pure whole milk, finished with a generous crown of whipped cream.</p>
+              <div class="food-card-ingredients">
+                <span>Madagascar Vanilla</span>
+                <span>Whole Milk</span>
+                <span>Vanilla Swirl</span>
+                <span>Whipped Cream</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 20 (BEVERAGES) -->
+          <div class="food-card menu-filter-item" data-category="beverages" data-title="Fresh Strawberry Cream Shake" data-price="$5.99" data-desc="Ripe California strawberries blended with rich vanilla cream and whole milk, topped with whipped cream and strawberry drizzle." data-img="images/image-56.png" data-ingredients="Fresh Strawberries, Whole Milk, Vanilla Cream, Berry Drizzle">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Popular</span>
+              <img src="images/image-56.png" alt="Creamy thick strawberry milkshake overflowing with whipped cream and berry sprinkles" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Fresh Strawberry Cream Shake</h3>
+                <span class="food-card-price">$5.99</span>
+              </div>
+              <p class="food-card-desc">Ripe California strawberries blended with rich vanilla cream and whole milk, topped with whipped cream and strawberry drizzle.</p>
+              <div class="food-card-ingredients">
+                <span>Fresh Strawberries</span>
+                <span>Whole Milk</span>
+                <span>Vanilla Cream</span>
+                <span>Berry Drizzle</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 21 (BEVERAGES) -->
+          <div class="food-card menu-filter-item" data-category="beverages" data-title="Hand-Squeezed Fresh Lemonade" data-price="$3.99" data-desc="Daily hand-squeezed Eureka lemons blended with pure cane sugar syrup and chilled sparkling water, garnished with fresh mint." data-img="images/image-55.png" data-ingredients="Eureka Lemons, Cane Sugar, Sparkling Water, Fresh Mint">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Refreshing</span>
+              <img src="images/image-55.png" alt="Refreshing iced homemade lemonade garnished with mint sprigs and lemon wheels" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Hand-Squeezed Fresh Lemonade</h3>
+                <span class="food-card-price">$3.99</span>
+              </div>
+              <p class="food-card-desc">Daily hand-squeezed Eureka lemons blended with pure cane sugar syrup and chilled sparkling water, garnished with fresh mint.</p>
+              <div class="food-card-ingredients">
+                <span>Eureka Lemons</span>
+                <span>Cane Sugar</span>
+                <span>Sparkling Water</span>
+                <span>Fresh Mint</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 22 (BEVERAGES) -->
+          <div class="food-card menu-filter-item" data-category="beverages" data-title="Vietnamese Iced Cold Brew" data-price="$4.99" data-desc="Slow-dripped dark roast Vietnamese coffee poured over ice and swirled with creamy sweetened condensed milk for a bold finish." data-img="images/image-58.png" data-ingredients="Dark Roast Coffee, Condensed Milk, Crushed Ice, Arabica Bean">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Specialty</span>
+              <img src="images/image-58.png" alt="Vietnamese iced coffee with swirling condensed milk and coffee beans" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Vietnamese Iced Cold Brew</h3>
+                <span class="food-card-price">$4.99</span>
+              </div>
+              <p class="food-card-desc">Slow-dripped dark roast Vietnamese coffee poured over ice and swirled with creamy sweetened condensed milk for a bold finish.</p>
+              <div class="food-card-ingredients">
+                <span>Dark Roast Coffee</span>
+                <span>Condensed Milk</span>
+                <span>Crushed Ice</span>
+                <span>Arabica Bean</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 23 (BEVERAGES) -->
+          <div class="food-card menu-filter-item" data-category="beverages" data-title="Iced Citrus Mint Mason Cooler" data-price="$4.29" data-desc="Crisp sparkling infusion of fresh Meyer lemon slices, lime wheels, and crushed garden mint served ice-cold in a rustic mason jar." data-img="images/image-60.png" data-ingredients="Meyer Lemon, Fresh Lime, Garden Mint, Chilled Soda">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Refreshing</span>
+              <img src="images/image-60.png" alt="Refreshing iced lemonade in mason jar with lemon wheels and fresh mint on sunny table" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Iced Citrus Mint Mason Cooler</h3>
+                <span class="food-card-price">$4.29</span>
+              </div>
+              <p class="food-card-desc">Crisp sparkling infusion of fresh Meyer lemon slices, lime wheels, and crushed garden mint served ice-cold in a rustic mason jar.</p>
+              <div class="food-card-ingredients">
+                <span>Meyer Lemon</span>
+                <span>Fresh Lime</span>
+                <span>Garden Mint</span>
+                <span>Chilled Soda</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 24 (BEVERAGES) -->
+          <div class="food-card menu-filter-item" data-category="beverages" data-title="Soda Fountain Vanilla Malt Float" data-price="$5.79" data-desc="Classic fountain soda with two scoops of velvety vanilla bean ice cream, malted barley syrup, whipped cream, and sprinkles." data-img="images/image-61.png" data-ingredients="Vanilla Ice Cream, Malted Barley, Craft Soda, Whipped Cream">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Retro Classic</span>
+              <img src="images/image-61.png" alt="Retro soda fountain vanilla malt milkshake with whipped cream, sprinkles and striped straw" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Soda Fountain Vanilla Malt Float</h3>
+                <span class="food-card-price">$5.79</span>
+              </div>
+              <p class="food-card-desc">Classic fountain soda with two scoops of velvety vanilla bean ice cream, malted barley syrup, whipped cream, and sprinkles.</p>
+              <div class="food-card-ingredients">
+                <span>Vanilla Ice Cream</span>
+                <span>Malted Barley</span>
+                <span>Craft Soda</span>
+                <span>Whipped Cream</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width: 100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: OUR SIGNATURE FAVOURITES (4 CARDS) -->
+    <section class="section section-charcoal" id="signatureFavourites">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Crowd Favorites</span>
+          <h2 class="section-title">THE LOCAL LEGENDS</h2>
+          <p class="section-desc">These four bestselling combinations have earned legendary status among our neighborhood diners.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Fav 1 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">#1 Ranked</span>
+              <img src="images/image-52.png" alt="Double smash burger combo on metal tray with crinkle-cut fries and iced cola" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Double Smash Angus Combo</h3>
+                <span class="food-card-price">$13.49</span>
+              </div>
+              <p class="food-card-desc">Double smash patties, crinkle-cut fries, signature fry sauce dip, and a fountain beverage.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fav 2 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Decadent</span>
+              <img src="images/image-54.png" alt="Gourmet bacon cheeseburger with upright fries in cup and chocolate milkshake" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Bacon Burger &amp; Shake Combo</h3>
+                <span class="food-card-price">$15.99</span>
+              </div>
+              <p class="food-card-desc">Brioche bacon cheeseburger, stainless-cup fries, and a towering hand-spun chocolate shake.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fav 3 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Twin Sub</span>
+              <img src="images/image-84.png" alt="Sub combo meal with roast beef and Italian cold cut sub with fries and iced cola" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Deli Sub Twin Combo</h3>
+                <span class="food-card-price">$14.29</span>
+              </div>
+              <p class="food-card-desc">Roast beef and Italian deli submarine halves with crinkle fries and an ice-cold fountain cola.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fav 4 -->
+          <div class="food-card">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Sweet &amp; Savory</span>
+              <img src="images/image-80.png" alt="Gourmet double cheeseburger on slate with fries and tall strawberry milkshake" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Double Cheddar Strawberry Feast</h3>
+                <span class="food-card-price">$14.99</span>
+              </div>
+              <p class="food-card-desc">Gourmet double beef cheeseburger, seasoned potato fries, and a rich strawberry cream shake.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ADD SOMETHING EXTRA (ADDON DEGUSTATION LEDGER) -->
+    <section class="section section-cream" id="addons">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Perfect Accompaniments</span>
+          <h2 class="section-title">ADD SOMETHING EXTRA</h2>
+          <p class="section-desc">Upgrade your dining experience with these craveable side additions and handcrafted drink pairings.</p>
+        </div>
+
+        <div class="addon-degustation-ledger">
+          <!-- Left: Hero Side Spotlight (image-45.png) -->
+          <div class="addon-hero-stage">
+            <img src="images/image-45.png" alt="Crispy deep-fried mozzarella sticks stacked with gooey cheese pull and marinara" loading="lazy">
+            <div class="addon-hero-badge">
+              <span>&#9733;</span>
+              <span>CHEF'S SIGNATURE SIDES &bull; $4.99</span>
+            </div>
+            <div class="addon-hero-caption">
+              <strong>Mozzarella Cheese Sticks</strong>
+              <span>Herb-seasoned crumbed mozzarella sticks fried golden with hot marinara dip and molten cheese pull.</span>
+            </div>
+          </div>
+
+          <!-- Right: 3-Tier Tasting Ledger -->
+          <div class="addon-ledger-column">
+            <!-- Row 1: Sweet Potato Fries (image-48.png) -->
+            <div class="addon-ledger-row">
+              <div class="addon-ledger-thumb">
+                <img src="images/image-48.png" alt="Sharing tray of seasoned crispy sweet potato fries with creamy dipping sauce" loading="lazy">
+              </div>
+              <div class="addon-row-info">
+                <h4>Sweet Potato Fries</h4>
+                <p>Golden crisp crinkle cuts served with our signature honey-garlic aioli dip.</p>
+              </div>
+              <div class="addon-row-pricing">
+                <span class="addon-price-tag">$5.49</span>
+                <span class="addon-category-tag">Crinkle Cut</span>
+              </div>
+            </div>
+
+            <!-- Row 2: Beer Battered Onion Rings (image-53.png) -->
+            <div class="addon-ledger-row">
+              <div class="addon-ledger-thumb">
+                <img src="images/image-53.png" alt="Spectacular high mound of beer-battered crispy onion rings with dipping sauce" loading="lazy">
+              </div>
+              <div class="addon-row-info">
+                <h4>Beer-Battered Onion Rings</h4>
+                <p>Colossal sweet yellow onions fried in light craft beer batter with smoky fry dip.</p>
+              </div>
+              <div class="addon-row-pricing">
+                <span class="addon-price-tag">$4.99</span>
+                <span class="addon-category-tag">Craft Battered</span>
+              </div>
+            </div>
+
+            <!-- Row 3: Vietnamese Cold Brew (image-58.png) -->
+            <div class="addon-ledger-row">
+              <div class="addon-ledger-thumb">
+                <img src="images/image-58.png" alt="Vietnamese iced coffee with swirling condensed milk and coffee beans" loading="lazy">
+              </div>
+              <div class="addon-row-info">
+                <h4>Vietnamese Cold Brew</h4>
+                <p>Slow-steeped dark roast poured over crushed ice with sweet condensed milk.</p>
+              </div>
+              <div class="addon-row-pricing">
+                <span class="addon-price-tag">$4.79</span>
+                <span class="addon-category-tag">Slow Steeped</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: MENU DISCOVERY CTA -->
+    <section class="section section-dark" id="menuCta">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-bg">
+            <img src="images/image-85.png" alt="Flat lay of grilled sandwiches, sesame bun, fries and iced cola" loading="lazy">
+          </div>
+          <div class="cta-banner-content">
+            <span class="section-tag" style="background:rgba(255,255,255,0.2); color:#fff; border-color:rgba(255,255,255,0.4);">Ready To Order?</span>
+            <h2>FOUND YOUR FAVOURITE? MAKE IT A MEAL.</h2>
+            <p>
+              Combine any burger or sandwich with our hot seasoned sides and a cold craft beverage to unlock special meal combo savings.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="combo-offers.html" class="btn btn-white btn-lg">Explore Combo Offers</a>
+            <a href="contact.html" class="btn btn-dark btn-lg">Contact &amp; Location</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint">
+            <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="44" height="44">
+            <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+          </a>
+          <p>Casual burger and sandwich restaurant crafting big-flavour meals with fresh ingredients, artisan breads, and warm neighborhood hospitality.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Joint</h4>
+          <div class="footer-links">
+            <a href="index.html">Home 1 (Main)</a>
+            <a href="home-2.html">Home 2 (Discovery)</a>
+            <a href="about.html">About Our Passion</a>
+            <a href="services.html">Catering &amp; Services</a>
+            <a href="contact.html">Contact &amp; Location</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Food Collections</h4>
+          <div class="footer-links">
+            <a href="burgers.html">Signature Burgers</a>
+            <a href="sandwiches.html">Sandwich Studio</a>
+            <a href="combo-offers.html">Value Combo Offers</a>
+            <a href="menu.html">Complete Food Menu</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hours &amp; Location</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span>Monday – Thursday</span>
+              <span>11:00 AM – 10:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Friday – Saturday</span>
+              <span>11:00 AM – 11:30 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Sunday</span>
+              <span>11:30 AM – 10:00 PM</span>
+            </div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.88rem; color: #bbb;">
+            &bull; 142 Market Street, Downtown<br>
+            &bull; Phone: +1 (555) 234-5678
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Burger &amp; Sandwich Joint. All rights reserved.</span>
+        <span>Crafted for Great Taste &bull; Fresh &bull; Made to Order</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Product Detail Modal -->
+  <div id="productModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <div class="modal-header">
+            <span class="section-tag">Chef's Signature Selection</span>
+            <h3 class="modal-title">Product Details</h3>
+          </div>
+          <div class="modal-price">$0.00</div>
+          <p class="modal-desc"></p>
+          <h4 class="modal-ingredients-heading">Featured Ingredients:</h4>
+          <div class="food-card-ingredients modal-ingredients"></div>
+          <div class="modal-action-wrap">
+            <a href="contact.html" class="btn btn-primary" style="width:100%;">Order / Enquire Today</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Drop to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll to top" title="Scroll to top">
+    <svg class="to-top-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>
+

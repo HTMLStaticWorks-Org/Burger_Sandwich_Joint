@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combo Offers &amp; Meal Deals | Burger &amp; Sandwich Joint</title>
+  <meta name="description" content="Save big with our curated combo offers, family sharing boxes, and build-your-own meal builder. Fresh burgers, hot fries, and cold drinks bundled to perfection.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('joint_direction');
+        if (d === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+        var t = localStorage.getItem('joint_theme');
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint Home">
+          <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="38" height="38">
+          <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <div class="nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html" class="nav-dropdown-link">Home 1</a>
+              <a href="home-2.html" class="nav-dropdown-link">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="burgers.html" class="nav-link">Signature Burgers</a>
+          <a href="sandwiches.html" class="nav-link">Sandwiches</a>
+          <a href="combo-offers.html" class="nav-link active">Combo Offers</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <!-- RTL Layout & Light/Dark Theme Toggles (Placed immediately after Contact) -->
+          <button type="button" class="nav-action-btn rtl-toggle" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
+            <svg class="rtl-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7h16M16 3l4 4-4 4"/>
+              <path d="M20 17H4M8 13l-4 4 4 4"/>
+            </svg>
+            <span class="rtl-text sr-only">RTL</span>
+          </button>
+          <button type="button" class="nav-action-btn theme-toggle" aria-label="Toggle light / dark theme" title="Toggle Light / Dark Theme">
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Details</a>
+          <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <div class="mobile-drawer-dropdown">
+        <button type="button" class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home</span>
+          <svg class="drawer-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">Home 1</a>
+          <a href="home-2.html" class="mobile-sublink">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="menu.html" class="mobile-nav-link"><span>Menu</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="burgers.html" class="mobile-nav-link"><span>Signature Burgers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="sandwiches.html" class="mobile-nav-link"><span>Sandwiches</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="combo-offers.html" class="mobile-nav-link active"><span>Combo Offers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span class="drawer-arrow">&rarr;</span></a>
+    </div>
+        <div class="mobile-drawer-footer">
+      <div class="drawer-action-toggles">
+        <button type="button" class="mobile-toggle-btn rtl-toggle" aria-label="Toggle RTL layout">
+          <svg class="rtl-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 13l-4 4 4 4"/>
+          </svg>
+          <span class="rtl-text">RTL Layout</span>
+        </button>
+        <button type="button" class="mobile-toggle-btn theme-toggle" aria-label="Toggle light / dark theme">
+          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-mode-text">Dark Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Details</a>
+      <div class="mobile-drawer-info">
+        <strong>Open 7 Days A Week</strong>
+        <span>11:00 AM – 10:30 PM</span>
+      </div>
+      <div class="mobile-drawer-info">
+        <strong>Call for Enquiries</strong>
+        <span>+1 (555) 234-5678</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT (EXACTLY 6 SECTIONS) ==================== -->
+  <main id="mainContent">
+
+    <!-- SECTION 1: COMBO HERO -->
+    <section class="page-hero" id="comboHero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <span class="section-tag">Value Dining Packages</span>
+            <h1 class="hero-title" style="margin-bottom: 1.25rem;">MORE FLAVOUR. MORE VALUE. ONE PERFECT COMBO.</h1>
+            <p class="hero-text">
+              Turn your meal into a full culinary experience. Our meal combos bundle our bestselling smash burgers and artisan sandwiches with piping hot sides and chilled craft beverages at genuine savings.
+            </p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#mealDeals" class="btn btn-primary btn-lg">Browse Meal Deals</a>
+              <a href="#mealBuilder" class="btn btn-secondary btn-lg">Build Your Own Meal</a>
+            </div>
+          </div>
+          <div class="page-hero-visual">
+            <img src="images/image-96.png" alt="Massive party feast spread across table with 24 mini burgers, fries, onion rings, wings and side dips">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EXPLORE OUR MEAL DEALS (4 CARDS) -->
+    <section class="section section-charcoal" id="mealDeals">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curated Value Bundles</span>
+          <h2 class="section-title">SIGNATURE MEAL PACKAGES</h2>
+          <p class="section-desc">Real savings when you bundle your main with hot golden sides and refreshing drinks.</p>
+        </div>
+
+        <!-- PROMOTIONAL ADVERTISEMENT STRIP -->
+        <div class="combo-ad-strip">
+          <span class="ad-strip-tag"><span class="ad-strip-pulse"></span> LIMITED TIME AD PROMO</span>
+          <span class="ad-strip-text">Save up to <strong>21% OFF</strong> on all Signature Combos! Hover over any meal card below to reveal instant advertisement savings &amp; free included perks.</span>
+        </div>
+
+        <div class="grid-4">
+          <!-- Deal 1 -->
+          <div class="food-card" data-title="Western BBQ Onion Ring Combo" data-price="$14.99" data-desc="Western BBQ bacon burger stacked with beer-battered onion rings, served with a basket of skin-on fries and fountain soda." data-img="images/image-3.png" data-ingredients="BBQ Bacon Burger, Beer-Battered Onion Rings, Golden Fries, Iced Fountain Cola">
+            <div class="food-card-img-wrap">
+              <span class="food-badge" style="background:#2E7D32;">Save $3.00</span>
+              <img src="images/image-3.png" alt="BBQ bacon burger with battered onion rings, melted cheese and basket of fries" loading="lazy">
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">🔥 INSTANT AD DEAL</span>
+                <div class="ad-savings-callout">SAVE $3.00 TODAY</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Free Crispy Onion Rings Included</li>
+                  <li><span class="ad-check">&#10003;</span> Basket of Golden Skin-On Fries</li>
+                  <li><span class="ad-check">&#10003;</span> Chilled Iced Fountain Cola</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; No coupon code needed at checkout</div>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Special Ad Offer:</strong> Hover image to reveal savings perks!</div>
+              <div class="food-card-header">
+                <h3 class="food-card-title">Western BBQ Bacon Combo</h3>
+                <div>
+                  <span class="food-card-price">$14.99</span>
+                  <span style="font-size:0.85rem; color:#888; text-decoration:line-through; display:block;">$17.99</span>
+                </div>
+              </div>
+              <p class="food-card-desc">BBQ bacon burger stacked with onion rings, served with a basket of skin-on fries and fountain soda.</p>
+              <div class="food-card-ingredients">
+                <span>Serves 1</span>
+                <span>Burger + Rings + Fries + Cola</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">Explore Combo</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal 2 -->
+          <div class="food-card" data-title="Southern Chicken & Fries Platter" data-price="$13.99" data-desc="Crispy Southern fried chicken burger with melted cheese and fresh greens, served with mountain of fries on wooden platter." data-img="images/image-18.png" data-ingredients="Crispy Chicken Burger, Golden French Fries, Creamy Slaw, Iced Drink">
+            <div class="food-card-img-wrap">
+              <span class="food-badge" style="background:#2E7D32;">Save $2.50</span>
+              <img src="images/image-18.png" alt="Crispy chicken burger combo with melted cheese and mountain of fries on wooden platter" loading="lazy">
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">&#11088; POPULAR VALUE DEAL</span>
+                <div class="ad-savings-callout">SAVE $2.50 TODAY</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Free House Garlic Aioli Dip</li>
+                  <li><span class="ad-check">&#10003;</span> Mountain Basket of Golden Fries</li>
+                  <li><span class="ad-check">&#10003;</span> 100% Buttermilk Fried Breast</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; Chef's top-rated chicken combo deal</div>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Special Ad Offer:</strong> Hover image to reveal savings perks!</div>
+              <div class="food-card-header">
+                <h3 class="food-card-title">Southern Chicken Platter</h3>
+                <div>
+                  <span class="food-card-price">$13.99</span>
+                  <span style="font-size:0.85rem; color:#888; text-decoration:line-through; display:block;">$16.49</span>
+                </div>
+              </div>
+              <p class="food-card-desc">Crispy fried chicken burger with melted cheese, served with a generous mountain of golden fries.</p>
+              <div class="food-card-ingredients">
+                <span>Serves 1</span>
+                <span>Chicken Burger + Fries + Drink</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">Explore Combo</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal 3 -->
+          <div class="food-card" data-title="Promo Bacon Double Duo Combo" data-price="$15.49" data-desc="Double Angus beef cheeseburger with crispy bacon, accompanied by a carton of crinkle fries and an iced cola." data-img="images/image-100.png" data-ingredients="Double Angus Burger, Applewood Bacon, Crinkle Fries, Iced Cola">
+            <div class="food-card-img-wrap">
+              <span class="food-badge" style="background:#2E7D32;">Save $4.00</span>
+              <img src="images/image-100.png" alt="Promotional graphic displaying bacon cheeseburger with french fries and iced cola" loading="lazy">
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">&#128165; 21% OFF FLASH DEAL</span>
+                <div class="ad-savings-callout">SAVE $4.00 TODAY</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Double 1/3 lb Angus Beef Patties</li>
+                  <li><span class="ad-check">&#10003;</span> Free Crinkle Fries &amp; Large Soda</li>
+                  <li><span class="ad-check">&#10003;</span> Double Molten Cheddar &amp; Bacon</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; Best price-to-protein value meal</div>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Special Ad Offer:</strong> Hover image to reveal savings perks!</div>
+              <div class="food-card-header">
+                <h3 class="food-card-title">Bacon Double Deluxe Combo</h3>
+                <div>
+                  <span class="food-card-price">$15.49</span>
+                  <span style="font-size:0.85rem; color:#888; text-decoration:line-through; display:block;">$19.49</span>
+                </div>
+              </div>
+              <p class="food-card-desc">Double Angus beef cheeseburger with crispy bacon, accompanied by a carton of crinkle fries and an iced cola.</p>
+              <div class="food-card-ingredients">
+                <span>Serves 1</span>
+                <span>Double Burger + Fries + Cola</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">Explore Combo</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal 4 -->
+          <div class="food-card" data-title="Crispy Chicken & Loaded Bacon Fries" data-price="$16.99" data-desc="Buttermilk crispy chicken brioche burger paired with carton of loaded cheese fries topped with bacon bits and sauce." data-img="images/image-104.png" data-ingredients="Crispy Chicken Brioche, Loaded Cheese & Bacon Fries, Iced Craft Beverage">
+            <div class="food-card-img-wrap">
+              <span class="food-badge" style="background:#2E7D32;">Save $3.50</span>
+              <img src="images/image-104.png" alt="Crispy chicken burger paired with loaded french fries with melted cheese and bacon bits" loading="lazy">
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">&#129472; SIGNATURE UPGRADE</span>
+                <div class="ad-savings-callout">SAVE $3.50 TODAY</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Upgraded Loaded Bacon Cheese Fries</li>
+                  <li><span class="ad-check">&#10003;</span> Buttermilk Fried Crispy Brioche</li>
+                  <li><span class="ad-check">&#10003;</span> Free Choice of Fountain Beverage</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; Free gourmet loaded side upgrade</div>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Special Ad Offer:</strong> Hover image to reveal savings perks!</div>
+              <div class="food-card-header">
+                <h3 class="food-card-title">Loaded Cheese Fries Combo</h3>
+                <div>
+                  <span class="food-card-price">$16.99</span>
+                  <span style="font-size:0.85rem; color:#888; text-decoration:line-through; display:block;">$20.49</span>
+                </div>
+              </div>
+              <p class="food-card-desc">Buttermilk crispy chicken brioche burger paired with loaded cheese fries topped with bacon bits.</p>
+              <div class="food-card-ingredients">
+                <span>Serves 1</span>
+                <span>Chicken Burger + Loaded Fries + Drink</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-primary btn-sm js-view-details" style="width:100%;">Explore Combo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INDIVIDUAL COMBO DETAILS (SPLIT VISUAL) -->
+    <section class="section section-cream" id="comboDetails">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <span class="section-tag">Inside Every Meal Box</span>
+            <h2 style="font-size:clamp(2rem, 3.5vw, 3rem); text-transform:uppercase; margin-bottom:1.2rem;">FRESHLY PACKED. HEAT SEALED.</h2>
+            <p style="font-size:1.1rem; color:var(--text-dark-muted); line-height:1.65; margin-bottom:1.5rem;">
+              When you order a combo from Burger &amp; Sandwich Joint, every component is carefully timed so the burger buns remain soft and toasty while the french fries and beer-battered onion rings stay piping hot and crunchy.
+            </p>
+            <div style="background:#fff; border-radius:var(--radius-lg); padding:1.5rem; border:1px solid rgba(0,0,0,0.08); margin-bottom:1.5rem;">
+              <h4 style="color:var(--primary); margin-bottom:0.4rem;">Double Burger Duo Package Highlights:</h4>
+              <ul style="color:#555; font-size:0.95rem; display:flex; flex-direction:column; gap:0.4rem; padding-left:1.2rem;">
+                <li>Two freshly griddled Angus beef smash cheeseburgers</li>
+                <li>Colossal crispy beer-battered onion rings with house fry sauce</li>
+                <li>Generous wire basket of seasoned skin-on potato fries</li>
+                <li>Two fountain drinks or handcrafted iced lemonades</li>
+              </ul>
+            </div>
+            <a href="contact.html?deal=Double-Burger-Duo-Package#contactForm" class="btn btn-primary">Order For Pickup / Dine-In &rarr;</a>
+          </div>
+          <div>
+            <img src="images/image-105.png" alt="Takeout meal spread with boxes containing two cheeseburgers, fries and onion rings with dip" style="border-radius:var(--radius-xl); box-shadow:var(--shadow-lg);" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BUILD YOUR OWN MEAL (INTERACTIVE MEAL BUILDER) -->
+    <section class="section section-dark" id="mealBuilder">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Custom Configurator</span>
+          <h2 class="section-title">BUILD YOUR OWN COMBO</h2>
+          <p class="section-desc">Select your main, side, beverage, and optional add-on below. Watch your live meal bundle calculate dynamically.</p>
+        </div>
+
+        <div class="builder-box">
+          <div class="builder-steps">
+            <!-- Step 1: Main -->
+            <div>
+              <div class="builder-step-title">
+                <span class="step-number">1</span>
+                <span>Select Your Main Item</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card builder-option-main selected" data-price="8.99" data-name="Single Smash Angus Cheeseburger">
+                  <div class="builder-option-name">Single Smash Angus</div>
+                  <div class="builder-option-price">$8.99</div>
+                </div>
+                <div class="builder-option-card builder-option-main" data-price="10.99" data-name="Double Oklahoma Smash Burger">
+                  <div class="builder-option-name">Double Oklahoma Smash</div>
+                  <div class="builder-option-price">$10.99</div>
+                </div>
+                <div class="builder-option-card builder-option-main" data-price="9.99" data-name="Crispy Buttermilk Chicken Sub">
+                  <div class="builder-option-name">Crispy Chicken Sub</div>
+                  <div class="builder-option-price">$9.99</div>
+                </div>
+                <div class="builder-option-card builder-option-main" data-price="9.49" data-name="Chicken Mozzarella Panini">
+                  <div class="builder-option-name">Chicken Panini Melt</div>
+                  <div class="builder-option-price">$9.49</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Side -->
+            <div>
+              <div class="builder-step-title">
+                <span class="step-number">2</span>
+                <span>Select Your Side</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card builder-option-side selected" data-price="3.99" data-name="Crispy Golden Skin-On Fries">
+                  <div class="builder-option-name">Skin-On Fries</div>
+                  <div class="builder-option-price">$3.99</div>
+                </div>
+                <div class="builder-option-card builder-option-side" data-price="4.49" data-name="Beer-Battered Onion Rings">
+                  <div class="builder-option-name">Beer Onion Rings</div>
+                  <div class="builder-option-price">$4.49</div>
+                </div>
+                <div class="builder-option-card builder-option-side" data-price="4.49" data-name="Sweet Potato Fries">
+                  <div class="builder-option-name">Sweet Potato Fries</div>
+                  <div class="builder-option-price">$4.49</div>
+                </div>
+                <div class="builder-option-card builder-option-side" data-price="4.99" data-name="Mozzarella Cheese Sticks">
+                  <div class="builder-option-name">Mozzarella Sticks</div>
+                  <div class="builder-option-price">$4.99</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Beverage -->
+            <div>
+              <div class="builder-step-title">
+                <span class="step-number">3</span>
+                <span>Select Your Beverage</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card builder-option-drink selected" data-price="2.99" data-name="Fountain Cola (Iced)">
+                  <div class="builder-option-name">Fountain Cola</div>
+                  <div class="builder-option-price">$2.99</div>
+                </div>
+                <div class="builder-option-card builder-option-drink" data-price="3.49" data-name="Handcrafted Lemonade">
+                  <div class="builder-option-name">House Lemonade</div>
+                  <div class="builder-option-price">$3.49</div>
+                </div>
+                <div class="builder-option-card builder-option-drink" data-price="4.49" data-name="Vietnamese Iced Coffee">
+                  <div class="builder-option-name">Viet Cold Brew</div>
+                  <div class="builder-option-price">$4.49</div>
+                </div>
+                <div class="builder-option-card builder-option-drink" data-price="4.99" data-name="Vanilla Bean Milkshake">
+                  <div class="builder-option-name">Hand-Spun Shake</div>
+                  <div class="builder-option-price">$4.99</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Optional Add-on -->
+            <div>
+              <div class="builder-step-title">
+                <span class="step-number">4</span>
+                <span>Optional Add-On Upgrade</span>
+              </div>
+              <div class="builder-options-grid">
+                <div class="builder-option-card builder-option-addon" data-price="1.50" data-name="Extra Molten Cheddar Dip">
+                  <div class="builder-option-name">Melted Cheddar Dip</div>
+                  <div class="builder-option-price">+$1.50</div>
+                </div>
+                <div class="builder-option-card builder-option-addon" data-price="1.75" data-name="Crispy Bacon Strips (2x)">
+                  <div class="builder-option-name">Crispy Bacon (2x)</div>
+                  <div class="builder-option-price">+$1.75</div>
+                </div>
+                <div class="builder-option-card builder-option-addon" data-price="1.99" data-name="Extra Angus Beef Smash Patty">
+                  <div class="builder-option-name">Extra Beef Patty</div>
+                  <div class="builder-option-price">+$1.99</div>
+                </div>
+                <div class="builder-option-card builder-option-addon" data-price="1.00" data-name="House Truffle Garlic Aioli">
+                  <div class="builder-option-name">Truffle Aioli Tub</div>
+                  <div class="builder-option-price">+$1.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary Bar -->
+          <div class="builder-summary-bar">
+            <div>
+              <span class="builder-total-label">Configured Combo Total:</span>
+              <div class="builder-total-amount">$15.97</div>
+              <p style="font-size:0.85rem; color:#888; margin-top:0.3rem;">
+                <span id="summaryMain">Single Smash Angus Cheeseburger</span> &bull; 
+                <span id="summarySide">Crispy Golden Skin-On Fries</span> &bull; 
+                <span id="summaryDrink">Fountain Cola (Iced)</span> &bull; 
+                <span id="summaryAddon">None</span>
+              </p>
+            </div>
+            <a href="contact.html" class="btn btn-primary btn-lg">Order This Custom Combo &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SHARING & GROUP MEALS (2x2 BANQUET PLATTER PAVILION) -->
+    <section class="section section-charcoal" id="groupMeals">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Feast For The Crew</span>
+          <h2 class="section-title">SHARING &amp; PARTY PLATTERS</h2>
+          <p class="section-desc">Specially formulated for game nights, office celebrations, and weekend family get-togethers.</p>
+        </div>
+
+        <!-- PROMOTIONAL ADVERTISEMENT STRIP -->
+        <div class="combo-ad-strip">
+          <span class="ad-strip-tag"><span class="ad-strip-pulse"></span> EVENT CATERING AD PROMO</span>
+          <span class="ad-strip-text">Big crew, bigger savings! Save up to <strong>$24.00 OFF</strong> on banquet platters. Hover over any platter below to reveal complete party breakdowns &amp; guest portions.</span>
+        </div>
+
+        <!-- ADVANCED BALANCED DESIGN: 2x2 BANQUET PLATTER PAVILION -->
+        <div class="banquet-pavilion-grid">
+          <!-- Platter 1 -->
+          <div class="banquet-platter-card" data-title="Family Burger & Tots Box" data-price="$34.99" data-desc="Eight gourmet Angus sliders, crispy golden tater tots, seasoned french fries, spicy chicken bites, and four signature house dipping sauces packed fresh in heat-sealed catering containers." data-img="images/image-91.png" data-ingredients="8 Angus Sliders, Golden Tater Tots, Spicy Chicken Bites, 4 House Dip Tubs">
+            <div class="platter-card-media">
+              <span class="platter-top-badge">&#9733; BESTSELLER CREW FEAST</span>
+              <img src="images/image-91.png" alt="Large family burger party box featuring eight sliders, fries, tater tots and chicken bites" loading="lazy">
+              <span class="platter-serves-pill">Feeds 4–5 Diners</span>
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">&#127942; FAMILY FEAST AD VALUE</span>
+                <div class="ad-savings-callout">SAVE $12.50 VS A LA CARTE</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Feeds 4–5 Diners for $7.00/person</li>
+                  <li><span class="ad-check">&#10003;</span> 8 Sliders + Tots + Bites + Fries</li>
+                  <li><span class="ad-check">&#10003;</span> 4 Free House Dipping Sauces</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; Heat-sealed insulated party box guarantee</div>
+              </div>
+            </div>
+            <div class="platter-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Catering Ad Value:</strong> Hover platter image to inspect party savings!</div>
+              <span class="platter-eyebrow">FEAST BUNDLE 01 // BESTSELLER</span>
+              <div class="platter-header-row">
+                <h3 class="platter-title">Family Burger & Tots Box</h3>
+                <span class="platter-price">$34.99</span>
+              </div>
+              <p class="platter-desc">Eight gourmet Angus sliders, crispy golden tater tots, seasoned french fries, spicy chicken bites, and four signature house dipping sauces packed fresh in heat-sealed catering containers.</p>
+              <div class="platter-chips-row">
+                <span class="platter-chip">8 Angus Sliders</span>
+                <span class="platter-chip">Golden Tater Tots</span>
+                <span class="platter-chip">Spicy Chicken Bites</span>
+                <span class="platter-chip">4 House Dip Tubs</span>
+              </div>
+              <div class="platter-action-row">
+                <a href="contact.html#contactForm" class="btn btn-primary btn-sm">Order Catering &rarr;</a>
+                <button type="button" class="btn btn-secondary btn-sm js-view-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Platter 2 -->
+          <div class="banquet-platter-card" data-title="Slider Party Crate (8x)" data-price="$29.99" data-desc="Eight assorted mini smash burgers with melted cheddar, griddled sweet onions, two generous sections of skin-on fries, and three dipping sauce tubs (ranch, BBQ, and burger relish)." data-img="images/image-90.png" data-ingredients="8 Smash Sliders, Double Skin-On Fries, 3 Dipping Sauces, Heat-Sealed Crate">
+            <div class="platter-card-media">
+              <span class="platter-top-badge">&#9733; GAME DAY FAVORITE</span>
+              <img src="images/image-90.png" alt="Catering slider party box featuring eight assorted mini burgers and dipping sauces" loading="lazy">
+              <span class="platter-serves-pill">Feeds 3–4 Diners</span>
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">&#127881; GAME DAY SPECIAL DEAL</span>
+                <div class="ad-savings-callout">SAVE $9.00 VS INDIVIDUAL</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Feeds 3–4 Diners for $7.50/person</li>
+                  <li><span class="ad-check">&#10003;</span> 8 Fresh Smashed Cheddar Sliders</li>
+                  <li><span class="ad-check">&#10003;</span> 2 Fry Sections + 3 Signature Sauces</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; Ready-to-serve crate for watch parties</div>
+              </div>
+            </div>
+            <div class="platter-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Catering Ad Value:</strong> Hover platter image to inspect party savings!</div>
+              <span class="platter-eyebrow">FEAST BUNDLE 02 // SLIDER CRATE</span>
+              <div class="platter-header-row">
+                <h3 class="platter-title">Slider Party Crate (8x)</h3>
+                <span class="platter-price">$29.99</span>
+              </div>
+              <p class="platter-desc">Eight assorted mini smash burgers with melted cheddar, griddled sweet onions, two generous sections of skin-on fries, and three dipping sauce tubs (ranch, BBQ, and burger relish).</p>
+              <div class="platter-chips-row">
+                <span class="platter-chip">8 Smash Sliders</span>
+                <span class="platter-chip">Double Skin-On Fries</span>
+                <span class="platter-chip">3 Dipping Sauces</span>
+                <span class="platter-chip">Heat-Sealed Crate</span>
+              </div>
+              <div class="platter-action-row">
+                <a href="contact.html#contactForm" class="btn btn-primary btn-sm">Order Catering &rarr;</a>
+                <button type="button" class="btn btn-secondary btn-sm js-view-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Platter 3 -->
+          <div class="banquet-platter-card" data-title="Artisan Sandwich Platter (16x)" data-price="$36.99" data-desc="Sixteen triangular quarters of triple-decker turkey clubs, toasted chicken mozzarella paninis, seasoned golden french fries, and pickled olive garnishes on an elegant silver catering platter." data-img="images/image-93.png" data-ingredients="16 Club Quarters, Mini Panini Rolls, Seasoned French Fries, Olive Garnishes">
+            <div class="platter-card-media">
+              <span class="platter-top-badge">&#9733; OFFICE LUNCH CRATE</span>
+              <img src="images/image-93.png" alt="Large silver catering party platter packed with club sandwich triangles, mini rolls and fries" loading="lazy">
+              <span class="platter-serves-pill">Feeds 4–6 Diners</span>
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">&#128188; CORPORATE &amp; EVENT VALUE</span>
+                <div class="ad-savings-callout">SAVE $14.00 VS SEPARATE</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Feeds 4–6 Diners for $6.15/person</li>
+                  <li><span class="ad-check">&#10003;</span> 16 Club &amp; Panini Triangular Cuts</li>
+                  <li><span class="ad-check">&#10003;</span> Plattered on Elegant Serving Tray</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; Free napkins, wet wipes &amp; condiments</div>
+              </div>
+            </div>
+            <div class="platter-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Catering Ad Value:</strong> Hover platter image to inspect party savings!</div>
+              <span class="platter-eyebrow">FEAST BUNDLE 03 // SANDWICH PLATTER</span>
+              <div class="platter-header-row">
+                <h3 class="platter-title">Artisan Sandwich Platter (16x)</h3>
+                <span class="platter-price">$36.99</span>
+              </div>
+              <p class="platter-desc">Sixteen triangular quarters of triple-decker turkey clubs, toasted chicken mozzarella paninis, seasoned golden french fries, and pickled olive garnishes on an elegant silver catering platter.</p>
+              <div class="platter-chips-row">
+                <span class="platter-chip">16 Club Quarters</span>
+                <span class="platter-chip">Mini Panini Rolls</span>
+                <span class="platter-chip">Seasoned French Fries</span>
+                <span class="platter-chip">Olive Garnishes</span>
+              </div>
+              <div class="platter-action-row">
+                <a href="contact.html#contactForm" class="btn btn-primary btn-sm">Order Catering &rarr;</a>
+                <button type="button" class="btn btn-secondary btn-sm js-view-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Platter 4 -->
+          <div class="banquet-platter-card" data-title="Mega Crew Feast Banquet (24x)" data-price="$59.99" data-desc="Twenty-four gourmet mini burgers, double beer-battered onion rings, loaded french fries, crispy buffalo chicken wings, and a full assortment of six signature house dipping sauces." data-img="images/image-96.png" data-ingredients="24 Mini Burgers, Crispy Wings, Beer-Battered Onion Rings, 6 Signature Dips">
+            <div class="platter-card-media">
+              <span class="platter-top-badge">&#9733; MEGA CREW SPREAD</span>
+              <img src="images/image-96.png" alt="Massive party feast spread across table with 24 mini burgers, fries, onion rings, wings and side dips" loading="lazy">
+              <span class="platter-serves-pill">Feeds 8–10 Diners</span>
+              <!-- Advertisement Hover Overlay -->
+              <div class="ad-hover-overlay" aria-hidden="true">
+                <span class="ad-promo-pill">&#128293; ULTIMATE BANQUET AD DEAL</span>
+                <div class="ad-savings-callout">SAVE $24.00 MASSIVE VALUE</div>
+                <ul class="ad-perks-list">
+                  <li><span class="ad-check">&#10003;</span> Feeds 8–10 Diners for under $6/person</li>
+                  <li><span class="ad-check">&#10003;</span> 24 Sliders + Wings + Rings + Fries</li>
+                  <li><span class="ad-check">&#10003;</span> 6 Signature Dips + Warming Pack</li>
+                </ul>
+                <div class="ad-footer-tag">&#9733; Free priority scheduled delivery ready</div>
+              </div>
+            </div>
+            <div class="platter-card-body">
+              <div class="ad-deal-ticker"><span class="ad-sparkle">&#9733;</span> <strong>Catering Ad Value:</strong> Hover platter image to inspect party savings!</div>
+              <span class="platter-eyebrow">FEAST BUNDLE 04 // CREW BANQUET</span>
+              <div class="platter-header-row">
+                <h3 class="platter-title">Mega Crew Feast Banquet (24x)</h3>
+                <span class="platter-price">$59.99</span>
+              </div>
+              <p class="platter-desc">Twenty-four gourmet mini burgers, double beer-battered onion rings, loaded french fries, crispy buffalo chicken wings, and a full assortment of six signature house dipping sauces.</p>
+              <div class="platter-chips-row">
+                <span class="platter-chip">24 Mini Burgers</span>
+                <span class="platter-chip">Crispy Wings</span>
+                <span class="platter-chip">Beer-Battered Onion Rings</span>
+                <span class="platter-chip">6 Signature Dips</span>
+              </div>
+              <div class="platter-action-row">
+                <a href="contact.html#contactForm" class="btn btn-primary btn-sm">Order Catering &rarr;</a>
+                <button type="button" class="btn btn-secondary btn-sm js-view-details">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FINAL OFFER CTA -->
+    <section class="section section-dark" id="comboCta">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-bg">
+            <img src="images/image-24.png" alt="Grilled burger combo on black slate platter with golden french fries, ketchup dip and tall iced pink mocktail" loading="lazy">
+          </div>
+          <div class="cta-banner-content" style="max-width: 720px;">
+            <span class="section-tag" style="background:rgba(255,255,255,0.2); color:#fff; border-color:rgba(255,255,255,0.4);">Unbeatable Value</span>
+            <h2>GOOD FOOD TASTES EVEN BETTER TOGETHER.</h2>
+            <p>
+              Whether you are feeding a hungry family or catering an office celebration, our meal packages deliver incredible portions, heat-sealed freshness, and generous hospitality.
+            </p>
+            <div style="display:flex; gap:1.5rem; flex-wrap:wrap; font-size:0.95rem; color:#bbb; margin-top:1.5rem;">
+              <span>&bull; Catering Inquiries Welcome</span>
+              <span>&bull; Custom Group Packages</span>
+              <span>&bull; Ready On Time</span>
+            </div>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="menu.html" class="btn btn-white btn-lg">Explore Full Menu</a>
+            <a href="contact.html" class="btn btn-dark btn-lg">Contact Us For Large Orders</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint">
+            <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="44" height="44">
+            <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+          </a>
+          <p>Casual burger and sandwich restaurant crafting big-flavour meals with fresh ingredients, artisan breads, and warm neighborhood hospitality.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Joint</h4>
+          <div class="footer-links">
+            <a href="index.html">Home 1 (Main)</a>
+            <a href="home-2.html">Home 2 (Discovery)</a>
+            <a href="about.html">About Our Passion</a>
+            <a href="services.html">Catering &amp; Services</a>
+            <a href="contact.html">Contact &amp; Location</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Food Collections</h4>
+          <div class="footer-links">
+            <a href="burgers.html">Signature Burgers</a>
+            <a href="sandwiches.html">Sandwich Studio</a>
+            <a href="combo-offers.html">Value Combo Offers</a>
+            <a href="menu.html">Complete Food Menu</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hours &amp; Location</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span>Monday – Thursday</span>
+              <span>11:00 AM – 10:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Friday – Saturday</span>
+              <span>11:00 AM – 11:30 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Sunday</span>
+              <span>11:30 AM – 10:00 PM</span>
+            </div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.88rem; color: #bbb;">
+            &bull; 142 Market Street, Downtown<br>
+            &bull; Phone: +1 (555) 234-5678
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Burger &amp; Sandwich Joint. All rights reserved.</span>
+        <span>Crafted for Great Taste &bull; Fresh &bull; Made to Order</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Product Detail Modal -->
+  <div id="productModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <div class="modal-header">
+            <span class="section-tag">Chef's Signature Selection</span>
+            <h3 class="modal-title">Product Details</h3>
+          </div>
+          <div class="modal-price">$0.00</div>
+          <p class="modal-desc"></p>
+          <h4 class="modal-ingredients-heading">Featured Ingredients:</h4>
+          <div class="food-card-ingredients modal-ingredients"></div>
+          <div class="modal-action-wrap">
+            <a href="contact.html" class="btn btn-primary" style="width:100%;">Order / Enquire Today</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Drop to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll to top" title="Scroll to top">
+    <svg class="to-top-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>

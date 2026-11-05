@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Burgers | Handcrafted Smash &amp; Gourmet Creations | Burger &amp; Sandwich Joint</title>
+  <meta name="description" content="Dedicated showcase of our signature handcrafted smash burgers, prime Angus creations, Nashville hot chicken, and molten cheese specialties.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('joint_direction');
+        if (d === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+        var t = localStorage.getItem('joint_theme');
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint Home">
+          <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="38" height="38">
+          <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <div class="nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html" class="nav-dropdown-link">Home 1</a>
+              <a href="home-2.html" class="nav-dropdown-link">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="burgers.html" class="nav-link active">Signature Burgers</a>
+          <a href="sandwiches.html" class="nav-link">Sandwiches</a>
+          <a href="combo-offers.html" class="nav-link">Combo Offers</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <!-- RTL Layout & Light/Dark Theme Toggles (Placed immediately after Contact) -->
+          <button type="button" class="nav-action-btn rtl-toggle" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
+            <svg class="rtl-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7h16M16 3l4 4-4 4"/>
+              <path d="M20 17H4M8 13l-4 4 4 4"/>
+            </svg>
+            <span class="rtl-text sr-only">RTL</span>
+          </button>
+          <button type="button" class="nav-action-btn theme-toggle" aria-label="Toggle light / dark theme" title="Toggle Light / Dark Theme">
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Details</a>
+          <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <div class="mobile-drawer-dropdown">
+        <button type="button" class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home</span>
+          <svg class="drawer-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">Home 1</a>
+          <a href="home-2.html" class="mobile-sublink">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="menu.html" class="mobile-nav-link"><span>Menu</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="burgers.html" class="mobile-nav-link active"><span>Signature Burgers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="sandwiches.html" class="mobile-nav-link"><span>Sandwiches</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="combo-offers.html" class="mobile-nav-link"><span>Combo Offers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span class="drawer-arrow">&rarr;</span></a>
+    </div>
+        <div class="mobile-drawer-footer">
+      <div class="drawer-action-toggles">
+        <button type="button" class="mobile-toggle-btn rtl-toggle" aria-label="Toggle RTL layout">
+          <svg class="rtl-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 13l-4 4 4 4"/>
+          </svg>
+          <span class="rtl-text">RTL Layout</span>
+        </button>
+        <button type="button" class="mobile-toggle-btn theme-toggle" aria-label="Toggle light / dark theme">
+          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-mode-text">Dark Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Details</a>
+      <div class="mobile-drawer-info">
+        <strong>Open 7 Days A Week</strong>
+        <span>11:00 AM – 10:30 PM</span>
+      </div>
+      <div class="mobile-drawer-info">
+        <strong>Call for Enquiries</strong>
+        <span>+1 (555) 234-5678</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT (EXACTLY 6 SECTIONS) ==================== -->
+  <main id="mainContent">
+
+    <!-- SECTION 1: BURGER COLLECTION HERO -->
+    <section class="page-hero" id="burgerHero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <span class="section-tag">Dedicated Burger Craft</span>
+            <h1 class="hero-title" style="margin-bottom: 1.25rem;">BURGERS MADE TO STEAL THE SPOTLIGHT.</h1>
+            <p class="hero-text">
+              We smash, sear, and stack each burger by hand to achieve an extraordinary balance of caramelized outer crust and juicy tenderness inside butter-basted brioche.
+            </p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#signatureBurgers" class="btn btn-primary btn-lg">Explore Burgers</a>
+              <a href="combo-offers.html" class="btn btn-secondary btn-lg">Make It A Combo</a>
+            </div>
+          </div>
+          <div class="page-hero-visual">
+            <img src="images/image-79.png" alt="Double and single cheeseburgers stacked with fries and tall glass of iced cola">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EXPLORE OUR BURGER RANGE (CULINARY SPECTRUM STUDIO) -->
+    <section class="section section-charcoal" id="burgerRange">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Explore The Spectrum</span>
+          <h2 class="section-title">CHOOSE YOUR BURGER STYLE</h2>
+          <p class="section-desc">From time-honored beef cheeseburgers to buttermilk fried chicken and spicy pepper jack heats.</p>
+        </div>
+
+                <!-- ADVANCED NON-CARD DESIGN: CULINARY SPECTRUM STUDIO -->
+        <div class="burger-spectrum-studio">
+          <!-- Segmented Style Navigator Rail -->
+          <div class="spectrum-nav-bar" role="tablist" aria-label="Burger Flavor Spectrum">
+            <button type="button" class="spectrum-nav-tab active" data-target="crunch" role="tab" aria-selected="true" aria-controls="panel-crunch" id="tab-crunch">
+              <span class="spectrum-tab-badge">01</span>
+              <span class="spectrum-tab-text">
+                <span class="spectrum-tab-label">STYLE // 01</span>
+                <strong class="spectrum-tab-heading">CRUNCH</strong>
+              </span>
+            </button>
+
+            <button type="button" class="spectrum-nav-tab" data-target="heat" role="tab" aria-selected="false" aria-controls="panel-heat" id="tab-heat">
+              <span class="spectrum-tab-badge">02</span>
+              <span class="spectrum-tab-text">
+                <span class="spectrum-tab-label">STYLE // 02</span>
+                <strong class="spectrum-tab-heading">HEAT</strong>
+              </span>
+            </button>
+
+            <button type="button" class="spectrum-nav-tab" data-target="oceanic" role="tab" aria-selected="false" aria-controls="panel-oceanic" id="tab-oceanic">
+              <span class="spectrum-tab-badge">03</span>
+              <span class="spectrum-tab-text">
+                <span class="spectrum-tab-label">STYLE // 03</span>
+                <strong class="spectrum-tab-heading">OCEANIC</strong>
+              </span>
+            </button>
+
+            <button type="button" class="spectrum-nav-tab" data-target="umami" role="tab" aria-selected="false" aria-controls="panel-umami" id="tab-umami">
+              <span class="spectrum-tab-badge">04</span>
+              <span class="spectrum-tab-text">
+                <span class="spectrum-tab-label">STYLE // 04</span>
+                <strong class="spectrum-tab-heading">UMAMI</strong>
+              </span>
+            </button>
+          </div>
+
+          <!-- Master Exhibition Showcase Stage -->
+          <div class="spectrum-stage-wrap">
+            <!-- PANEL 1: CRUNCH (Crispy Southern Chicken) -->
+            <div class="spectrum-stage-panel active" id="panel-crunch" role="tabpanel" aria-labelledby="tab-crunch" data-style-panel="crunch">
+              <div class="spectrum-stage-grid">
+                <div class="spectrum-visual-frame">
+                  <div class="spectrum-visual-ambient ambient-amber"></div>
+                  <div class="spectrum-floating-badge badge-top">12-Spice Dredge &bull; Crispy Shatter</div>
+                  <div class="spectrum-img-box">
+                    <img src="images/image-2.png" alt="Crispy fried chicken burger with mayonnaise and pickles on wooden cutting board" loading="lazy">
+                  </div>
+                  <div class="spectrum-floating-badge badge-bottom">Fry Sizzle: 375&deg;F &bull; Fresh Southern Herb Aioli</div>
+                </div>
+
+                <div class="spectrum-dossier">
+                  <div class="spectrum-watermark" aria-hidden="true">I</div>
+                  <div class="spectrum-tag-pill">BURGER SPECTRUM // STYLE 01</div>
+                  <h3 class="spectrum-title">Crispy Southern Chicken Deluxe</h3>
+                  <div class="spectrum-subtitle">Buttermilk-Marinated Whole Breast &bull; 12-Spice Golden Crust</div>
+                  <p class="spectrum-desc">Thick whole chicken breast marinated for 12 hours in seasoned buttermilk, double-dredged in our proprietary 12-spice recipe, and flash-fried to an extraordinary golden shatter with house roasted garlic aioli.</p>
+
+                  <div class="spectrum-specs-matrix">
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Coating Technique</span>
+                        <span class="spec-val">12-Spice Seasoned Dredge</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 96%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Bakery Pairing</span>
+                        <span class="spec-val">Toasted Golden Brioche Bun</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 92%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Heat &amp; Spice Index</span>
+                        <span class="spec-val">Mild &bull; Savory Crisp</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 40%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">House Condiment</span>
+                        <span class="spec-val">Roasted Garlic Herb Aioli</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 88%;"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="spectrum-quote-callout">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p class="quote-body">The buttermilk brine locks in rich natural juices, while double dredging guarantees a crisp crust that stays loud and crunchy until the final bite.</p>
+                  </div>
+
+                  <div class="spectrum-action-bar">
+                    <a href="#signatureBurgers" class="btn btn-primary btn-sm">Explore Chicken In Signature Lineup &darr;</a>
+                    <span class="spectrum-pairing-hint"><strong>Recommended Pairing:</strong> Vanilla Bean Handcrafted Shake</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 2: HEAT (Spicy Pepper Jack) -->
+            <div class="spectrum-stage-panel" id="panel-heat" role="tabpanel" aria-labelledby="tab-heat" data-style-panel="heat">
+              <div class="spectrum-stage-grid">
+                <div class="spectrum-visual-frame">
+                  <div class="spectrum-visual-ambient ambient-crimson"></div>
+                  <div class="spectrum-floating-badge badge-top">Flame-Charred Jalape&ntilde;os &bull; Iron Sear</div>
+                  <div class="spectrum-img-box">
+                    <img src="images/image-5.png" alt="Jalapeño smash burger with molten pepper jack cheese and pickled jalapeños" loading="lazy">
+                  </div>
+                  <div class="spectrum-floating-badge badge-bottom">Iron Press: 450&deg;F &bull; Fiery Chipotle Glaze</div>
+                </div>
+
+                <div class="spectrum-dossier">
+                  <div class="spectrum-watermark" aria-hidden="true">II</div>
+                  <div class="spectrum-tag-pill">BURGER SPECTRUM // STYLE 02</div>
+                  <h3 class="spectrum-title">Spicy Pepper Jack Smash</h3>
+                  <div class="spectrum-subtitle">Double Angus Beef Smash &bull; Fiery Chipotle &amp; Charred Jalape&ntilde;o</div>
+                  <p class="spectrum-desc">Twin Angus beef smash patties pressed at searing 450&deg;F heat to forge caramelized crispy edges, cloaked in molten Monterey Pepper Jack cheese and crowned with flame-charred jalape&ntilde;o rings and smoky chipotle crema.</p>
+
+                  <div class="spectrum-specs-matrix">
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Griddle Sear</span>
+                        <span class="spec-val">450&deg;F Cast Iron Press</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 98%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Molten Cheese</span>
+                        <span class="spec-val">Aged Pepper Jack Melt</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 95%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Heat &amp; Spice Index</span>
+                        <span class="spec-val">Fiery &bull; Zesty Kick (4.5 / 5)</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 88%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">House Condiment</span>
+                        <span class="spec-val">Smoky Chipotle Crema</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 90%;"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="spectrum-quote-callout">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p class="quote-body">The searing iron locks caramelized crust into every ridge of the beef, while pickled jalape&ntilde;o acidity cuts through rich molten pepper jack.</p>
+                  </div>
+
+                  <div class="spectrum-action-bar">
+                    <a href="#signatureBurgers" class="btn btn-primary btn-sm">Explore Spicy In Signature Lineup &darr;</a>
+                    <span class="spectrum-pairing-hint"><strong>Recommended Pairing:</strong> Loaded Fiesta Nachos &amp; Iced Lemonade</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 3: OCEANIC (Crispy Fish Fillet) -->
+            <div class="spectrum-stage-panel" id="panel-oceanic" role="tabpanel" aria-labelledby="tab-oceanic" data-style-panel="oceanic">
+              <div class="spectrum-stage-grid">
+                <div class="spectrum-visual-frame">
+                  <div class="spectrum-visual-ambient ambient-azure"></div>
+                  <div class="spectrum-floating-badge badge-top">Wild Flaky White Fish &bull; Japanese Panko</div>
+                  <div class="spectrum-img-box">
+                    <img src="images/image-7.png" alt="Crispy golden fried fish fillet burger with cheddar and tartar sauce" loading="lazy">
+                  </div>
+                  <div class="spectrum-floating-badge badge-bottom">Flash Fry: 365&deg;F &bull; Fresh Caper Tartar Sauce</div>
+                </div>
+
+                <div class="spectrum-dossier">
+                  <div class="spectrum-watermark" aria-hidden="true">III</div>
+                  <div class="spectrum-tag-pill">BURGER SPECTRUM // STYLE 03</div>
+                  <h3 class="spectrum-title">Crispy Ocean Fish Fillet</h3>
+                  <div class="spectrum-subtitle">Panko-Crusted White Fish &bull; Fresh Dill Tartar &amp; Melted Cheddar</div>
+                  <p class="spectrum-desc">Delicate tender white fish fillet enveloped in airy Japanese panko flakes, flash-fried to a whisper-light crunch, topped with melted American cheddar, and smothered in house dill and caper tartar sauce on a steamed bun.</p>
+
+                  <div class="spectrum-specs-matrix">
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Fillet Quality</span>
+                        <span class="spec-val">100% Wild Flaky White Fish</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 100%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Crust Texture</span>
+                        <span class="spec-val">Light Japanese Panko Flakes</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 90%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Heat &amp; Spice Index</span>
+                        <span class="spec-val">Zesty &bull; Mild Citrus Refresh</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 20%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">House Condiment</span>
+                        <span class="spec-val">Fresh Caper &amp; Herb Tartar</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 94%;"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="spectrum-quote-callout">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p class="quote-body">Panko absorbs significantly less oil than batter, forming a crisp golden lattice that preserves the steaming, tender flake of fresh ocean fish.</p>
+                  </div>
+
+                  <div class="spectrum-action-bar">
+                    <a href="#signatureBurgers" class="btn btn-primary btn-sm">Explore Fish In Signature Lineup &darr;</a>
+                    <span class="spectrum-pairing-hint"><strong>Recommended Pairing:</strong> Panko Onion Rings &amp; Citrus Mason Cooler</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 4: UMAMI (Alpine Mushroom Swiss) -->
+            <div class="spectrum-stage-panel" id="panel-umami" role="tabpanel" aria-labelledby="tab-umami" data-style-panel="umami">
+              <div class="spectrum-stage-grid">
+                <div class="spectrum-visual-frame">
+                  <div class="spectrum-visual-ambient ambient-emerald"></div>
+                  <div class="spectrum-floating-badge badge-top">Garlic Butter Saut&eacute; &bull; Emmental Swiss</div>
+                  <div class="spectrum-img-box">
+                    <img src="images/image-14.png" alt="Mushroom and melted Swiss cheeseburger with crinkle-cut fries" loading="lazy">
+                  </div>
+                  <div class="spectrum-floating-badge badge-bottom">Flame Sear: 500&deg;F &bull; Truffle Herb Remoulade</div>
+                </div>
+
+                <div class="spectrum-dossier">
+                  <div class="spectrum-watermark" aria-hidden="true">IV</div>
+                  <div class="spectrum-tag-pill">BURGER SPECTRUM // STYLE 04</div>
+                  <h3 class="spectrum-title">Alpine Mushroom Swiss</h3>
+                  <div class="spectrum-subtitle">Flame-Grilled Angus &bull; Butter-Saut&eacute;ed Mushrooms &amp; Velvety Swiss</div>
+                  <p class="spectrum-desc">Char-grilled Angus beef patty smothered beneath garlic-butter button mushrooms, velvety melted Swiss Emmental cheese, coarse cracked black pepper, and herb remoulade on a toasted bakery brioche bun.</p>
+
+                  <div class="spectrum-specs-matrix">
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Umami Saut&eacute;</span>
+                        <span class="spec-val">Garlic Butter Button Mushrooms</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 99%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Velvety Melt</span>
+                        <span class="spec-val">Imported Swiss Emmental</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 96%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">Heat &amp; Spice Index</span>
+                        <span class="spec-val">Rich &bull; Savory Earthy Peppery</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 30%;"></div></div>
+                    </div>
+
+                    <div class="spec-matrix-item">
+                      <div class="spec-label-row">
+                        <span class="spec-label">House Condiment</span>
+                        <span class="spec-val">Truffled Herb Remoulade</span>
+                      </div>
+                      <div class="spec-meter-track"><div class="spec-meter-fill" style="width: 92%;"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="spectrum-quote-callout">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p class="quote-body">Saut&eacute;ing fresh mushrooms in browned garlic butter evaporates excess water and concentrates savoury glutamate umami across every molten cheese bite.</p>
+                  </div>
+
+                  <div class="spectrum-action-bar">
+                    <a href="#signatureBurgers" class="btn btn-primary btn-sm">Explore Swiss In Signature Lineup &darr;</a>
+                    <span class="spectrum-pairing-hint"><strong>Recommended Pairing:</strong> Sweet Potato Waffle Fries &amp; Malt Float</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SIGNATURE BURGER PRODUCTS (4 CARDS) -->
+    <section class="section section-dark" id="signatureBurgers">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Chef's Lineup</span>
+          <h2 class="section-title">THE SIGNATURE SELECTION</h2>
+          <p class="section-desc">Click any burger to inspect full ingredients, cooking temperatures, and customization options.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Burger 1 -->
+          <div class="food-card" data-title="Mini Gourmet Sliders Flight" data-price="$11.99" data-desc="Trio of mini prime beef smash sliders with melted American cheese, diced sweet onions, and house burger spread on brioche buns." data-img="images/image-10.png" data-ingredients="Prime Beef, Sweet Onions, American Cheese, Slider Brioche, House Spread">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Slider Trio</span>
+              <img src="images/image-10.png" alt="Flight of mini gourmet beef sliders with melted cheese on rustic wooden board" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Mini Gourmet Sliders Flight</h3>
+                <span class="food-card-price">$11.99</span>
+              </div>
+              <p class="food-card-desc">Trio of mini prime beef smash sliders with melted American cheese and house spread.</p>
+              <div class="food-card-ingredients">
+                <span>Prime Beef</span>
+                <span>Sweet Onions</span>
+                <span>American Cheese</span>
+                <span>Brioche</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Burger 2 -->
+          <div class="food-card" data-title="Sunny Breakfast Bacon Burger" data-price="$12.49" data-desc="Seared beef patty, crispy applewood bacon, melted sharp cheddar, and a sunny-side-up fried egg with golden runny yolk." data-img="images/image-22.png" data-ingredients="Angus Beef, Applewood Bacon, Farm Fried Egg, Sharp Cheddar, Brioche">
+            <div class="food-card-img-wrap">
+              <span class="food-badge badge-special">Breakfast All Day</span>
+              <img src="images/image-22.png" alt="Breakfast burger with beef patty, cheddar, bacon and dripping sunny-side-up egg" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Sunny Breakfast Bacon Burger</h3>
+                <span class="food-card-price">$12.49</span>
+              </div>
+              <p class="food-card-desc">Seared beef patty, crispy bacon, melted cheddar, and a sunny-side-up egg with dripping yolk.</p>
+              <div class="food-card-ingredients">
+                <span>Angus Beef</span>
+                <span>Smoked Bacon</span>
+                <span>Fried Egg</span>
+                <span>Cheddar</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Burger 3 -->
+          <div class="food-card" data-title="Loaded Buttermilk Fried Beast" data-price="$11.99" data-desc="Crispy fried chicken breast loaded with molten cheese, bacon strip, crinkle pickles, shredded lettuce, and overflowing secret sauce." data-img="images/image-25.png" data-ingredients="Crispy Chicken, Smoked Bacon, Molten Cheese, Pickles, Secret Sauce">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Crispy King</span>
+              <img src="images/image-25.png" alt="Stacked crispy fried chicken burger loaded with cheese, bacon and overflowing sauce" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Loaded Buttermilk Fried Beast</h3>
+                <span class="food-card-price">$11.99</span>
+              </div>
+              <p class="food-card-desc">Crispy fried chicken breast loaded with molten cheese, bacon strip, pickles, and overflowing sauce.</p>
+              <div class="food-card-ingredients">
+                <span>Crispy Chicken</span>
+                <span>Bacon Strip</span>
+                <span>Molten Cheese</span>
+                <span>Sauce</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Burger 4 -->
+          <div class="food-card" data-title="Classic Value Angus Burger" data-price="$9.99" data-desc="Single smash Angus patty on toasted sesame bun with melted American cheese, crinkle pickles, and tangy burger spread." data-img="images/image-86.png" data-ingredients="Angus Beef, Sesame Bun, American Cheese, Pickles, Secret Spread">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Value Star</span>
+              <img src="images/image-86.png" alt="Fast-food value meal combo with sesame cheeseburger, red carton fries and cola" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <div class="food-card-header">
+                <h3 class="food-card-title">Classic Value Angus Burger</h3>
+                <span class="food-card-price">$9.99</span>
+              </div>
+              <p class="food-card-desc">Single smash Angus patty on toasted sesame bun with melted American cheese and pickles.</p>
+              <div class="food-card-ingredients">
+                <span>Angus Beef</span>
+                <span>Sesame Bun</span>
+                <span>American Cheese</span>
+                <span>Pickles</span>
+              </div>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BURGER ANATOMY & SECRET DIPS (SPLIT VISUAL) -->
+    <section class="section section-cream" id="burgerAnatomyDetail">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <span class="section-tag">Culinary Science</span>
+            <h2 style="font-size:clamp(2rem, 3.5vw, 3rem); text-transform:uppercase; margin-bottom:1.2rem;">THE SECRET IS IN THE CRUST &amp; DIPS</h2>
+            <p style="font-size:1.1rem; color:var(--text-dark-muted); line-height:1.65; margin-bottom:1.5rem;">
+              Our cooking protocol is dialed in to seconds. We sear our patties on searing steel at 450&deg;F using weighted cast iron smashers. This forms a crisp, caramelized edge while locking in natural beef fats.
+            </p>
+            <div style="background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1.5rem;">
+              <h4 style="color:var(--primary); margin-bottom:0.4rem;">House Secret Dipping Sauce</h4>
+              <p style="font-size:0.92rem; color:#555;">Slow-cooked shallots, roasted garlic, smoked paprika, Dijon mustard, and apple cider vinegar whipped with fresh egg yolks.</p>
+            </div>
+            <a href="menu.html" class="btn btn-primary">Check All Sides &amp; Dips &rarr;</a>
+          </div>
+          <div>
+            <img src="images/image-49.png" alt="Golden crispy battered chicken nuggets with bowl of barbecue sauce" style="border-radius:var(--radius-xl); box-shadow:var(--shadow-lg);" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FIND YOUR FAVOURITE (INTERACTIVE FLAVOUR SELECTOR - 4 CARDS) -->
+    <section class="section section-dark" id="flavourSelector">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Flavour Filter</span>
+          <h2 class="section-title">CHOOSE YOUR FLAVOUR MOOD</h2>
+          <p class="section-desc">Click a flavor profile below to highlight the burger that fits your mood.</p>
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-btn flavour-filter-btn active" data-flavour="all">All Flavours</button>
+          <button class="filter-btn flavour-filter-btn" data-flavour="mild">Mild &amp; Classic</button>
+          <button class="filter-btn flavour-filter-btn" data-flavour="spicy">Spicy Kick</button>
+          <button class="filter-btn flavour-filter-btn" data-flavour="cheesy">Extra Cheesy</button>
+          <button class="filter-btn flavour-filter-btn" data-flavour="loaded">Loaded Beast</button>
+        </div>
+
+        <div class="grid-4">
+          <!-- Card 1 -->
+          <div class="food-card flavour-target-card" data-flavour="mild">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Mild Classic</span>
+              <img src="images/image-50.png" alt="Classic cheeseburger combo with thick-cut steak fries and iced cola" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Classic Comfort Cheeseburger</h3>
+              <p class="food-card-desc">Tender beef patty, molten cheddar, and thick-cut steak fries for comforting, mild flavor.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="food-card flavour-target-card" data-flavour="spicy">
+            <div class="food-card-img-wrap">
+              <span class="food-badge" style="background:#D32F2F;">Spicy Kick</span>
+              <img src="images/image-23.png" alt="Grilled spicy chicken burger with coleslaw and side of golden onion rings" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Firecracker Crunch Chicken</h3>
+              <p class="food-card-desc">Red chili glazed chicken breast with fresh vinegar slaw and beer-battered onion rings.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="food-card flavour-target-card" data-flavour="cheesy">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Extra Cheesy</span>
+              <img src="images/image-59.png" alt="Double beef cheeseburger paired with chocolate fudge milkshake" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Double Cheddar Decadence</h3>
+              <p class="food-card-desc">Double melted cheddar blankets cascading over twin smash patties with a chocolate shake.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="food-card flavour-target-card" data-flavour="loaded">
+            <div class="food-card-img-wrap">
+              <span class="food-badge">Loaded Beast</span>
+              <img src="images/image-81.png" alt="Platter of four crispy fried chicken sliders with seasoned fries and lemonade" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">The Four Slider Platter</h3>
+              <p class="food-card-desc">Loaded assortment of crispy fried sliders served with wire-basket fries and citrus soda.</p>
+              <div class="food-card-footer">
+                <button class="btn btn-secondary btn-sm js-view-details" style="width:100%;">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: COMPLETE YOUR BURGER EXPERIENCE (CLOSING CTA) -->
+    <section class="section section-charcoal" id="burgerCta">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-bg">
+            <img src="images/image-94.png" alt="Octagonal party box containing four sesame burgers and loaded fries" loading="lazy">
+          </div>
+          <div class="cta-banner-content">
+            <span class="section-tag" style="background:rgba(255,255,255,0.2); color:#fff; border-color:rgba(255,255,255,0.4);">Elevate Your Meal</span>
+            <h2>YOUR BURGER DESERVES A PERFECT SIDE.</h2>
+            <p>
+              Turn your signature burger into a legendary meal deal with our golden skin-on fries, beer-battered onion rings, and hand-spun milkshakes.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="combo-offers.html" class="btn btn-white btn-lg">View Combo Offers</a>
+            <a href="menu.html" class="btn btn-dark btn-lg">Explore Full Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint">
+            <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="44" height="44">
+            <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+          </a>
+          <p>Casual burger and sandwich restaurant crafting big-flavour meals with fresh ingredients, artisan breads, and warm neighborhood hospitality.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Joint</h4>
+          <div class="footer-links">
+            <a href="index.html">Home 1 (Main)</a>
+            <a href="home-2.html">Home 2 (Discovery)</a>
+            <a href="about.html">About Our Passion</a>
+            <a href="services.html">Catering &amp; Services</a>
+            <a href="contact.html">Contact &amp; Location</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Food Collections</h4>
+          <div class="footer-links">
+            <a href="burgers.html">Signature Burgers</a>
+            <a href="sandwiches.html">Sandwich Studio</a>
+            <a href="combo-offers.html">Value Combo Offers</a>
+            <a href="menu.html">Complete Food Menu</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hours &amp; Location</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span>Monday – Thursday</span>
+              <span>11:00 AM – 10:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Friday – Saturday</span>
+              <span>11:00 AM – 11:30 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Sunday</span>
+              <span>11:30 AM – 10:00 PM</span>
+            </div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.88rem; color: #bbb;">
+            &bull; 142 Market Street, Downtown<br>
+            &bull; Phone: +1 (555) 234-5678
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Burger &amp; Sandwich Joint. All rights reserved.</span>
+        <span>Crafted for Great Taste &bull; Fresh &bull; Made to Order</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Product Detail Modal -->
+  <div id="productModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <div class="modal-header">
+            <span class="section-tag">Chef's Signature Selection</span>
+            <h3 class="modal-title">Product Details</h3>
+          </div>
+          <div class="modal-price">$0.00</div>
+          <p class="modal-desc"></p>
+          <h4 class="modal-ingredients-heading">Featured Ingredients:</h4>
+          <div class="food-card-ingredients modal-ingredients"></div>
+          <div class="modal-action-wrap">
+            <a href="contact.html" class="btn btn-primary" style="width:100%;">Order / Enquire Today</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Drop to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll to top" title="Scroll to top">
+    <svg class="to-top-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/interactions.js"></script>
+</body>
+</html>
+

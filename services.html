@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering &amp; Event Services | Burger &amp; Sandwich Joint</title>
+  <meta name="description" content="Professional catering, party platters, corporate lunch boxes, and live burger bar grilling stations from Burger &amp; Sandwich Joint for events of any size.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('joint_direction');
+        if (d === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+        var t = localStorage.getItem('joint_theme');
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint Home">
+          <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="38" height="38">
+          <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <div class="nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html" class="nav-dropdown-link">Home 1</a>
+              <a href="home-2.html" class="nav-dropdown-link">Home 2</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link active">Services</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="burgers.html" class="nav-link">Signature Burgers</a>
+          <a href="sandwiches.html" class="nav-link">Sandwiches</a>
+          <a href="combo-offers.html" class="nav-link">Combo Offers</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <!-- RTL Layout & Light/Dark Theme Toggles (Placed immediately after Contact) -->
+          <button type="button" class="nav-action-btn rtl-toggle" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
+            <svg class="rtl-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7h16M16 3l4 4-4 4"/>
+              <path d="M20 17H4M8 13l-4 4 4 4"/>
+            </svg>
+            <span class="rtl-text sr-only">RTL</span>
+          </button>
+          <button type="button" class="nav-action-btn theme-toggle" aria-label="Toggle light / dark theme" title="Toggle Light / Dark Theme">
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Details</a>
+          <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-links">
+      <div class="mobile-drawer-dropdown">
+        <button type="button" class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home</span>
+          <svg class="drawer-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">Home 1</a>
+          <a href="home-2.html" class="mobile-sublink">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="services.html" class="mobile-nav-link active"><span>Services</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="menu.html" class="mobile-nav-link"><span>Menu</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="burgers.html" class="mobile-nav-link"><span>Signature Burgers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="sandwiches.html" class="mobile-nav-link"><span>Sandwiches</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="combo-offers.html" class="mobile-nav-link"><span>Combo Offers</span> <span class="drawer-arrow">&rarr;</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <span class="drawer-arrow">&rarr;</span></a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <div class="drawer-action-toggles">
+        <button type="button" class="mobile-toggle-btn rtl-toggle" aria-label="Toggle RTL layout">
+          <svg class="rtl-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M16 3l4 4-4 4"/>
+            <path d="M20 17H4M8 13l-4 4 4 4"/>
+          </svg>
+          <span class="rtl-text">RTL Layout</span>
+        </button>
+        <button type="button" class="mobile-toggle-btn theme-toggle" aria-label="Toggle light / dark theme">
+          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-mode-text">Dark Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Details</a>
+      <div class="mobile-drawer-info">
+        <strong>Open 7 Days A Week</strong>
+        <span>11:00 AM – 10:30 PM</span>
+      </div>
+      <div class="mobile-drawer-info">
+        <strong>Call for Enquiries</strong>
+        <span>+1 (555) 234-5678</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT (EXACTLY 2 CARD SECTIONS, REST ADVANCED LAYOUTS) ==================== -->
+  <main id="mainContent">
+
+    <!-- SECTION 1: ADVANCED ASYMMETRIC SPLIT HERO (NOT CARDS) -->
+    <section class="services-hero" id="servicesHero">
+      <div class="container">
+        <div class="services-hero-grid">
+          <div class="services-hero-content">
+            <div class="service-live-badge">
+              <span class="live-dot"></span>
+              <span>Premium Hospitality &amp; Event Solutions</span>
+            </div>
+            <h1 class="services-hero-title">CATERING &amp; BESPOKE FOOD SERVICES</h1>
+            <p class="services-hero-desc">
+              From corporate power luncheons and weekend game-day parties to wedding after-parties and private venue buyouts, Burger &amp; Sandwich Joint brings fresh-smashed beef patties, artisan toasted paninis, golden sides, and white-glove hospitality straight to your crowd.
+            </p>
+            
+            <div class="services-metrics-strip">
+              <div class="metric-item">
+                <span class="metric-item-num">1,200+</span>
+                <span class="metric-item-label">Events Catered</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-item-num">24 HR</span>
+                <span class="metric-item-label">Advance Notice</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-item-num">100%</span>
+                <span class="metric-item-label">Fresh On-Site</span>
+              </div>
+            </div>
+
+            <div class="services-hero-actions">
+              <a href="#servicePackages" class="btn btn-primary">Explore Packages</a>
+              <a href="contact.html" class="btn btn-secondary">Request Custom Quote &rarr;</a>
+            </div>
+          </div>
+
+          <div class="services-hero-media">
+            <div class="services-floating-card top-right">
+              <div class="floating-icon-circle">&#9733;</div>
+              <div class="floating-card-text">
+                <strong>4.9 / 5.0 Star Rating</strong>
+                <span>Over 350+ Verified Corporate Reviews</span>
+              </div>
+            </div>
+
+            <div class="services-hero-image-wrap">
+              <img src="images/image-89.png" alt="Takeout and dine-in spread of sandwiches, burger, fries and canned drinks representing restaurant hospitality" loading="eager">
+            </div>
+
+            <div class="services-floating-card bottom-left">
+              <div class="floating-icon-circle">&#10004;</div>
+              <div class="floating-card-text">
+                <strong>Cambro Thermal Tech</strong>
+                <span>Piping Hot Food Guaranteed for 3 Hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CARD SECTION 1 OF 2 — CORE HOSPITALITY SERVICES (4 CARDS) -->
+    <section class="section section-dark" id="coreServices">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">End-to-End Solutions</span>
+          <h2 class="section-title">OUR SPECIALIZED FOOD SERVICES</h2>
+          <p class="section-desc">
+            Choose the ideal dining format tailored specifically for your venue, headcount, and scheduling requirements.
+          </p>
+        </div>
+
+        <div class="service-card-grid">
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="images/image-106.png" alt="Takeaway meal box with a grilled vegetable club sandwich, burger, juice pouch, and dip" loading="lazy">
+              <span class="service-card-badge">Office Favorite</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Corporate Box Lunches &amp; Desk Drops</h3>
+              <p class="service-card-desc">
+                Individually labeled, calorie-aware meal boxes with signature burgers or deli clubs, golden fries, chilled fruit juice, and condiments. Zero mess, zero cross-contamination.
+              </p>
+              <div class="service-specs-list">
+                <span class="spec-pill">Individual Boxes</span>
+                <span class="spec-pill">Custom Name Tags</span>
+                <span class="spec-pill">Dietary Labels</span>
+              </div>
+              <div class="service-card-cta">
+                <a href="contact.html?package=Corporate-Box-Lunches#contactForm" class="btn btn-primary btn-sm">Book Box Lunches &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="images/image-93.png" alt="Large silver catering party platter packed with club sandwich triangles, mini rolls and fries" loading="lazy">
+              <span class="service-card-badge">Party Bestseller</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Artisan Platters &amp; Crate Feasts</h3>
+              <p class="service-card-desc">
+                Generous stainless and hardwood catering platters stacked high with quadruple-cut triple-decker clubs, mini panini rolls, and crispy skin-on fries ready to unbox and serve.
+              </p>
+              <div class="service-specs-list">
+                <span class="spec-pill">Serves 10–50 Diners</span>
+                <span class="spec-pill">Finger-Food Ready</span>
+                <span class="spec-pill">4 House Dips</span>
+              </div>
+              <div class="service-card-cta">
+                <a href="contact.html?package=Artisan-Platters#contactForm" class="btn btn-primary btn-sm">Order Party Platters &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="images/image-15.png" alt="Grilled herb chicken breast burger with fresh lettuce, tomato and onion" loading="lazy">
+              <span class="service-card-badge">Chef-Attended</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">On-Site Live Flattop Grilling Station</h3>
+              <p class="service-card-desc">
+                Our mobile chef crew brings commercial cast-iron griddles to your event, searing fresh Angus smash patties and grilling chicken to order with toasted bakery brioche.
+              </p>
+              <div class="service-specs-list">
+                <span class="spec-pill">Live Chefs On-Site</span>
+                <span class="spec-pill">Bun Toasting Station</span>
+                <span class="spec-pill">Build-Your-Own Bar</span>
+              </div>
+              <div class="service-card-cta">
+                <a href="contact.html?package=Live-Grilling-Station#contactForm" class="btn btn-primary btn-sm">Book Live Grilling &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="service-card-media">
+              <img src="images/image-92.png" alt="Friends dining together around a round table sharing burgers, tenders and drinks" loading="lazy">
+              <span class="service-card-badge">Exclusive Space</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Private Dining &amp; Restaurant Buyouts</h3>
+              <p class="service-card-desc">
+                Host your milestone celebration or corporate dinner inside our flagship downtown dining room. Includes dedicated kitchen staff, full audio-visual, and custom multi-course menus.
+              </p>
+              <div class="service-specs-list">
+                <span class="spec-pill">Up to 85 Seated</span>
+                <span class="spec-pill">Full Sound System</span>
+                <span class="spec-pill">Fountain Soda Bar</span>
+              </div>
+              <div class="service-card-cta">
+                <a href="contact.html?package=Private-Dining-Buyout#contactForm" class="btn btn-primary btn-sm">Reserve Private Dining &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ADVANCED LAYOUT — 4-STEP CONNECTING TIMELINE / PROCESS WORKFLOW (NOT CARDS) -->
+    <section class="service-process-section" id="serviceProcess">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Seamless Organization</span>
+          <h2 class="section-title">HOW OUR CATERING WORKS</h2>
+          <p class="section-desc">
+            We remove all stress from event planning with our clear 4-step execution pipeline from initial consultation to clean-up.
+          </p>
+        </div>
+
+        <div class="process-timeline-wrap">
+          <div class="process-connecting-line" aria-hidden="true"></div>
+
+          <div class="process-steps-grid">
+            <!-- Step 1 -->
+            <div class="process-step-item">
+              <div class="step-bubble">
+                <span class="step-num">01</span>
+              </div>
+              <div class="step-card-content">
+                <h3 class="step-title">Consult &amp; Curate</h3>
+                <p class="step-desc">
+                  Share your date, headcount, and venue details. Our dedicated catering concierge proposes customized burger, sandwich, and side ratios.
+                </p>
+                <span class="step-turnaround">Turnaround: 2 Hours</span>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step-item">
+              <div class="step-bubble">
+                <span class="step-num">02</span>
+              </div>
+              <div class="step-card-content">
+                <h3 class="step-title">Tasting &amp; Allergens</h3>
+                <p class="step-desc">
+                  Review sample portion sizes and specify dietary needs. We accommodate gluten-free, vegan cheese, and nut-free requirements with zero cross-contamination.
+                </p>
+                <span class="step-turnaround">Flexible Customization</span>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step-item">
+              <div class="step-bubble">
+                <span class="step-num">03</span>
+              </div>
+              <div class="step-card-content">
+                <h3 class="step-title">Fresh Griddle Prep</h3>
+                <p class="step-desc">
+                  Every burger and sandwich is cooked within 90 minutes of dispatch and packed into commercial thermal Cambro carriers keeping food over 140°F.
+                </p>
+                <span class="step-turnaround">Cooked Just-in-Time</span>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step-item">
+              <div class="step-bubble">
+                <span class="step-num">04</span>
+              </div>
+              <div class="step-card-content">
+                <h3 class="step-title">White-Glove Setup</h3>
+                <p class="step-desc">
+                  Our professional crew arrives 30 minutes before meal time, staging food warmers, arranging dipping sauce carousels, and ensuring rapid guest flow.
+                </p>
+                <span class="step-turnaround">On-Time Guarantee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-emergency-bar">
+          <div class="emergency-info">
+            <strong>Need Emergency Same-Day Catering?</strong>
+            <p>We keep dedicated reserve kitchen capacity for last-minute orders up to 40 guests with 3 hours notice.</p>
+          </div>
+          <a href="tel:+15552345678" class="btn btn-primary btn-sm">Call Hotline: (555) 234-5678</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CARD SECTION 2 OF 2 — CURATED CATERING PACKAGES & PARTY PLATTERS (4 CARDS) -->
+    <section class="section section-dark" id="servicePackages">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Turnkey Packages</span>
+          <h2 class="section-title">FEATURED CATERING CRATES &amp; BUNDLES</h2>
+          <p class="section-desc">
+            Transparent per-box pricing with everything included: mains, hot seasoned sides, signature house sauces, and eco-friendly tableware.
+          </p>
+        </div>
+
+        <div class="package-card-grid">
+          <!-- Package 1 -->
+          <div class="package-card">
+            <div class="package-card-media">
+              <img src="images/image-97.png" alt="Gourmet sandwich quarters with potato chips and dip in catering box" loading="lazy">
+              <span class="package-card-serves">Serves 10–12 Guests</span>
+            </div>
+            <div class="package-card-body">
+              <div class="package-card-header">
+                <h3 class="package-card-title">The Executive Sandwich Board</h3>
+                <span class="package-card-price">$149.00</span>
+              </div>
+              <span class="package-contents-heading">Package Inclusions:</span>
+              <ul class="package-items-list">
+                <li>16 Triple-Decker Turkey Club Quarters</li>
+                <li>8 Toasted Chicken Caprese Panini Halves</li>
+                <li>Basket of Kettle-Cooked Chips</li>
+                <li>Kosher Dill Pickle Spears &amp; Olives</li>
+                <li>Signature Honey Dijon &amp; Garlic Aioli Dips</li>
+              </ul>
+              <div class="package-card-cta">
+                <a href="contact.html?package=The-Executive-Sandwich-Board#contactForm" class="btn btn-primary btn-sm">Order Package &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="package-card">
+            <div class="package-card-media">
+              <img src="images/image-90.png" alt="Catering slider party box featuring eight assorted mini burgers and dipping sauces" loading="lazy">
+              <span class="package-card-serves">Serves 12–15 Guests</span>
+            </div>
+            <div class="package-card-body">
+              <div class="package-card-header">
+                <h3 class="package-card-title">The Slider Party Crate (24x Feast)</h3>
+                <span class="package-card-price">$189.00</span>
+              </div>
+              <span class="package-contents-heading">Package Inclusions:</span>
+              <ul class="package-items-list">
+                <li>12 Oklahoma Onion Beef Smash Sliders</li>
+                <li>12 Southern Buttermilk Fried Chicken Sliders</li>
+                <li>Double Share Crate of Crispy Golden Tater Tots</li>
+                <li>Large Basket of Seasoned Skin-On Fries</li>
+                <li>House Burger Sauce, Truffle Mayo &amp; BBQ Tubs</li>
+              </ul>
+              <div class="package-card-cta">
+                <a href="contact.html?package=The-Slider-Party-Crate#contactForm" class="btn btn-primary btn-sm">Order Package &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 3 -->
+          <div class="package-card">
+            <div class="package-card-media">
+              <img src="images/image-107.png" alt="Takeout order in white foam clamshells containing turkey club sandwich halves, chicken, onion rings, cheeseburger, drinks" loading="lazy">
+              <span class="package-card-serves">Serves 15–18 Guests</span>
+            </div>
+            <div class="package-card-body">
+              <div class="package-card-header">
+                <h3 class="package-card-title">Clamshell Crowd Pleaser Feast</h3>
+                <span class="package-card-price">$229.00</span>
+              </div>
+              <span class="package-contents-heading">Package Inclusions:</span>
+              <ul class="package-items-list">
+                <li>12 Individually Portioned Clamshell Combos</li>
+                <li>Mix of Roast Turkey Club &amp; Angus Cheeseburgers</li>
+                <li>Mountain of Beer-Battered Panko Onion Rings</li>
+                <li>Hot Crinkle-Cut French Fries with Fry Salt</li>
+                <li>18 Assorted Chilled Canned Sodas &amp; Mineral Waters</li>
+              </ul>
+              <div class="package-card-cta">
+                <a href="contact.html?package=Clamshell-Crowd-Pleaser#contactForm" class="btn btn-primary btn-sm">Order Package &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 4 -->
+          <div class="package-card">
+            <div class="package-card-media">
+              <img src="images/image-109.png" alt="Takeout feast in four open foam containers featuring crispy chicken burger, chicken hoagie, fish sub, kebab melt, fries" loading="lazy">
+              <span class="package-card-serves">Serves 20–25 Guests</span>
+            </div>
+            <div class="package-card-body">
+              <div class="package-card-header">
+                <h3 class="package-card-title">The 4-Sub Takeout Banquet Box</h3>
+                <span class="package-card-price">$289.00</span>
+              </div>
+              <span class="package-contents-heading">Package Inclusions:</span>
+              <ul class="package-items-list">
+                <li>16 Jumbo Hoagie Sub Portions (Steak, Chicken, Cod)</li>
+                <li>12 Double Smash Beef Cheeseburgers</li>
+                <li>Two Extra-Large Party Trays of Seasoned Fries</li>
+                <li>Loaded Mozzarella Sticks with Warm Marinara</li>
+                <li>Full Assortment of 6 Handcrafted Dipping Sauces</li>
+              </ul>
+              <div class="package-card-cta">
+                <a href="contact.html?package=The-4-Sub-Takeout-Banquet-Box#contactForm" class="btn btn-primary btn-sm">Order Package &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ADVANCED LAYOUT — EDITORIAL QUALITY STANDARDS & LIVE GRIDDLE SHOWCASE (NOT CARDS) -->
+    <section class="service-editorial-section" id="serviceStandards">
+      <div class="container">
+        <div class="service-editorial-grid">
+          <div class="editorial-visual-stack">
+            <div class="editorial-img-main">
+              <img src="images/image-68.png" alt="Professional chefs in black uniforms assembling artisan burgers behind counter" loading="lazy">
+            </div>
+            <div class="editorial-img-inset">
+              <img src="images/image-64.png" alt="Open kitchen with chefs working flat top grills and fryers" loading="lazy">
+            </div>
+          </div>
+
+          <div class="editorial-text-col">
+            <span class="section-tag">Uncompromised Quality</span>
+            <h2 class="section-title">FRESH OFF THE GRIDDLE, NEVER PRE-ASSEMBLED</h2>
+            <p class="section-desc text-left">
+              Unlike generic catering suppliers who prepare cold sandwiches hours before your event, our culinary team operates with a strict freshness protocol so every bite tastes just like sitting at our downtown counter.
+            </p>
+
+            <div class="editorial-pillar-list">
+              <div class="editorial-pillar-item">
+                <div class="pillar-icon-box">&#9832;</div>
+                <div class="pillar-content">
+                  <strong>Commercial Cambro Thermal Tech</strong>
+                  <p>Our heavy-duty insulated transport carriers maintain food temperature above 140°F for up to 3 hours without steaming buns soggy.</p>
+                </div>
+              </div>
+
+              <div class="editorial-pillar-item">
+                <div class="pillar-icon-box">&#10024;</div>
+                <div class="pillar-content">
+                  <strong>Sauce-Separation Packaging Protocol</strong>
+                  <p>All house sauces, aiolis, and au jus come in separate airtight squeeze bottles or ramekins so bakery buns retain their toasted crunch.</p>
+                </div>
+              </div>
+
+              <div class="editorial-pillar-item">
+                <div class="pillar-icon-box">&#127825;</div>
+                <div class="pillar-content">
+                  <strong>Zero Cross-Contamination Safeguards</strong>
+                  <p>Dedicated gluten-free prep boards, separate fryers for vegetarian items, and sealed allergen labeling give every guest total peace of mind.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-secondary">Discuss Custom Dietary Needs &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: ADVANCED LAYOUT — CATERING CAPABILITIES COMPARISON MATRIX (NOT CARDS) -->
+    <section class="service-matrix-section" id="serviceMatrix">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Transparent Comparison</span>
+          <h2 class="section-title">CATERING TIERS &amp; SERVICE SPECS</h2>
+          <p class="section-desc">
+            Choose the exact level of support that matches your venue, guest expectations, and event schedule.
+          </p>
+        </div>
+
+        <div class="service-matrix-table-wrap">
+          <table class="service-matrix-table">
+            <thead>
+              <tr>
+                <th>Service Feature</th>
+                <th>Express Drop-Off</th>
+                <th class="col-highlight">Buffet Setup &amp; Chafing</th>
+                <th>Full-Service Live Station</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feat-title">Guest Capacity</td>
+                <td>10 to 80 Guests</td>
+                <td class="col-highlight">25 to 250 Guests</td>
+                <td>50 to 500+ Guests</td>
+              </tr>
+              <tr>
+                <td class="feat-title">Advance Notice Required</td>
+                <td>24 Hours (Rush Available)</td>
+                <td class="col-highlight">48 Hours</td>
+                <td>5 Days</td>
+              </tr>
+              <tr>
+                <td class="feat-title">Thermal Temperature Control</td>
+                <td>Insulated Thermal Bags</td>
+                <td class="col-highlight">Stainless Chafing Warmers</td>
+                <td>Commercial Cast-Iron Griddles</td>
+              </tr>
+              <tr>
+                <td class="feat-title">Setup &amp; Table Display</td>
+                <td>Unpack-and-Serve Boxes</td>
+                <td class="col-highlight">Full Buffet Table Staging</td>
+                <td>Complete Mobile Kitchen Station</td>
+              </tr>
+              <tr>
+                <td class="feat-title">Eco-Friendly Tableware</td>
+                <td><span class="matrix-check">&#10004; Standard Napkins &amp; Forks</span></td>
+                <td class="col-highlight"><span class="matrix-check">&#10004; Heavyweight Compostable</span></td>
+                <td><span class="matrix-check">&#10004; Bamboo or Real China Plating</span></td>
+              </tr>
+              <tr>
+                <td class="feat-title">Dedicated Staff on Site</td>
+                <td>Delivery Courier Only</td>
+                <td class="col-highlight">Setup Staff (1 Hour)</td>
+                <td>2–4 Professional Line Chefs &amp; Servers</td>
+              </tr>
+              <tr>
+                <td class="feat-title">Custom Printed Menus</td>
+                <td>Digital PDF Only</td>
+                <td class="col-highlight"><span class="matrix-check">&#10004; Buffet Station Cards</span></td>
+                <td><span class="matrix-check">&#10004; Branded Chalkboards &amp; Cards</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="matrix-action-row">
+          <p style="margin: 0; color: #AAA; font-size: 0.9rem;">
+            Need a hybrid arrangement? We frequently customize setups combining express boxes with a live slider bar.
+          </p>
+          <a href="contact.html" class="btn btn-primary btn-sm">Request Tier Quote &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: ADVANCED LAYOUT — CATERING LOGISTICS & 45-MIN HOT-CHAIN DISPATCH BLUEPRINT (NOT CARDS) -->
+    <section class="service-dispatch-section" id="serviceDispatch">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Logistics &amp; Freshness Commitment</span>
+          <h2 class="section-title">THE 45-MINUTE HOT-CHAIN DISPATCH SYSTEM</h2>
+          <p class="section-desc">
+            How our dedicated event logistics crew guarantees sizzling griddle temperature, crispy bakery textures, and pinpoint arrival times for gatherings of 10 to 500+ guests.
+          </p>
+        </div>
+
+        <div class="service-dispatch-grid">
+          <!-- Visual Logistics Staging Showcase -->
+          <div class="dispatch-media-column">
+            <div class="dispatch-visual-wrapper">
+              <div class="dispatch-primary-img">
+                <img src="images/image-95.png" alt="Black catering delivery box packed with gourmet smash sliders, french fries, crispy arancini cheese balls, sauced chicken wings, and chilled soda cans" loading="lazy">
+                <div class="dispatch-floating-badge top-badge">
+                  <div class="badge-icon">&#127777;</div>
+                  <div class="badge-details">
+                    <span class="badge-title">Temperature Guard</span>
+                    <span class="badge-value">145°F Core Thermal Lock</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dispatch-secondary-img">
+                <img src="images/image-88.png" alt="Platter with crispy fried chicken brioche burger, grilled cheesesteak wrap halves, and hot skin-on fries" loading="lazy">
+                <div class="dispatch-floating-badge bottom-badge">
+                  <div class="badge-icon">&#9201;</div>
+                  <div class="badge-details">
+                    <span class="badge-title">Kitchen-to-Van Departure</span>
+                    <span class="badge-value">Cooked &lt;20 Mins Prior</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dispatch-coverage-pill">
+              <span class="pill-dot"></span>
+              <span><strong>15-Mile Priority Delivery Radius:</strong> Downtown, Financial District, Flavor District, Midtown &amp; Surrounding Venues.</span>
+            </div>
+          </div>
+
+          <!-- Operational Blueprint Milestones (Staggered Flow, Not Cards) -->
+          <div class="dispatch-content-column">
+            <div class="dispatch-flow-list">
+              <div class="dispatch-flow-item">
+                <div class="flow-track">
+                  <span class="flow-num">01</span>
+                  <div class="flow-line"></div>
+                </div>
+                <div class="flow-body">
+                  <span class="flow-tag">Stage 1 // Synchronized Griddle Prep</span>
+                  <h3 class="flow-heading">Cooked Strictly to Order, Never Reheated</h3>
+                  <p class="flow-text">
+                    Your banquet menu is never cooked hours ahead. Buns hit the buttered toasters and smash beef patties hit the 450°F grooved cast iron only after our GPS dispatcher confirms delivery route conditions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dispatch-flow-item">
+                <div class="flow-track">
+                  <span class="flow-num">02</span>
+                  <div class="flow-line"></div>
+                </div>
+                <div class="flow-body">
+                  <span class="flow-tag">Stage 2 // Cambro Moisture-Vent Vaults</span>
+                  <h3 class="flow-heading">Zero Steamed Buns &bull; Crunchy Fries</h3>
+                  <p class="flow-text">
+                    We pack all hot party crates inside commercial Cambro thermal insulated chambers with active vapor vents. Heat stays above 140°F while steam escapes, keeping bakery sourdough crisp and fries crunchy.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dispatch-flow-item">
+                <div class="flow-track">
+                  <span class="flow-num">03</span>
+                  <div class="flow-line"></div>
+                </div>
+                <div class="flow-body">
+                  <span class="flow-tag">Stage 3 // White-Glove Staging &amp; Setup</span>
+                  <h3 class="flow-heading">Complete Unpack &amp; Buffet Ignition</h3>
+                  <p class="flow-text">
+                    We never drop cardboard boxes at your lobby desk. Our uniformed catering team carries crates into your dining suite, arranges stainless chafer stations, ignites warming canisters, and sets serving tongs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="dispatch-flow-item">
+                <div class="flow-track">
+                  <span class="flow-num">04</span>
+                </div>
+                <div class="flow-body">
+                  <span class="flow-tag">Stage 4 // Post-Event Breakdown &amp; Eco Clean</span>
+                  <h3 class="flow-heading">100% Compostable &amp; Hardware Retrieval</h3>
+                  <p class="flow-text">
+                    All packaging is either certified biodegradable Kraft paperboard or picked up by our logistics crew after your event concludes, leaving your boardroom or hall completely spotless.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Operations Metrics Strip -->
+        <div class="dispatch-stats-ribbon">
+          <div class="dispatch-stat-box">
+            <span class="stat-number">1,250+</span>
+            <span class="stat-label">Banquets &amp; Events Catered</span>
+          </div>
+          <div class="dispatch-stat-box">
+            <span class="stat-number">45 Min</span>
+            <span class="stat-label">Max Transit Temperature Window</span>
+          </div>
+          <div class="dispatch-stat-box">
+            <span class="stat-number">99.8%</span>
+            <span class="stat-label">On-Time Arrival Rate</span>
+          </div>
+          <div class="dispatch-stat-box">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Allergen-Segregated Packaging</span>
+          </div>
+        </div>
+
+        <!-- High-Conversion Instant Quote Banner -->
+        <div class="services-cta-banner">
+          <div class="services-cta-content">
+            <h3>READY TO ELEVATE YOUR NEXT EVENT WITH UNFORGETTABLE FOOD?</h3>
+            <p>
+              Speak directly with our head catering coordinator. We provide customized, itemized proposals with zero obligation within 4 business hours.
+            </p>
+          </div>
+          <div class="services-cta-btns">
+            <a href="contact.html" class="btn btn-primary btn-lg">Submit Catering Inquiry &rarr;</a>
+            <a href="tel:+15552345678" class="btn btn-secondary btn-lg">Call Hotline: (555) 234-5678</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Burger &amp; Sandwich Joint">
+            <img src="images/logo.svg" alt="Burger &amp; Sandwich Joint Logo" class="brand-logo-img" width="44" height="44">
+            <span>BURGER <span class="logo-highlight">&amp;</span> SANDWICH</span>
+          </a>
+          <p>Casual burger and sandwich restaurant crafting big-flavour meals with fresh ingredients, artisan breads, and warm neighborhood hospitality.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Joint</h4>
+          <div class="footer-links">
+            <a href="index.html">Home 1 (Main)</a>
+            <a href="home-2.html">Home 2 (Discovery)</a>
+            <a href="about.html">About Our Passion</a>
+            <a href="services.html">Catering &amp; Services</a>
+            <a href="contact.html">Contact &amp; Location</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Food Collections</h4>
+          <div class="footer-links">
+            <a href="burgers.html">Signature Burgers</a>
+            <a href="sandwiches.html">Sandwich Studio</a>
+            <a href="combo-offers.html">Value Combo Offers</a>
+            <a href="menu.html">Complete Food Menu</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hours &amp; Location</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-row">
+              <span>Monday – Thursday</span>
+              <span>11:00 AM – 10:00 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Friday – Saturday</span>
+              <span>11:00 AM – 11:30 PM</span>
+            </div>
+            <div class="footer-hours-row">
+              <span>Sunday</span>
+              <span>11:30 AM – 10:00 PM</span>
+            </div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.88rem; color: #bbb;">
+            &bull; 142 Market Street, Downtown<br>
+            &bull; Phone: +1 (555) 234-5678
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Burger &amp; Sandwich Joint. All rights reserved.</span>
+        <span>Crafted for Great Taste &bull; Fresh &bull; Made to Order</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Product Detail Modal -->
+  <div id="productModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <div class="modal-header">
+            <span class="section-tag">Chef's Signature Selection</span>
+            <h3 class="modal-title">Product Details</h3>
+          </div>
+          <div class="modal-price">$0.00</div>
+          <p class="modal-desc"></p>
+          <h4 class="modal-ingredients-heading">Featured Ingredients:</h4>
+          <div class="food-card-ingredients modal-ingredients"></div>
+          <div class="modal-action-wrap">
+            <a href="contact.html" class="btn btn-primary" style="width:100%;">Order / Enquire Today</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Drop to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll to top" title="Scroll to top">
+    <svg class="to-top-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
