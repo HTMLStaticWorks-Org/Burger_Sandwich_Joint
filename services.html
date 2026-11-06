@@ -70,15 +70,7 @@
         </nav>
 
         <div class="header-actions">
-                    <a href="cart.html" class="header-cart-btn" aria-label="Shopping Cart" title="View Cart">
-            <svg class="cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-            <span class="cart-badge">3</span>
-          </a>
-<a href="contact.html" class="btn btn-primary btn-sm">Contact Details</a>
+          <a href="contact.html" class="btn btn-primary btn-sm">Contact Details</a>
           <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
             <span></span>
             <span></span>
@@ -114,27 +106,29 @@
     </div>
     <div class="mobile-drawer-footer">
       <div class="drawer-action-toggles">
-        <button type="button" class="mobile-toggle-btn rtl-toggle" aria-label="Toggle RTL layout">
-          <svg class="rtl-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 7h16M16 3l4 4-4 4"/>
-            <path d="M20 17H4M8 13l-4 4 4 4"/>
-          </svg>
-          <span class="rtl-text">RTL Layout</span>
-        </button>
-        <button type="button" class="mobile-toggle-btn theme-toggle" aria-label="Toggle light / dark theme">
-          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <span class="theme-mode-text">Dark Theme</span>
-        </button>
-      </div>
-      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Details</a>
-      <div class="mobile-drawer-info">
-        <strong>Open 7 Days A Week</strong>
-        <span>11:00 AM – 10:30 PM</span>
-      </div>
-      <div class="mobile-drawer-info">
-        <strong>Call for Enquiries</strong>
-        <span>+1 (555) 234-5678</span>
+        <div class="drawer-action-icons">
+          <button type="button" class="nav-action-btn rtl-toggle" aria-label="Toggle RTL layout" title="Switch text direction">
+            <span class="rtl-text sr-only">RTL</span>
+            <svg class="rtl-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7h16M16 3l4 4-4 4"/>
+              <path d="M20 17H4M8 13l-4 4 4 4"/>
+            </svg>
+          </button>
+          <button type="button" class="nav-action-btn theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme">
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <span class="theme-mode-text sr-only">Dark Theme</span>
+          </button>
+          <a href="cart.html" class="nav-action-btn cart-btn" aria-label="Shopping Cart" title="View Cart">
+            <svg class="cart-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge">3</span>
+          </a>
+        </div>
+        <a href="contact.html" class="btn btn-primary drawer-contact-btn">Contact Details</a>
       </div>
     </div>
   </aside>
