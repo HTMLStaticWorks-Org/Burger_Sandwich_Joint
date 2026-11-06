@@ -33,7 +33,7 @@ pages.forEach(p => {
     allPassed = false;
   }
 
-  // 3. Check RTL and Theme buttons after Contact
+  // 3. Check RTL, Theme, and Cart buttons after Contact
   const navMatch = content.match(/<nav class="nav-menu"[\s\S]*?<\/nav>/);
   if (!navMatch) {
     console.error(`FAIL: ${p} nav-menu match failed`);
@@ -44,12 +44,13 @@ pages.forEach(p => {
   const contactPos = navHtml.indexOf('Contact</a>');
   const rtlPos = navHtml.indexOf('class="nav-action-btn rtl-toggle"');
   const themePos = navHtml.indexOf('class="nav-action-btn theme-toggle"');
+  const cartPos = navHtml.indexOf('class="nav-action-btn cart-btn');
 
-  if (contactPos === -1 || rtlPos === -1 || themePos === -1) {
-    console.error(`FAIL: ${p} missing contact or rtl or theme button`);
+  if (contactPos === -1 || rtlPos === -1 || themePos === -1 || cartPos === -1) {
+    console.error(`FAIL: ${p} missing contact, rtl, theme, or cart button`);
     allPassed = false;
-  } else if (rtlPos > contactPos && themePos > rtlPos) {
-    console.log(`PASS: ${p} navbar structure verified.`);
+  } else if (rtlPos > contactPos && themePos > rtlPos && cartPos > themePos) {
+    console.log(`PASS: ${p} navbar structure verified (Contact -> RTL -> Theme -> Cart).`);
   } else {
     console.error(`FAIL: ${p} order of nav buttons incorrect`);
     allPassed = false;
@@ -57,7 +58,7 @@ pages.forEach(p => {
 });
 
 if (allPassed) {
-  console.log('\nALL 8 PAGES VERIFIED WITH PERFECT NAVBAR STRUCTURE!');
+  console.log('\nALL 10 PAGES VERIFIED WITH PERFECT NAVBAR STRUCTURE!');
 } else {
   process.exit(1);
 }

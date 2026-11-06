@@ -31,6 +31,7 @@ pages.forEach(p => {
   const contactIdx = navHtml.indexOf('Contact</a>');
   const rtlIdx = navHtml.indexOf('class="nav-action-btn rtl-toggle"');
   const themeIdx = navHtml.indexOf('class="nav-action-btn theme-toggle"');
+  const cartIdx = navHtml.indexOf('class="nav-action-btn cart-btn');
 
   if (contactIdx === -1) {
     console.error(`FAIL: ${p} Contact link missing in nav`);
@@ -41,10 +42,13 @@ pages.forEach(p => {
   } else if (themeIdx === -1) {
     console.error(`FAIL: ${p} Theme button missing in nav`);
     allPassed = false;
-  } else if (rtlIdx > contactIdx && themeIdx > contactIdx) {
-    console.log(`PASS: ${p} has RTL and Theme buttons located AFTER Contact navlink.`);
+  } else if (cartIdx === -1) {
+    console.error(`FAIL: ${p} Cart button missing in nav`);
+    allPassed = false;
+  } else if (rtlIdx > contactIdx && themeIdx > rtlIdx && cartIdx > themeIdx) {
+    console.log(`PASS: ${p} has RTL, Theme, and Cart buttons located AFTER Contact in correct order.`);
   } else {
-    console.error(`FAIL: ${p} RTL or Theme button is NOT after Contact link.`);
+    console.error(`FAIL: ${p} order of RTL, Theme, or Cart button is incorrect.`);
     allPassed = false;
   }
 

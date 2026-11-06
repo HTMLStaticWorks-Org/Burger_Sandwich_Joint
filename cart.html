@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Order Cart &bull; Burger &amp; Sandwich Joint</title>
+  <meta name="description" content="Review your freshly seared burger and sandwich order, customize preparation notes, and proceed to secure checkout.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      var savedDir = localStorage.getItem('joint_direction');
+      if (savedDir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+      }
+      var savedTheme = localStorage.getItem('joint_theme');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="mainContent">
+
+    <!-- CART WORKSPACE -->
+    <section class="section section-dark" id="cartWorkspace" style="min-height: 100vh; padding: clamp(2rem, 4vw, 3.5rem) 0;">
+      <div class="container">
+        
+        <!-- Top Back Navigation & Theme Controls -->
+        <div class="cart-top-nav">
+          <a href="menu.html" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.45rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back to Menu</span>
+          </a>
+          <div class="cart-top-controls" style="display: flex; align-items: center; gap: 0.6rem;">
+            <button type="button" class="nav-action-btn theme-toggle" aria-label="Toggle light / dark theme" title="Toggle Light / Dark Theme">
+              <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+            <button type="button" class="nav-action-btn rtl-toggle" aria-label="Toggle RTL layout" title="Toggle RTL / LTR layout">
+              <svg class="rtl-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 7h16M16 3l4 4-4 4"/>
+                <path d="M20 17H4M8 13l-4 4 4 4"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="cart-layout" id="cartContainer">
+          
+          <!-- LEFT COLUMN: CART ITEMS & SPECIAL REQUESTS -->
+          <div class="cart-items-column">
+            
+            <div class="cart-panel-header">
+              <div>
+                <h1 class="cart-panel-title">Selected Dishes (<span id="cartCountTitle">3</span>)</h1>
+                <p class="cart-panel-subtitle">Items are held in kitchen queue &bull; 100% cooked to order</p>
+              </div>
+              <button type="button" class="btn-clear-cart" id="clearCartBtn" title="Clear all items">Clear All</button>
+            </div>
+
+            <!-- Cart Items List -->
+            <div class="cart-items-list" id="cartItemsList">
+              
+              <!-- ITEM 1 -->
+              <div class="cart-item-card" data-id="item-1" data-unit-price="14.99">
+                <div class="cart-item-img-wrap">
+                  <img src="images/image-1.png" alt="The Oklahoma Double Smash" loading="lazy">
+                </div>
+                <div class="cart-item-info">
+                  <div class="cart-item-top">
+                    <span class="cart-item-category">Signature Burger</span>
+                    <button type="button" class="cart-item-remove" aria-label="Remove item" title="Remove">&times;</button>
+                  </div>
+                  <h3 class="cart-item-title">The Oklahoma Double Smash</h3>
+                  <p class="cart-item-desc">Twin smashed Angus beef patties, caramelized griddled onions, melted American cheddar, toasted butter brioche, house fry sauce.</p>
+                  <div class="cart-item-addon">&check; Includes wire-basket seasoned fries &amp; house dip</div>
+                  <div class="cart-item-bottom">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">&minus;</button>
+                      <span class="qty-val">1</span>
+                      <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">&#43;</button>
+                    </div>
+                    <div class="cart-item-price-wrap">
+                      <span class="unit-price">$14.99 each</span>
+                      <strong class="item-total">$14.99</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 2 -->
+              <div class="cart-item-card" data-id="item-2" data-unit-price="12.49">
+                <div class="cart-item-img-wrap">
+                  <img src="images/image-23.png" alt="Artisan Sourdough Turkey Bacon Club" loading="lazy">
+                </div>
+                <div class="cart-item-info">
+                  <div class="cart-item-top">
+                    <span class="cart-item-category">Craft Deli Sandwich</span>
+                    <button type="button" class="cart-item-remove" aria-label="Remove item" title="Remove">&times;</button>
+                  </div>
+                  <h3 class="cart-item-title">Artisan Sourdough Turkey Bacon Club</h3>
+                  <p class="cart-item-desc">Roasted turkey breast, crispy applewood bacon, Haas avocado, crisp leaf lettuce, and garlic-herb aioli on toasted seeded sourdough.</p>
+                  <div class="cart-item-addon">&check; Light dressing requested</div>
+                  <div class="cart-item-bottom">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">&minus;</button>
+                      <span class="qty-val">1</span>
+                      <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">&#43;</button>
+                    </div>
+                    <div class="cart-item-price-wrap">
+                      <span class="unit-price">$12.49 each</span>
+                      <strong class="item-total">$12.49</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 3 -->
+              <div class="cart-item-card" data-id="item-3" data-unit-price="5.50">
+                <div class="cart-item-img-wrap">
+                  <img src="images/image-61.png" alt="Handcrafted Vanilla Malt Milkshake" loading="lazy">
+                </div>
+                <div class="cart-item-info">
+                  <div class="cart-item-top">
+                    <span class="cart-item-category">Fountain &amp; Shakes</span>
+                    <button type="button" class="cart-item-remove" aria-label="Remove item" title="Remove">&times;</button>
+                  </div>
+                  <h3 class="cart-item-title">Handcrafted Vanilla Malt Milkshake</h3>
+                  <p class="cart-item-desc">Old-school soda fountain recipe with whole Madagascar vanilla bean ice cream, malted barley, whipped cream crown &amp; sprinkles.</p>
+                  <div class="cart-item-addon">&check; Extra whipped cream</div>
+                  <div class="cart-item-bottom">
+                    <div class="qty-stepper">
+                      <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">&minus;</button>
+                      <span class="qty-val">2</span>
+                      <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">&#43;</button>
+                    </div>
+                    <div class="cart-item-price-wrap">
+                      <span class="unit-price">$5.50 each</span>
+                      <strong class="item-total">$11.00</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Fulfillment Method -->
+            <div class="fulfillment-box">
+              <h4 class="fulfillment-title">Select Fulfillment Method</h4>
+              <div class="fulfillment-options">
+                <label class="fulfillment-option active">
+                  <input type="radio" name="fulfillment" value="dinein" checked>
+                  <div class="fulfillment-content">
+                    <strong>Dine-In Service</strong>
+                    <span>Hot delivery directly to your table booth</span>
+                  </div>
+                </label>
+                <label class="fulfillment-option">
+                  <input type="radio" name="fulfillment" value="pickup">
+                  <div class="fulfillment-content">
+                    <strong>Express Pickup</strong>
+                    <span>Ready at express counter in 12–15 mins</span>
+                  </div>
+                </label>
+                <label class="fulfillment-option">
+                  <input type="radio" name="fulfillment" value="delivery">
+                  <div class="fulfillment-content">
+                    <strong>Hot-Chain Dispatch</strong>
+                    <span>Delivered in heated temperature pack</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Special Instructions Box -->
+            <div class="cart-notes-box">
+              <label for="kitchenNotes" class="cart-notes-label">
+                <span>Special Kitchen Instructions (Optional)</span>
+                <span class="notes-hint">Allergies, extra sauce, fry crispiness</span>
+              </label>
+              <textarea id="kitchenNotes" class="cart-notes-input" rows="2" placeholder="e.g. Please put dipping sauce on the side; extra napkins appreciated..."></textarea>
+            </div>
+
+            <!-- Empty Cart State (Hidden by default) -->
+            <div class="empty-cart-state" id="emptyCartView" style="display: none;">
+              <div class="empty-cart-icon">🛒</div>
+              <h3>YOUR CART IS CURRENTLY EMPTY</h3>
+              <p>Looks like you haven't added any burgers, sandwiches, or combo platters to your order yet.</p>
+              <a href="menu.html" class="btn btn-primary btn-lg">Explore Our Full Menu &rarr;</a>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: STICKY ORDER SUMMARY -->
+          <div class="cart-summary-column">
+            <div class="cart-summary-card">
+              <h3 class="summary-card-title">Order Summary</h3>
+              
+              <div class="summary-breakdown">
+                <div class="summary-row">
+                  <span>Subtotal</span>
+                  <span id="subtotalVal">$38.48</span>
+                </div>
+                <div class="summary-row">
+                  <span>Estimated Tax (8.25%)</span>
+                  <span id="taxVal">$3.17</span>
+                </div>
+                <div class="summary-row">
+                  <span>Eco Packaging Fee</span>
+                  <span id="ecoVal">$0.99</span>
+                </div>
+                <div class="summary-row discount-row" id="discountRow" style="display: none;">
+                  <span>Promo Discount (<span id="promoCodeApplied"></span>)</span>
+                  <span id="discountVal">&minus;$5.00</span>
+                </div>
+                <div class="summary-row delivery-row">
+                  <span>Delivery / Dispatch</span>
+                  <span class="free-pill">FREE</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-total-row">
+                  <strong>Total Amount</strong>
+                  <strong class="total-amount" id="totalAmountVal">$42.64</strong>
+                </div>
+              </div>
+
+              <!-- Promo Code Input -->
+              <div class="promo-box">
+                <div class="promo-input-wrap">
+                  <input type="text" id="promoInput" placeholder="Promo code (e.g. JOINT10)" aria-label="Promo code">
+                  <button type="button" class="btn btn-primary btn-sm" id="applyPromoBtn">Apply</button>
+                </div>
+                <div class="promo-feedback" id="promoFeedback"></div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="summary-actions">
+                <button type="button" class="btn btn-primary btn-lg btn-checkout" id="checkoutBtn">
+                  <span>Proceed to Checkout</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <a href="menu.html" class="btn btn-secondary btn-continue">
+                  &larr; Continue Adding Items
+                </a>
+                <a href="index.html" class="btn btn-secondary btn-continue" style="margin-top: 0.5rem; text-align: center;">
+                  &larr; Return to Home
+                </a>
+              </div>
+
+              <!-- Order Guarantee & Security Badges -->
+              <div class="summary-perks">
+                <div class="summary-perk-item">
+                  <span class="perk-icon">&check;</span>
+                  <span><strong>Cooked To Order:</strong> Fresh off the 450&deg; iron flat-top</span>
+                </div>
+                <div class="summary-perk-item">
+                  <span class="perk-icon">&check;</span>
+                  <span><strong>Zero Heat Lamps:</strong> Immediate table dispatch</span>
+                </div>
+                <div class="summary-perk-item">
+                  <span class="perk-icon">&check;</span>
+                  <span><strong>Secure Payment:</strong> Apple Pay, Google Pay, Visa &amp; Cash</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Product Details Modal (Reused) -->
+  <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-body">
+        <div class="modal-media">
+          <img src="images/image-1.png" alt="Dish photo" class="modal-img">
+        </div>
+        <div class="modal-info">
+          <div class="modal-header-row">
+            <h3 class="modal-title" id="modalTitle">Product Details</h3>
+            <span class="modal-price">$0.00</span>
+          </div>
+          <p class="modal-desc"></p>
+          <div class="modal-ingredients-section">
+            <h4 class="modal-ingredients-heading">Featured Ingredients:</h4>
+            <div class="modal-ingredients"></div>
+          </div>
+          <div class="modal-action-wrap">
+            <a href="contact.html" class="btn btn-primary btn-lg" style="width: 100%;">Order Now at Joint &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <!-- Cart Specific Interactive Controller -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initCartInteractions();
+    });
+
+    function initCartInteractions() {
+      const cartItemsList = document.getElementById('cartItemsList');
+      const cartContainer = document.getElementById('cartContainer');
+      const emptyCartView = document.getElementById('emptyCartView');
+      const cartCountTitle = document.getElementById('cartCountTitle');
+      const navCartBadge = document.getElementById('navCartBadge');
+      const headerCartBadges = document.querySelectorAll('.cart-badge, .cart-count-pill');
+      
+      const subtotalEl = document.getElementById('subtotalVal');
+      const taxEl = document.getElementById('taxVal');
+      const totalEl = document.getElementById('totalAmountVal');
+      const discountRow = document.getElementById('discountRow');
+      const discountValEl = document.getElementById('discountVal');
+      const promoCodeAppliedEl = document.getElementById('promoCodeApplied');
+      const promoInput = document.getElementById('promoInput');
+      const applyPromoBtn = document.getElementById('applyPromoBtn');
+      const promoFeedback = document.getElementById('promoFeedback');
+      const clearCartBtn = document.getElementById('clearCartBtn');
+      const checkoutBtn = document.getElementById('checkoutBtn');
+
+      let discountAmount = 0;
+      let appliedCode = '';
+
+      function recalculateTotals() {
+        const itemCards = document.querySelectorAll('.cart-item-card');
+        let totalItems = 0;
+        let subtotal = 0;
+
+        itemCards.forEach(card => {
+          const unitPrice = parseFloat(card.getAttribute('data-unit-price') || '0');
+          const qty = parseInt(card.querySelector('.qty-val').textContent.trim() || '1', 10);
+          const itemTotal = unitPrice * qty;
+          card.querySelector('.item-total').textContent = '$' + itemTotal.toFixed(2);
+          totalItems += qty;
+          subtotal += itemTotal;
+        });
+
+        if (totalItems === 0) {
+          if (cartItemsList) cartItemsList.style.display = 'none';
+          const fulfillBox = document.querySelector('.fulfillment-box');
+          const notesBox = document.querySelector('.cart-notes-box');
+          if (fulfillBox) fulfillBox.style.display = 'none';
+          if (notesBox) notesBox.style.display = 'none';
+          if (emptyCartView) emptyCartView.style.display = 'block';
+          if (clearCartBtn) clearCartBtn.style.display = 'none';
+        } else {
+          if (cartItemsList) cartItemsList.style.display = 'flex';
+          const fulfillBox = document.querySelector('.fulfillment-box');
+          const notesBox = document.querySelector('.cart-notes-box');
+          if (fulfillBox) fulfillBox.style.display = 'block';
+          if (notesBox) notesBox.style.display = 'block';
+          if (emptyCartView) emptyCartView.style.display = 'none';
+          if (clearCartBtn) clearCartBtn.style.display = 'inline-block';
+        }
+
+        if (cartCountTitle) cartCountTitle.textContent = totalItems;
+        headerCartBadges.forEach(badge => {
+          if (badge.classList.contains('cart-count-pill')) {
+            badge.textContent = totalItems + ' items';
+          } else {
+            badge.textContent = totalItems;
+          }
+        });
+
+        const tax = subtotal * 0.0825;
+        const ecoFee = subtotal > 0 ? 0.99 : 0;
+        const netTotal = Math.max(0, subtotal + tax + ecoFee - discountAmount);
+
+        if (subtotalEl) subtotalEl.textContent = '$' + subtotal.toFixed(2);
+        if (taxEl) taxEl.textContent = '$' + tax.toFixed(2);
+        if (totalEl) totalEl.textContent = '$' + netTotal.toFixed(2);
+      }
+
+      // Quantity buttons & item removal
+      if (cartItemsList) {
+        cartItemsList.addEventListener('click', (e) => {
+          const target = e.target;
+          const card = target.closest('.cart-item-card');
+          if (!card) return;
+
+          // Plus
+          if (target.classList.contains('qty-plus')) {
+            const qtyVal = card.querySelector('.qty-val');
+            let q = parseInt(qtyVal.textContent.trim(), 10) || 1;
+            q++;
+            qtyVal.textContent = q;
+            recalculateTotals();
+          }
+
+          // Minus
+          if (target.classList.contains('qty-minus')) {
+            const qtyVal = card.querySelector('.qty-val');
+            let q = parseInt(qtyVal.textContent.trim(), 10) || 1;
+            if (q > 1) {
+              q--;
+              qtyVal.textContent = q;
+              recalculateTotals();
+            } else {
+              // Remove if drops to zero
+              card.remove();
+              recalculateTotals();
+            }
+          }
+
+          // Remove button
+          if (target.classList.contains('cart-item-remove')) {
+            card.style.opacity = '0';
+            card.style.transform = 'translateX(20px)';
+            card.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+              card.remove();
+              recalculateTotals();
+            }, 300);
+          }
+        });
+      }
+
+      // Clear all
+      if (clearCartBtn) {
+        clearCartBtn.addEventListener('click', () => {
+          if (confirm('Are you sure you want to clear all items from your order?')) {
+            const cards = document.querySelectorAll('.cart-item-card');
+            cards.forEach(c => c.remove());
+            recalculateTotals();
+          }
+        });
+      }
+
+      // Fulfillment selection
+      const fulfillmentOptions = document.querySelectorAll('.fulfillment-option');
+      fulfillmentOptions.forEach(opt => {
+        opt.addEventListener('click', () => {
+          fulfillmentOptions.forEach(o => o.classList.remove('active'));
+          opt.classList.add('active');
+        });
+      });
+
+      // Promo Code
+      if (applyPromoBtn && promoInput) {
+        applyPromoBtn.addEventListener('click', () => {
+          const code = promoInput.value.trim().toUpperCase();
+          if (!code) {
+            promoFeedback.textContent = 'Please enter a valid coupon code.';
+            promoFeedback.className = 'promo-feedback error';
+            return;
+          }
+          if (code === 'JOINT10' || code === 'BURGER10' || code === 'FLAVOUR' || code === 'SAVE5') {
+            discountAmount = 5.00;
+            appliedCode = code;
+            promoFeedback.textContent = 'Success! $' + discountAmount.toFixed(2) + ' discount applied.';
+            promoFeedback.className = 'promo-feedback success';
+            if (discountRow) discountRow.style.display = 'flex';
+            if (promoCodeAppliedEl) promoCodeAppliedEl.textContent = code;
+            recalculateTotals();
+          } else {
+            promoFeedback.textContent = 'Code not recognized. Try promo code: JOINT10';
+            promoFeedback.className = 'promo-feedback error';
+          }
+        });
+      }
+
+      // Checkout Button
+      if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+          const totalVal = totalEl ? totalEl.textContent : '$42.64';
+          alert(`Order Confirmed!\nTotal: ${totalVal}\nYour ticket has been sent to our kitchen flat-top line. Pick-up / table service ready in 15 minutes!`);
+        });
+      }
+
+      recalculateTotals();
+    }
+  </script>
+</body>
+</html>

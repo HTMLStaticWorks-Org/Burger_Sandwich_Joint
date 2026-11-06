@@ -9,7 +9,8 @@ const pages = [
   'burgers.html',
   'sandwiches.html',
   'combo-offers.html',
-  'contact.html'
+  'contact.html',
+  'cart.html'
 ];
 
 let issues = [];
